@@ -1,6 +1,6 @@
 .header {
   padding-top: 40px;
-  position: fixed;
+  // position: fixed;
 }
 
 .header__container {
@@ -94,11 +94,15 @@
   padding-bottom: 1em;
   background-color: var(--background-color);
   border: 2px solid var(--primary-color);
-  width: 380px;
+  width: 220px;
   border-top-right-radius: 42px;
   transition: clip-path 0.8s ease-in-out, -webkit-clip-path 0.8s ease-in-out;
   -webkit-clip-path: circle(0 at 95% 5%);
   clip-path: circle(0 at 95% 5%);
+
+  @media screen and (min-width: 440px) {
+    width: 380px;
+  }
 
   &.open-menu {
     webkit-clip-path: circle(150% at 95% 5%);
