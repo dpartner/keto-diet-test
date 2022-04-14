@@ -1,5 +1,6 @@
 .header {
   padding-top: 40px;
+  position: fixed;
 }
 
 .header__container {
@@ -9,14 +10,17 @@
   padding-left: 25px;
   position: relative;
 }
-.header__logo-link {
+.logo-link {
   width: 200px;
-  background-color: var(--button-background);
   height: 122px;
   border-radius: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__logo-link {
+  background-color: var(--button-background);
 }
 
 .header__logo {
@@ -76,6 +80,7 @@
   height: 4px;
   background-color: var(--primary-color);
   transform-origin: center;
+  transition: width 0.4s ease-in-out;
 }
 
 .header__burger-menu {
