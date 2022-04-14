@@ -8,20 +8,34 @@
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
+
+  @media screen and (max-width: 440px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
   }
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     align-items: flex-start;
+    justify-content: space-between;
   }
 }
 
-.footer__menu-item:not(:last-child) {
-  margin-bottom: 10px;
+.footer__menu-item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 440px) {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__menu-link {
