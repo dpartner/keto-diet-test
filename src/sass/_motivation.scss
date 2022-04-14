@@ -16,19 +16,33 @@
 .motivation__list {
   display: flex;
   justify-content: start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: -20px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -20px;
+  }
 }
 
 .motivation__list-item {
   min-height: 170px;
-  flex-basis: calc((100% - 120px) / 3);
-  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 120px) / 3);
+    margin: 20px;
+  }
 }
 
 .motivation__list-item-heading {
