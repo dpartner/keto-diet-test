@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");const e={burgerButton:document.querySelector(".header__button"),burgerMenu:document.querySelector(".header__burger-menu")};function r(r){r.currentTarget.classList.toggle("toggle-menu"),e.burgerMenu.classList.toggle("open-menu")}e.burgerButton.addEventListener("click",r);
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/keto-diet-test/src.d1e370f1.js.map
+//# sourceMappingURL=/keto-diet-test/src.6ace6187.js.map
