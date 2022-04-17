@@ -24,6 +24,7 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 110px;
   }
 }
 
@@ -48,11 +49,10 @@
 }
 
 .logo-link--footer {
-  width: 135px;
-  height: 60px;
+  padding: 0;
 }
 
-.footer__logo {
+.logo--footer {
   color: #34164e;
   opacity: 0.2;
   &:hover,
@@ -61,7 +61,7 @@
   }
 }
 
-.footer__logo-svg {
+.logo-svg--footer {
   fill: currentColor;
 }
 .footer__license-wrap {
