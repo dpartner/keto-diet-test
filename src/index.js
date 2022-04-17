@@ -1,13 +1,13 @@
-import './sass/main.scss';
+import './js/menu';
 
-const ref = {
-  burgerButton: document.querySelector('.header__button'),
-  burgerMenu: document.querySelector('.header__burger-menu'),
-};
+// const ref = {
+//   burgerButton: document.querySelector('.header__button'),
+//   burgerMenu: document.querySelector('.header__burger-menu'),
+// };
 
-ref.burgerButton.addEventListener('click', openMenu);
+// ref.burgerButton.addEventListener('click', openMenu);
 
-function openMenu(e) {
-  e.currentTarget.classList.toggle('toggle-menu');
-  ref.burgerMenu.classList.toggle('open-menu');
-}
+// function openMenu(e) {
+//   e.currentTarget.classList.toggle('toggle-menu');
+//   ref.burgerMenu.classList.toggle('open-menu');
+// }
