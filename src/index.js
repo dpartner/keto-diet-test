@@ -1,5 +1,4 @@
 import './js/menu';
-
 // const ref = {
 //   burgerButton: document.querySelector('.header__button'),
 //   burgerMenu: document.querySelector('.header__burger-menu'),
