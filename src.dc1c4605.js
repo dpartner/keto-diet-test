@@ -3,4 +3,4 @@ const e={burgerButton:document.querySelector(".header__button"),burgerMenu:docum
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/menu");
 },{"./js/menu":"i0CD"}]},{},["Focm"], null)
-//# sourceMappingURL=/keto-diet-test/src.c9ac66b0.js.map
+//# sourceMappingURL=/keto-diet-test/src.dc1c4605.js.map
