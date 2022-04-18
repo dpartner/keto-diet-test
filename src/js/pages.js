@@ -2,7 +2,7 @@ export const pages = [
   {
     page: 1,
     type: 'quiz',
-    name: '',
+    name: 'Physical activity',
     question: 'Physical activity',
     answers: [
       'ALMOST NO PHYSICAL ACTIVITY',
@@ -15,7 +15,7 @@ export const pages = [
   {
     page: 2,
     type: 'quiz',
-    name: '',
+    name: 'Energy',
     question: 'Do you have the energy and focus you need to meet your daily challenges?',
     answers: [
       'YES! TOTALLY ENERGETIC',
@@ -27,7 +27,7 @@ export const pages = [
   {
     page: 3,
     type: 'quiz',
-    name: '',
+    name: 'Easy weight',
     question: 'Is it easy for you to lose weight?',
     answers: [
       'IF I WORK ON IT - QUITE EASY',
@@ -38,7 +38,7 @@ export const pages = [
   {
     page: 4,
     type: 'card',
-    name: 'target-weight',
+    name: 'Target weight',
     question: '',
     answers:
       'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',

@@ -4,16 +4,18 @@ import throttle from 'lodash.throttle';
 import onPercentage from './js/progress-percent';
 import { onDoneDotExp, removeOldActiveDotExp, removeDoneDotExp } from './js/progress-dot';
 import { onDoneLineExp, clearDoneLineExp } from './js/progress-line';
-import { addAnswersMarkupExp, addQuestionExp } from './js/add-markup';
 import { pages } from './js/pages';
 
 let pageDone = localStorage.getItem('page');
+const qtyPages = pages.length;
 
 addQuestionExp(pages, pageDone);
 addAnswersMarkupExp(pages, pageDone);
+addProgressDotMarkupExp(pages);
 
+import { addAnswersMarkupExp, addProgressDotMarkupExp, addQuestionExp } from './js/add-markup';
 const ref = {
-  progressWrap: document.querySelector('.progress__percentage'),
+  progressStart: document.querySelector('.progress__percentage-value'),
   answers: document.querySelector('.quiz-list'),
   backButton: document.querySelector('.progress__button-link--back'),
 };
@@ -23,16 +25,12 @@ const throttleScroll = throttle(renderProgress, 700);
 window.addEventListener('scroll', throttleScroll);
 
 function renderProgress() {
-  const rect = ref.progressWrap.getBoundingClientRect();
-  const isInViewport =
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+  const rect = ref.progressStart.getBoundingClientRect();
+  const isInViewport = rect.top <= document.documentElement.clientHeight;
   if (isInViewport) {
-    onPercentage(pageDone);
+    onPercentage(pageDone, qtyPages);
     onDoneDotExp(pageDone);
-    onDoneLineExp(pageDone);
+    onDoneLineExp(pageDone, qtyPages);
     return window.removeEventListener('scroll', throttleScroll);
   }
 }

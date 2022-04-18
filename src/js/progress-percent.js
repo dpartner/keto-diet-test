@@ -1,18 +1,15 @@
 const ref = {
   percentage: document.querySelector('.progress__percentage-value'),
-  allPages: document.querySelectorAll('.progress-bar__circle'),
 };
 
-export default function onPercentage(page) {
-  const qtyPages = ref.allPages.length;
-  // const perc = page * 3;
-  const perc = (100 / qtyPages) * page;
+export default function onPercentage(page, allPages) {
+  const perc = (100 / allPages) * page;
 
   let delay = 1000;
 
   for (let i = 1; i <= perc; i += 1) {
     makePromise(i, delay).then(value => changeValue(value));
-    delay = delay + 200;
+    delay = delay + 70;
   }
 }
 

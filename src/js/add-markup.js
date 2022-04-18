@@ -1,6 +1,7 @@
 const ref = {
   answerList: document.querySelector('.quiz-list'),
   question: document.querySelector('.hero__heading'),
+  dotParent: document.querySelector('.progress-bar__dot'),
 };
 
 function createAnswersMarkup(objects, pageDone) {
@@ -25,6 +26,23 @@ function addQuestion(objects, pageDone) {
   // return answersMarkup;
 }
 
+function createProgressDotMarkup(arrObj) {
+  return arrObj
+    .map(obj => {
+      return `<div class="progress-bar__circle">
+                  <span class="progress-bar__dot-desc">${obj.name}</span>
+                </div>`;
+    })
+    .join('');
+}
+
+function addProgressDotMarkup(arr) {
+  const allDotMarkup = createProgressDotMarkup(arr);
+  ref.dotParent.insertAdjacentHTML('beforeend', allDotMarkup);
+}
+
 export const addAnswersMarkupExp = (objects, pageDone) => addAnswersMarkup(objects, pageDone);
 
 export const addQuestionExp = (objects, pageDone) => addQuestion(objects, pageDone);
+
+export const addProgressDotMarkupExp = arr => addProgressDotMarkup(arr);

@@ -1,5 +1,5 @@
 const ref = {
-  allDot: document.querySelectorAll('.progress-bar__circle'),
+  allDot: document.querySelector('.progress-bar__dot').children,
 };
 
 function onDoneDot(page) {
