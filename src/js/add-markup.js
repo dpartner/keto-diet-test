@@ -7,7 +7,7 @@ function createAnswersMarkup(objects, pageDone) {
   const arrAnswers = objects.find(obj => obj.page === Number(pageDone)).answers;
   const answersMarkup = arrAnswers
     .map(answer => {
-      return `<li class="quiz-list__item"><div class="quiz-list__link" href="">${answer}</div></li>`;
+      return `<li class="quiz-list__item"><button type="button" class="quiz-list__link" href="">${answer}</button></li>`;
     })
     .join('');
   return answersMarkup;

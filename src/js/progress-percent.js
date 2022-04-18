@@ -1,11 +1,13 @@
 const ref = {
   percentage: document.querySelector('.progress__percentage-value'),
+  allPages: document.querySelectorAll('.progress-bar__circle'),
 };
 
-const pageNumber = 3;
-
 export default function onPercentage(page) {
-  const perc = page * 3;
+  const qtyPages = ref.allPages.length;
+  // const perc = page * 3;
+  const perc = (100 / qtyPages) * page;
+
   let delay = 1000;
 
   for (let i = 1; i <= perc; i += 1) {

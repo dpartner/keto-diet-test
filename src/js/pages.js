@@ -1,33 +1,46 @@
 export const pages = [
   {
     page: 1,
-    question: 'Физическая активность',
+    type: 'quiz',
+    name: '',
+    question: 'Physical activity',
     answers: [
-      'МИНИМАЛЬНАЯ ФИЗИЧЕСКАЯ АКТИВНОСТЬ',
-      'Я ЧАСТО ХОЖУ ПЕШКОМ',
-      'Я ЗАНИМАЮСЬ 1 - 2 РАЗА В НЕДЕЛЮ',
-      'Я ЗАНИМАЮСЬ 3 - 5 РАЗ В НЕДЕЛЮ',
-      'Я ЗАНИМАЮСЬ 5 - 7 РАЗ В НЕДЕЛЮ',
+      'ALMOST NO PHYSICAL ACTIVITY',
+      'I OFTEN GO FOR A WALK',
+      'I EXERCISE 1 - 2 TIMES A WEEK',
+      'I EXERCISE 3 - 5 TIMES A WEEK',
+      'I EXERCISE 5 - 7 TIMES A WEEK',
     ],
   },
   {
     page: 2,
-    question:
-      'Есть ли у вас энергия и сосредоточенность, необходимые для решения ваших повседневных задач?',
+    type: 'quiz',
+    name: '',
+    question: 'Do you have the energy and focus you need to meet your daily challenges?',
     answers: [
-      'ДА! ПОЛНОСТЬЮ ЭНЕРГЕТИЧЕСКИЙ',
-      'УРОВЕНЬ МОЕЙ ЭНЕРГИИ ПАДАЕТ В ДЕНЬ',
-      'ОБЫЧНО Я ЧУВСТВУЮ СЛАБОСТЬ И ЛЕНЬ',
-      'Я ЧУВСТВУЮ ОТВЛЕЧЕНИЕ ДАЖЕ ПОСЛЕ ЭНЕРГИЧНОСТИ',
+      'YES! TOTALLY ENERGETIC',
+      'MY ENERGY LEVELS FALL DURING THE DAY',
+      'I USUALLY FEEL WEAK AND LAZY',
+      'I FEEL DISTRACTED EVEN AFTER BEING ENERGETIC',
     ],
   },
   {
     page: 3,
-    question: 'Легко ли вам похудеть?',
+    type: 'quiz',
+    name: '',
+    question: 'Is it easy for you to lose weight?',
     answers: [
-      'ЕСЛИ Я РАБОТАЮ НА ЭТОМ - СОВЕРШЕННО ЛЕГКО',
-      'ПОТЕРЯ ВЕСА ДЛЯ МЕНЯ НЕМНОГО ТРУДНА',
-      'ЭТО ВСЕГДА БЫЛО ТЯЖЕЛО',
+      'IF I WORK ON IT - QUITE EASY',
+      'WEIGHT LOSS IS A LITTLE BIT DIFFICULT FOR ME',
+      'IT HAS ALWAYS BEEN HARD',
     ],
+  },
+  {
+    page: 4,
+    type: 'card',
+    name: 'target-weight',
+    question: '',
+    answers:
+      'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
   },
 ];

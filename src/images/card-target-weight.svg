@@ -1,0 +1,33 @@
+<svg width="404" height="366" viewBox="0 0 404 366" fill="none" xmlns="http://www.w3.org/2000/svg" class="multi-info-svg">
+<g id="target-wieght ">
+<path id="card-bgr" d="M392 0H12C5.37258 0 0 5.37259 0 12V354C0 360.627 5.37258 366 12 366H392C398.627 366 404 360.627 404 354V12C404 5.37258 398.627 0 392 0Z" fill="#151226" />
+<g id="chart">
+<g id="grid">
+<line id="Line" x1="28.5" y1="87.5" x2="379.5" y2="87.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_2" x1="28.5" y1="112.5" x2="379.5" y2="112.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_3" x1="28.5" y1="137.5" x2="379.5" y2="137.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_4" x1="28.5" y1="162.5" x2="379.5" y2="162.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_5" x1="28.5" y1="187.5" x2="379.5" y2="187.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_6" x1="28.5" y1="212.5" x2="379.5" y2="212.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_7" x1="28.5" y1="237.5" x2="379.5" y2="237.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_8" x1="28.5" y1="262.5" x2="379.5" y2="262.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_9" x1="28.5" y1="287.5" x2="379.5" y2="287.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+<line id="Line_10" x1="28.5" y1="312.5" x2="379.5" y2="312.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
+</g>
+<path id="solid" d="M28.5 318.5V99.5C28.5 99.5 145.5 125 192 164C230.644 196.411 216.5 240.5 266.5 274.5C310.565 304.464 379 305 379 305V318.5H28.5Z" fill="url(#paint0_linear_944_189)" />
+<path id="curve" d="M28.5 99.5C28.5 99.5 153.5 127.5 192 164C231.03 201.002 216.5 238 266.5 274.5C309.54 305.919 379 305 379 305" stroke="#A450FF" stroke-width="4" stroke-linecap="round" />
+<g id="pointers">
+<circle id="Ellipse" cx="379" cy="306" r="6" fill="white" stroke="#151226" stroke-width="4" />
+<circle id="Ellipse_2" cx="243" cy="253" r="6" fill="white" stroke="#151226" stroke-width="4" />
+<circle id="Ellipse_3" cx="192" cy="164" r="6" fill="white" stroke="#151226" stroke-width="4" />
+<circle id="Ellipse_4" cx="28" cy="101" r="6" fill="white" stroke="#151226" stroke-width="4" />
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_944_189" x1="570.172" y1="319" x2="570.172" y2="36.9999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8A25F8" stop-opacity="0" />
+<stop offset="1" stop-color="#8A25F8" stop-opacity="0.6" />
+</linearGradient>
+</defs>
+</svg>

@@ -82,14 +82,18 @@
         <div class="container progress__container">
           <div class="progress__percentage"><span class="progress__percentage-value">0</span>%</div>
           <div class="progress__wrap">
-            <a class="progress__button-link" href="/"
-              ><svg class="progress__button-icon">
+            <button
+              type="button"
+              class="progress__button-link progress__button-link--back"
+              href="/"
+            >
+              <svg class="progress__button-icon">
                 <use
                   class="progress__button-svg"
                   href="./images/symbol-defs.svg#icon-back-circled"
                 ></use></svg
-              >Назад</a
-            >
+              >Назад
+            </button>
             <div class="progress-bar__wrap">
               <div class="progress-bar__line">
                 <div class="progress-bar__line-back"></div>
@@ -143,13 +147,14 @@
                 </div>
               </div>
             </div>
-            <a class="progress__button-link" href="/"
-              >Помощь<svg class="progress__button-icon progress__button-icon--help">
+            <button type="button" class="progress__button-link">
+              Помощь<svg class="progress__button-icon progress__button-icon--help">
                 <use
                   class="progress__button-svg"
                   href="./images/symbol-defs.svg#icon-help-thinner"
-                ></use></svg
-            ></a>
+                ></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>

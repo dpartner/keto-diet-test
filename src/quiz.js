@@ -2,8 +2,8 @@
 // import './js/progress-line';
 import throttle from 'lodash.throttle';
 import onPercentage from './js/progress-percent';
-import { onDoneDotExp, removeOldActiveDotExp } from './js/progress-dot';
-import onDoneLine from './js/progress-line';
+import { onDoneDotExp, removeOldActiveDotExp, removeDoneDotExp } from './js/progress-dot';
+import { onDoneLineExp, clearDoneLineExp } from './js/progress-line';
 import { addAnswersMarkupExp, addQuestionExp } from './js/add-markup';
 import { pages } from './js/pages';
 
@@ -15,15 +15,15 @@ addAnswersMarkupExp(pages, pageDone);
 const ref = {
   progressWrap: document.querySelector('.progress__percentage'),
   answers: document.querySelector('.quiz-list'),
+  backButton: document.querySelector('.progress__button-link--back'),
 };
 
-const throttleScroll = throttle(doneProgress, 700);
+const throttleScroll = throttle(renderProgress, 700);
 
 window.addEventListener('scroll', throttleScroll);
 
-function doneProgress() {
+function renderProgress() {
   const rect = ref.progressWrap.getBoundingClientRect();
-  console.log(rect);
   const isInViewport =
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -32,21 +32,35 @@ function doneProgress() {
   if (isInViewport) {
     onPercentage(pageDone);
     onDoneDotExp(pageDone);
-    onDoneLine(pageDone);
+    onDoneLineExp(pageDone);
     return window.removeEventListener('scroll', throttleScroll);
   }
+}
+
+function renderMarkup(currentPage, previousPage) {
+  localStorage.setItem('page', `${currentPage}`);
+  pageDone = localStorage.getItem('page');
+  clearDoneLineExp();
+  removeDoneDotExp();
+  addQuestionExp(pages, pageDone);
+  addAnswersMarkupExp(pages, pageDone);
+  removeOldActiveDotExp(previousPage);
+  window.addEventListener('scroll', throttleScroll);
 }
 
 // -----------------------------------------
 
 ref.answers.addEventListener('click', onQuestion);
+ref.backButton.addEventListener('click', onBack);
 
-function onQuestion(e) {
+function onQuestion() {
+  const oldPage = pageDone;
   const newPage = Number(pageDone) + 1;
-  localStorage.setItem('page', `${newPage}`);
-  pageDone = localStorage.getItem('page');
-  addQuestionExp(pages, pageDone);
-  addAnswersMarkupExp(pages, pageDone);
-  removeOldActiveDotExp(pageDone - 1);
-  window.addEventListener('scroll', throttleScroll);
+  renderMarkup(newPage, oldPage);
+}
+
+function onBack() {
+  const oldPage = pageDone;
+  const newPage = Number(pageDone) - 1;
+  renderMarkup(newPage, oldPage);
 }
