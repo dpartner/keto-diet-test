@@ -2,6 +2,7 @@ const ref = {
   answerList: document.querySelector('.quiz-list'),
   question: document.querySelector('.hero__heading'),
   dotParent: document.querySelector('.progress-bar__dot'),
+  headerLogo: document.querySelector('.heading__logo'),
 };
 
 function createAnswersMarkup(objects, pageDone) {
@@ -41,8 +42,21 @@ function addProgressDotMarkup(arr) {
   ref.dotParent.insertAdjacentHTML('beforeend', allDotMarkup);
 }
 
+function addHeaderIcon(arrObj, currentPage) {
+  const icon = arrObj[currentPage - 1].icon;
+  // console.log(icon);
+  const svgMarkup = `<use
+                    class="heading__logo-svg"
+                    href="./images/symbol-defs.svg#${icon}"
+                  ></use>`;
+  ref.headerLogo.innerHTML = '';
+  ref.headerLogo.insertAdjacentHTML('beforeend', svgMarkup);
+}
+
 export const addAnswersMarkupExp = (objects, pageDone) => addAnswersMarkup(objects, pageDone);
 
 export const addQuestionExp = (objects, pageDone) => addQuestion(objects, pageDone);
 
 export const addProgressDotMarkupExp = arr => addProgressDotMarkup(arr);
+
+export const addHeaderIconExp = (arrObj, currentPage) => addHeaderIcon(arrObj, currentPage);

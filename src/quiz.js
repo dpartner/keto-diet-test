@@ -5,21 +5,26 @@ import onPercentage from './js/progress-percent';
 import { onDoneDotExp, removeOldActiveDotExp, removeDoneDotExp } from './js/progress-dot';
 import { onDoneLineExp, clearDoneLineExp } from './js/progress-line';
 import { pages } from './js/pages';
+import {
+  addAnswersMarkupExp,
+  addProgressDotMarkupExp,
+  addQuestionExp,
+  addHeaderIconExp,
+} from './js/add-markup';
 
 let pageDone = localStorage.getItem('page');
 const qtyPages = pages.length;
 
+addHeaderIconExp(pages, pageDone);
 addQuestionExp(pages, pageDone);
 addAnswersMarkupExp(pages, pageDone);
 addProgressDotMarkupExp(pages);
 
-import { addAnswersMarkupExp, addProgressDotMarkupExp, addQuestionExp } from './js/add-markup';
 const ref = {
-  progressStart: document.querySelector('.progress__percentage-value'),
+  progressStart: document.querySelector('.progress__section'),
   answers: document.querySelector('.quiz-list'),
   backButton: document.querySelector('.progress__button-link--back'),
 };
-
 const throttleScroll = throttle(renderProgress, 700);
 
 window.addEventListener('scroll', throttleScroll);
@@ -40,6 +45,7 @@ function renderMarkup(currentPage, previousPage) {
   pageDone = localStorage.getItem('page');
   clearDoneLineExp();
   removeDoneDotExp();
+  addHeaderIconExp(pages, pageDone);
   addQuestionExp(pages, pageDone);
   addAnswersMarkupExp(pages, pageDone);
   removeOldActiveDotExp(previousPage);
@@ -57,7 +63,8 @@ function onQuestion() {
   renderMarkup(newPage, oldPage);
 }
 
-function onBack() {
+function onBack(e) {
+  e.preventDefault();
   const oldPage = pageDone;
   const newPage = Number(pageDone) - 1;
   renderMarkup(newPage, oldPage);

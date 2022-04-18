@@ -11,6 +11,7 @@ export const pages = [
       'I EXERCISE 3 - 5 TIMES A WEEK',
       'I EXERCISE 5 - 7 TIMES A WEEK',
     ],
+    icon: 'icon-physical-activity',
   },
   {
     page: 2,
@@ -23,6 +24,7 @@ export const pages = [
       'I USUALLY FEEL WEAK AND LAZY',
       'I FEEL DISTRACTED EVEN AFTER BEING ENERGETIC',
     ],
+    icon: 'icon-have-energy',
   },
   {
     page: 3,
@@ -34,6 +36,7 @@ export const pages = [
       'WEIGHT LOSS IS A LITTLE BIT DIFFICULT FOR ME',
       'IT HAS ALWAYS BEEN HARD',
     ],
+    icon: 'icon-easy-to-lose-weight',
   },
   {
     page: 4,

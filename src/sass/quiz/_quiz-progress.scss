@@ -1,11 +1,12 @@
 .progress__section {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
 
 .progress__container {
   max-width: 1000px;
   position: relative;
   overflow: hidden;
+  padding: 0 5px;
 }
 
 .progress__percentage {
@@ -52,6 +53,7 @@
 
 .progress__button-link {
   height: 55px;
+  width: 160px;
   min-width: 160px;
   border-radius: 30px;
   background-color: transparent;
@@ -68,9 +70,9 @@
   z-index: 3;
 
   @media screen and (max-width: 439px) {
-    height: 35px;
-    min-width: 100px;
-    font-size: 16px;
+    height: 50px;
+    width: 140px;
+    font-size: 18px;
   }
 
   &:hover,
@@ -86,10 +88,10 @@
   margin-right: 15px;
   fill: currentColor;
 
-  @media screen and (max-width: 439px) {
-    width: 18px;
-    height: 18px;
-  }
+  // @media screen and (max-width: 439px) {
+  //   width: 24px;
+  //   height: 24px;
+  // }
 }
 
 .progress__button-icon--help {
