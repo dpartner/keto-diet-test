@@ -64,6 +64,9 @@ function onQuestion() {
 }
 
 function onBack(e) {
+  if (Number(pageDone) === 1) {
+    return;
+  }
   e.preventDefault();
   const oldPage = pageDone;
   const newPage = Number(pageDone) - 1;
