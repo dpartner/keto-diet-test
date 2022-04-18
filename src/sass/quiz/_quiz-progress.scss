@@ -158,8 +158,13 @@
     border: 3px solid var(--primary-color);
   }
 
+  &.active {
+    border-color: var(--primary-color);
+  }
+
   &.active .progress-bar__dot-desc {
     opacity: 1;
+    top: 15px;
   }
 }
 
