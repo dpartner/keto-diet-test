@@ -2,7 +2,7 @@ const ref = {
   answerList: document.querySelector('.quiz-list'),
   question: document.querySelector('.hero__heading'),
   dotParent: document.querySelector('.progress-bar__dot'),
-  headerLogo: document.querySelector('.heading__logo'),
+  headerLogo: document.querySelector('.heading__logo-svg'),
 };
 
 function createAnswersMarkup(objects, pageDone) {
@@ -43,14 +43,19 @@ function addProgressDotMarkup(arr) {
 }
 
 function addHeaderIcon(arrObj, currentPage) {
-  const icon = arrObj[currentPage - 1].icon;
+  const iconPrevious = arrObj[currentPage - 2].icon;
+  const iconCurrent = arrObj[currentPage - 1].icon;
+  const linkPrevious = ref.headerLogo.href.baseVal;
+  const linkCurrent = linkPrevious.replace(`${iconPrevious}`, `${iconCurrent}`);
+  ref.headerLogo.href.baseVal = linkCurrent;
+
   // console.log(icon);
-  const svgMarkup = `<use
-                    class="heading__logo-svg"
-                    href="./images/symbol-defs.svg#${icon}"
-                  ></use>`;
-  ref.headerLogo.innerHTML = '';
-  ref.headerLogo.insertAdjacentHTML('beforeend', svgMarkup);
+  // const svgMarkup = `<use
+  //                   class="heading__logo-svg"
+  //                   href="./images/symbol-defs.svg#${icon}"
+  //                 ></use>`;
+  // ref.headerLogo.innerHTML = '';
+  // ref.headerLogo.insertAdjacentHTML('beforeend', svgMarkup);
 }
 
 export const addAnswersMarkupExp = (objects, pageDone) => addAnswersMarkup(objects, pageDone);

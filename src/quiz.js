@@ -15,7 +15,6 @@ import {
 let pageDone = localStorage.getItem('page');
 const qtyPages = pages.length;
 
-addHeaderIconExp(pages, pageDone);
 addQuestionExp(pages, pageDone);
 addAnswersMarkupExp(pages, pageDone);
 addProgressDotMarkupExp(pages);
