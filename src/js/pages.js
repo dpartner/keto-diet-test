@@ -12,6 +12,8 @@ export const pages = [
       'I EXERCISE 5 - 7 TIMES A WEEK',
     ],
     icon: 'icon-physical-activity',
+    background: 'bg-1',
+    p: '',
   },
   {
     page: 2,
@@ -25,6 +27,8 @@ export const pages = [
       'I FEEL DISTRACTED EVEN AFTER BEING ENERGETIC',
     ],
     icon: 'icon-have-energy',
+    background: 'bg-2',
+    p: '',
   },
   {
     page: 3,
@@ -37,6 +41,8 @@ export const pages = [
       'IT HAS ALWAYS BEEN HARD',
     ],
     icon: 'icon-easy-to-lose-weight',
+    background: 'bg-3',
+    p: '',
   },
   {
     page: 4,
@@ -45,5 +51,43 @@ export const pages = [
     question: '',
     answers:
       'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
+    icon: 'icon-easy-to-lose-weight',
+    background: 'card-target-weight',
+    p: 'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
+  },
+  {
+    page: 5,
+    type: 'quiz',
+    name: 'Desired weight',
+    question: 'How long has it been since you were at your desired weight?',
+    answers: ['I AM RIGHT NOW', 'LESS THAN A YEAR AGO', 'MORE THAN A YEAR AGO', 'I CAN’T REMEMBER'],
+    icon: 'icon-since-desired-weight',
+    background: 'bg-4',
+    p: '',
+  },
+  {
+    page: 6,
+    type: 'quiz',
+    name: 'Calories',
+    question: 'Do you care about calories?',
+    answers: [
+      'YES, I COUNT CALORIES AND MACROS',
+      'I HAVE SOME IDEA ABOUT THE CALORIES OF MY DAILY MEALS',
+      'I DON’T CARE ABOUT CALORIES',
+    ],
+    icon: 'icon-care-about-calories',
+    background: 'bg-5',
+    p: '',
+  },
+  {
+    page: 7,
+    type: 'card',
+    name: 'Target weight',
+    question: '',
+    answers:
+      'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
+    icon: 'icon-easy-to-lose-weight',
+    background: 'card-target-weight',
+    p: 'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
   },
 ];

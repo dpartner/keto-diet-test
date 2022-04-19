@@ -1,33 +1,46 @@
-<svg width="404" height="366" viewBox="0 0 404 366" fill="none" xmlns="http://www.w3.org/2000/svg" class="multi-info-svg">
-<g id="target-wieght ">
-<path id="card-bgr" d="M392 0H12C5.37258 0 0 5.37259 0 12V354C0 360.627 5.37258 366 12 366H392C398.627 366 404 360.627 404 354V12C404 5.37258 398.627 0 392 0Z" fill="#151226" />
-<g id="chart">
-<g id="grid">
-<line id="Line" x1="28.5" y1="87.5" x2="379.5" y2="87.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_2" x1="28.5" y1="112.5" x2="379.5" y2="112.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_3" x1="28.5" y1="137.5" x2="379.5" y2="137.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_4" x1="28.5" y1="162.5" x2="379.5" y2="162.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_5" x1="28.5" y1="187.5" x2="379.5" y2="187.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_6" x1="28.5" y1="212.5" x2="379.5" y2="212.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_7" x1="28.5" y1="237.5" x2="379.5" y2="237.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_8" x1="28.5" y1="262.5" x2="379.5" y2="262.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_9" x1="28.5" y1="287.5" x2="379.5" y2="287.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-<line id="Line_10" x1="28.5" y1="312.5" x2="379.5" y2="312.5" stroke="white" stroke-opacity="0.1" stroke-linecap="round" stroke-dasharray="4 8" />
-</g>
-<path id="solid" d="M28.5 318.5V99.5C28.5 99.5 145.5 125 192 164C230.644 196.411 216.5 240.5 266.5 274.5C310.565 304.464 379 305 379 305V318.5H28.5Z" fill="url(#paint0_linear_944_189)" />
-<path id="curve" d="M28.5 99.5C28.5 99.5 153.5 127.5 192 164C231.03 201.002 216.5 238 266.5 274.5C309.54 305.919 379 305 379 305" stroke="#A450FF" stroke-width="4" stroke-linecap="round" />
-<g id="pointers">
-<circle id="Ellipse" cx="379" cy="306" r="6" fill="white" stroke="#151226" stroke-width="4" />
-<circle id="Ellipse_2" cx="243" cy="253" r="6" fill="white" stroke="#151226" stroke-width="4" />
-<circle id="Ellipse_3" cx="192" cy="164" r="6" fill="white" stroke="#151226" stroke-width="4" />
-<circle id="Ellipse_4" cx="28" cy="101" r="6" fill="white" stroke="#151226" stroke-width="4" />
-</g>
-</g>
-</g>
-<defs>
-<linearGradient id="paint0_linear_944_189" x1="570.172" y1="319" x2="570.172" y2="36.9999" gradientUnits="userSpaceOnUse">
-<stop stop-color="#8A25F8" stop-opacity="0" />
-<stop offset="1" stop-color="#8A25F8" stop-opacity="0.6" />
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="417px" height="366px" viewBox="0 0 417 366" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>card-target-weight</title>
+    <defs>
+        <linearGradient x1="154.542653%" y1="100.228311%" x2="154.542653%" y2="-28.5388584%" id="linearGradient-1">
+            <stop stop-color="#8A25F8" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#8A25F8" stop-opacity="0.6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="card-target-weight">
+            <path d="M388.118812,0 L11.8811881,0 C5.31938614,0 0,5.37259 0,12 L0,354 C0,360.627 5.31938614,366 11.8811881,366 L388.118812,366 C394.680198,366 400,360.627 400,354 L400,12 C400,5.37258 394.680198,0 388.118812,0 Z" id="card-bgr" fill="#151226" fill-rule="nonzero"></path>
+            <g id="chart" transform="translate(22.000000, 87.000000)">
+                <g id="grid" transform="translate(6.446281, 0.000000)" stroke="#FFFFFF" stroke-dasharray="4" stroke-linecap="round" stroke-opacity="0.1">
+                    <line x1="0" y1="0.501079914" x2="348.099174" y2="0.501079914" id="Line"></line>
+                    <line x1="0" y1="25.5550756" x2="348.099174" y2="25.5550756" id="Line_2"></line>
+                    <line x1="0" y1="50.6090713" x2="348.099174" y2="50.6090713" id="Line_3"></line>
+                    <line x1="0" y1="75.663067" x2="348.099174" y2="75.663067" id="Line_4"></line>
+                    <line x1="0" y1="100.717063" x2="348.099174" y2="100.717063" id="Line_5"></line>
+                    <line x1="0" y1="125.771058" x2="348.099174" y2="125.771058" id="Line_6"></line>
+                    <line x1="0" y1="150.825054" x2="348.099174" y2="150.825054" id="Line_7"></line>
+                    <line x1="0" y1="175.87905" x2="348.099174" y2="175.87905" id="Line_8"></line>
+                    <line x1="0" y1="200.933045" x2="348.099174" y2="200.933045" id="Line_9"></line>
+                    <line x1="0" y1="225.987041" x2="348.099174" y2="225.987041" id="Line_10"></line>
+                </g>
+                <path d="M6.44628099,232 L6.44628099,12.5269978 C6.44628099,12.5269978 122.479339,38.0820734 168.595041,77.1663067 C206.919669,109.647309 192.892562,153.831533 242.479339,187.904968 C286.180165,217.933685 354.049587,218.470842 354.049587,218.470842 L354.049587,232 L6.44628099,232 Z" id="solid" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M6.44628099,12.5269978 C6.44628099,12.5269978 130.413223,40.587473 168.595041,77.1663067 C207.302479,114.248225 192.892562,151.326134 242.479339,187.904968 C285.163636,219.391827 354.049587,218.470842 354.049587,218.470842" id="curve" stroke="#A450FF" stroke-width="4" stroke-linecap="round"></path>
+                <g id="pointers" transform="translate(0.000000, 8.017279)" fill="#FFFFFF" fill-rule="nonzero" stroke="#151226" stroke-width="4">
+                    <ellipse id="Ellipse" cx="354.049587" cy="211.455724" rx="5.95041322" ry="6.01295896"></ellipse>
+                    <ellipse id="Ellipse_2" cx="219.173554" cy="158.341253" rx="5.95041322" ry="6.01295896"></ellipse>
+                    <ellipse id="Ellipse_3" cx="168.595041" cy="69.1490281" rx="5.95041322" ry="6.01295896"></ellipse>
+                    <ellipse id="Ellipse_4" cx="5.95041322" cy="6.01295896" rx="5.95041322" ry="6.01295896"></ellipse>
+                </g>
+            </g>
+            <text id="Weight" stroke="#979797" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="28" font-weight="normal" line-spacing="14" fill="#FFFFFF">
+                <tspan x="32" y="90">Weight</tspan>
+            </text>
+            <text id="Starting-weight" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="12" font-weight="normal" fill="#FFFFFF">
+                <tspan x="32" y="348">Starting weight</tspan>
+            </text>
+            <text id="Target-weight" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="12" font-weight="normal" fill="#FFFFFF">
+                <tspan x="301" y="348">Target weight</tspan>
+            </text>
+        </g>
+    </g>
 </svg>

@@ -1,5 +1,3 @@
-// import './js/progress-percent';
-// import './js/progress-line';
 import throttle from 'lodash.throttle';
 import onPercentage from './js/progress-percent';
 import { onDoneDotExp, removeOldActiveDotExp, removeDoneDotExp } from './js/progress-dot';
@@ -7,22 +5,36 @@ import { onDoneLineExp, clearDoneLineExp } from './js/progress-line';
 import { pages } from './js/pages';
 import {
   addAnswersMarkupExp,
-  addProgressDotMarkupExp,
   addQuestionExp,
+  addBackgroundExp,
   addHeaderIconExp,
-} from './js/add-markup';
+} from './js/add-markup-answers';
+import { addProgressDotMarkupExp } from './js/add-markup-progress';
+import { addCardMarkupExp } from './js/add-markup-card';
+import backgroundsLinks from './images/quiz-bg/*.jpeg';
+import svg from './images/*.svg';
 
-let pageDone = localStorage.getItem('page');
+let pageDone = Number(localStorage.getItem('page'));
 const qtyPages = pages.length;
 
-addQuestionExp(pages, pageDone);
-addAnswersMarkupExp(pages, pageDone);
+if (pages[pageDone - 1].type === 'quiz') {
+  addBackgroundExp(pages, pageDone, backgroundsLinks);
+  addHeaderIconExp(pages, pageDone, svg);
+  addQuestionExp(pages, pageDone);
+  addAnswersMarkupExp(pages, pageDone);
+}
+
+if (pages[pageDone - 1].type === 'card') {
+  addCardMarkupExp(pages, pageDone, svg);
+}
+
 addProgressDotMarkupExp(pages);
 
 const ref = {
   progressStart: document.querySelector('.progress__section'),
   answers: document.querySelector('.quiz-list'),
   backButton: document.querySelector('.progress__button-link--back'),
+  cardNextButton: document.querySelector('.card__button-link'),
 };
 const throttleScroll = throttle(renderProgress, 700);
 
@@ -42,11 +54,18 @@ function renderProgress() {
 function renderMarkup(currentPage, previousPage) {
   localStorage.setItem('page', `${currentPage}`);
   pageDone = localStorage.getItem('page');
-  clearDoneLineExp();
   removeDoneDotExp();
-  addHeaderIconExp(pages, pageDone);
-  addQuestionExp(pages, pageDone);
-  addAnswersMarkupExp(pages, pageDone);
+  clearDoneLineExp();
+  if (pages[pageDone - 1].type === 'quiz') {
+    addBackgroundExp(pages, pageDone, backgroundsLinks);
+    addHeaderIconExp(pages, pageDone, svg);
+    addQuestionExp(pages, pageDone);
+    addAnswersMarkupExp(pages, pageDone);
+  }
+  if (pages[pageDone - 1].type === 'card') {
+    addCardMarkupExp(pages, pageDone, svg);
+  }
+
   removeOldActiveDotExp(previousPage);
   window.addEventListener('scroll', throttleScroll);
 }
@@ -55,8 +74,16 @@ function renderMarkup(currentPage, previousPage) {
 
 ref.answers.addEventListener('click', onQuestion);
 ref.backButton.addEventListener('click', onBack);
+ref.cardNextButton.addEventListener('click', onCardNext);
 
-function onQuestion() {
+function onCardNext() {
+  const oldPage = pageDone;
+  const newPage = Number(pageDone) + 1;
+  renderMarkup(newPage, oldPage);
+}
+
+function onQuestion(e) {
+  e.preventDefault();
   const oldPage = pageDone;
   const newPage = Number(pageDone) + 1;
   renderMarkup(newPage, oldPage);
