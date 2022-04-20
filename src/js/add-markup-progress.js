@@ -1,6 +1,4 @@
-const ref = {
-  dotParent: document.querySelector('.progress-bar__dot'),
-};
+import { ref } from './quiz-ref';
 
 function createProgressDotMarkup(arrObj) {
   return arrObj

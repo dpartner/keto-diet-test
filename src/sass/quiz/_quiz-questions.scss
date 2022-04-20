@@ -4,6 +4,10 @@
 
 .quiz-container {
   padding-top: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: 550px;
+  }
 }
 
 .quiz-container--card {
@@ -14,6 +18,7 @@
 }
 
 .quiz-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,14 +60,25 @@
     opacity: 0;
     border-radius: 36px;
     transition: opacity 0.2s ease-in-out;
-    background-image: linear-gradient(90deg, #f53373, #bf51e8);
+
     pointer-events: none;
   }
 
   &:hover::after {
     opacity: 1;
-    background-image: linear-gradient(90deg, #f53373, #bf51e8);
     box-shadow: 0 20px 30px 0 rgb(76 5 45 / 60%);
+  }
+}
+
+.quiz-list__item--male {
+  &::after {
+    background-image: linear-gradient(90deg, #33f5e0, #5172e8);
+  }
+}
+
+.quiz-list__item--female {
+  &::after {
+    background-image: linear-gradient(90deg, #f53373, #bf51e8);
   }
 }
 
@@ -79,79 +95,4 @@
   @media screen and (min-width: 768px) {
     font-size: 22px;
   }
-}
-
-.quiz__card-wrap {
-  width: 330px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (min-width: 768px) {
-    width: 480px;
-  }
-}
-
-.card-wrap__desc {
-  width: 100%;
-  padding: 10px;
-}
-
-.card-wrap__content {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  min-height: 320px;
-  height: 100%;
-
-  @media screen and (min-width: 768px) {
-    height: 450px;
-  }
-}
-
-.card__button-link {
-  height: 70px;
-  width: 320px;
-  min-width: 160px;
-  border-radius: 30px;
-  background-color: transparent;
-  border: 1px solid rgba(99, 97, 113, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: hsla(0, 0%, 100%, 0.5);
-  font-size: 22px;
-  font-weight: 300;
-  transition: color 0.35s ease;
-  text-align: center;
-  cursor: pointer;
-  z-index: 3;
-  position: relative;
-
-  @media screen and (max-width: 439px) {
-    height: 50px;
-    width: 140px;
-    font-size: 18px;
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-}
-
-.card__button-icon {
-  position: absolute;
-  width: 27px;
-  height: 27px;
-  right: 15px;
-  fill: currentColor;
-
-  // @media screen and (max-width: 439px) {
-  //   width: 24px;
-  //   height: 24px;
-  // }
 }

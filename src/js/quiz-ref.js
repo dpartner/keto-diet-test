@@ -1,0 +1,18 @@
+export const ref = {
+  answerList: document.querySelector('.quiz-list'),
+  answerListItem: document.querySelector('.quiz-list__item'),
+  question: document.querySelector('.hero__heading'),
+  heading: document.querySelector('.hero__heading-wrap'),
+  headerLogo: document.querySelector('.heading__logo-svg'),
+  cardWrap: document.querySelector('.card-wrap'),
+  containerHero: document.querySelector('.hero__container'),
+  backgroundMask: document.querySelector('.hero__mask-svg'),
+  cardWrapContent: document.querySelector('.card-wrap__content'),
+  cardButtonWrap: document.querySelector('.card__button-wrap '),
+  choiceWrap: document.querySelector('.quiz__choice-wrap'),
+  dotParent: document.querySelector('.progress-bar__dot'),
+  allDot: document.querySelector('.progress-bar__dot').children,
+  line: document.querySelector('.progress-bar__line-done'),
+  lineWrap: document.querySelector('.progress-bar__line'),
+  percentage: document.querySelector('.progress__percentage-value'),
+};

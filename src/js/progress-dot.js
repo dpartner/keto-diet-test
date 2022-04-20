@@ -1,6 +1,4 @@
-const ref = {
-  allDot: document.querySelector('.progress-bar__dot').children,
-};
+import { ref } from './quiz-ref';
 
 function onDoneDot(page) {
   let delay = 2200;
@@ -38,5 +36,3 @@ function removeDoneDot() {
 export const onDoneDotExp = page => onDoneDot(page);
 export const removeOldActiveDotExp = page => removeOldActiveDot(page);
 export const removeDoneDotExp = () => removeDoneDot();
-
-// onDoneDot(pageNumber);

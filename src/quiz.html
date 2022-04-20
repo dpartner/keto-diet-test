@@ -21,16 +21,6 @@
             <use class="header__logo-svg" href="./images/symbol-defs.svg#icon-keto-icon"></use>
           </svg>
         </a>
-        <!-- <div class="header__burger-wrapper">
-          <button class="header__button">
-            <span class="burger__line"></span>
-          </button>
-          <div class="header__burger-menu active">
-            <a href="" class="burger-menu__link">Центр помощи</a>
-            <a href="" class="burger-menu__link">Блог</a>
-            <a href="" class="burger-menu__link">Войти</a>
-          </div>
-        </div> -->
       </div>
     </header>
     <main>
@@ -56,26 +46,38 @@
       </section>
       <section class="section quiz__section">
         <div class="container quiz-container quiz-container--card">
-          <ul class="quiz-list">
-            <!-- <li class="quiz-list__item">
-              <a class="quiz-list__link" href="">МИНИМАЛЬНАЯ ФИЗИЧЕСКАЯ АКТИВНОСТЬ</a>
-            </li>
-            <li class="quiz-list__item">
-              <a class="quiz-list__link" href="">Я ЧАСТО ХОЖУ ПЕШКОМ</a>
-            </li>
-            <li class="quiz-list__item">
-              <a class="quiz-list__link" href="">Я ЗАНИМАЮСЬ 1 - 2 РАЗА В НЕДЕЛЮ</a>
-            </li>
-            <li class="quiz-list__item">
-              <a class="quiz-list__link" href="">Я ЗАНИМАЮСЬ 3 - 5 РАЗ В НЕДЕЛЮ</a>
-            </li>
-            <li class="quiz-list__item">
-              <a class="quiz-list__link" href="">Я ЗАНИМАЮСЬ 5 - 7 РАЗ В НЕДЕЛЮ</a>
-            </li> -->
-          </ul>
+          <ul class="quiz-list"></ul>
           <div class="quiz__card-wrap card-wrap">
-            <p class="card-wrap__desc"></p>
             <div class="card-wrap__content"></div>
+            <div class="card__button-wrap">
+              <a class="card__button-link">
+                Continue<svg class="card__button-icon">
+                  <use class="card__button-svg" href="./images/symbol-defs.svg#icon-next"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="quiz__choice-wrap">
+            <form action="">
+              <input
+                class="visually-hidden pork-hidden-checkbox"
+                type="checkbox"
+                name="email"
+                id="pork"
+              />
+              <label class="quiz__choice-label" for="pork">
+                <svg class="quiz__choice-icon">
+                  <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-pork"></use>
+                </svg>
+                <span class="quiz__choice-desc">pork</span>
+                <div class="quiz__choice-plus-wrap plus-wrap">
+                  <div class="plus-wrap__symbols-wrap">
+                    <span class="plus-wrap__symbol"></span>
+                    <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+                  </div>
+                </div>
+              </label>
+            </form>
           </div>
         </div>
       </section>

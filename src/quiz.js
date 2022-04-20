@@ -11,21 +11,31 @@ import {
 } from './js/add-markup-answers';
 import { addProgressDotMarkupExp } from './js/add-markup-progress';
 import { addCardMarkupExp } from './js/add-markup-card';
+import { addChoiceMarkupExp } from './js/add-markup-choice';
+
 import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
 
 let pageDone = Number(localStorage.getItem('page'));
+let gender = localStorage.getItem('gender');
 const qtyPages = pages.length;
 
 if (pages[pageDone - 1].type === 'quiz') {
   addBackgroundExp(pages, pageDone, backgroundsLinks);
   addHeaderIconExp(pages, pageDone, svg);
   addQuestionExp(pages, pageDone);
-  addAnswersMarkupExp(pages, pageDone);
+  addAnswersMarkupExp({ pages, pageDone, svg, gender });
 }
 
 if (pages[pageDone - 1].type === 'card') {
-  addCardMarkupExp(pages, pageDone, svg);
+  addCardMarkupExp({ pages, pageDone, svg, gender });
+}
+
+if (pages[pageDone - 1].type === 'choice') {
+  addBackgroundExp(pages, pageDone, backgroundsLinks);
+  addHeaderIconExp(pages, pageDone, svg);
+  addQuestionExp(pages, pageDone);
+  addChoiceMarkupExp({ pages, pageDone, svg, gender });
 }
 
 addProgressDotMarkupExp(pages);
@@ -60,10 +70,16 @@ function renderMarkup(currentPage, previousPage) {
     addBackgroundExp(pages, pageDone, backgroundsLinks);
     addHeaderIconExp(pages, pageDone, svg);
     addQuestionExp(pages, pageDone);
-    addAnswersMarkupExp(pages, pageDone);
+    addAnswersMarkupExp({ pages, pageDone, svg, gender });
   }
   if (pages[pageDone - 1].type === 'card') {
-    addCardMarkupExp(pages, pageDone, svg);
+    addCardMarkupExp({ pages, pageDone, svg, gender });
+  }
+  if (pages[pageDone - 1].type === 'choice') {
+    addBackgroundExp(pages, pageDone, backgroundsLinks);
+    addHeaderIconExp(pages, pageDone, svg);
+    addQuestionExp(pages, pageDone);
+    addChoiceMarkupExp({ pages, pageDone, svg, gender });
   }
 
   removeOldActiveDotExp(previousPage);

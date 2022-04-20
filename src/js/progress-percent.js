@@ -1,10 +1,7 @@
-const ref = {
-  percentage: document.querySelector('.progress__percentage-value'),
-};
+import { ref } from './quiz-ref';
 
 export default function onPercentage(page, allPages) {
-  const perc = (100 / allPages) * page;
-
+  const perc = (100 / allPages) * (page - 1);
   let delay = 1000;
 
   for (let i = 1; i <= perc; i += 1) {
@@ -22,5 +19,3 @@ function makePromise(number, delay) {
 function changeValue(value) {
   ref.percentage.textContent = value;
 }
-
-// onPercentage(pageNumber);

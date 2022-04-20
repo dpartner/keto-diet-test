@@ -1,0 +1,104 @@
+.pork-hidden-checkbox {
+  &:checked + .quiz__choice-label {
+    border-color: var(--primary-color);
+    background-color: hsla(0, 0%, 100%, 0.05);
+  }
+  &:checked + .quiz__choice-label .plus-wrap {
+    border-color: var(--primary-color);
+  }
+  &:checked + .quiz__choice-label .plus-wrap::after {
+    opacity: 1;
+  }
+  &:checked + .quiz__choice-label .plus-wrap .plus-wrap__symbol--plus {
+    transform: rotate(270deg);
+  }
+  &:checked + .quiz__choice-label .quiz__choice-icon {
+    opacity: 1;
+  }
+  &:checked + .quiz__choice-label .quiz__choice-desc {
+    opacity: 1;
+  }
+}
+
+.quiz__choice-label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  height: 150px;
+  // max-width: 140px;
+  width: 140px;
+  border-radius: 30px;
+  border: 1px solid #636171;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.quiz__choice-icon {
+  height: 56px;
+  margin-bottom: 5px;
+  width: auto;
+  max-width: 85px;
+  opacity: 0.5;
+  fill: var(--primary-color);
+  transition: opacity 0.35s ease;
+}
+
+.quiz__choice-desc {
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--primary-color);
+  opacity: 0.5;
+  transition: opacity 0.35s ease;
+  padding: 0 10px;
+  line-height: 1.3;
+  height: 2.6em;
+  overflow: hidden;
+}
+
+.plus-wrap {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: #201d34;
+  border: 1px solid #636171;
+  border-radius: 50%;
+  transition: all 0.35s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #33f5e0, #5172e8);
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
+.plus-wrap__symbols-wrap {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.plus-wrap__symbol {
+  position: absolute;
+  top: 5px;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: all 0.35s ease;
+  z-index: 5;
+}
