@@ -1,5 +1,13 @@
+.quiz-container--card {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .quiz__card-wrap {
-  width: 330px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +19,7 @@
 }
 
 .card-wrap__content {
+  width: 100%;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -27,6 +36,7 @@
 }
 
 .card-wrap__img {
+  width: 100%;
   min-height: 320px;
   height: 100%;
 
@@ -101,9 +111,9 @@
   position: relative;
 
   @media screen and (max-width: 439px) {
-    height: 50px;
-    width: 140px;
-    font-size: 18px;
+    height: 60px;
+    width: 250px;
+    font-size: 22px;
   }
 
   &:hover,
@@ -119,9 +129,4 @@
   height: 35px;
   right: 20px;
   fill: currentColor;
-
-  // @media screen and (max-width: 439px) {
-  //   width: 24px;
-  //   height: 24px;
-  // }
 }

@@ -11,41 +11,20 @@ import {
 } from './js/add-markup-answers';
 import { addProgressDotMarkupExp } from './js/add-markup-progress';
 import { addCardMarkupExp } from './js/add-markup-card';
-import { addChoiceMarkupExp } from './js/add-markup-choice';
+import { addChoiceMarkupExp, sendFormToStorageExp } from './js/add-markup-choice';
 
 import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
+import { ref } from './js/quiz-ref';
 
 let pageDone = Number(localStorage.getItem('page'));
 let gender = localStorage.getItem('gender');
 const qtyPages = pages.length;
 
-if (pages[pageDone - 1].type === 'quiz') {
-  addBackgroundExp(pages, pageDone, backgroundsLinks);
-  addHeaderIconExp(pages, pageDone, svg);
-  addQuestionExp(pages, pageDone);
-  addAnswersMarkupExp({ pages, pageDone, svg, gender });
-}
-
-if (pages[pageDone - 1].type === 'card') {
-  addCardMarkupExp({ pages, pageDone, svg, gender });
-}
-
-if (pages[pageDone - 1].type === 'choice') {
-  addBackgroundExp(pages, pageDone, backgroundsLinks);
-  addHeaderIconExp(pages, pageDone, svg);
-  addQuestionExp(pages, pageDone);
-  addChoiceMarkupExp({ pages, pageDone, svg, gender });
-}
+renderContentMarkup(pageDone);
 
 addProgressDotMarkupExp(pages);
 
-const ref = {
-  progressStart: document.querySelector('.progress__section'),
-  answers: document.querySelector('.quiz-list'),
-  backButton: document.querySelector('.progress__button-link--back'),
-  cardNextButton: document.querySelector('.card__button-link'),
-};
 const throttleScroll = throttle(renderProgress, 700);
 
 window.addEventListener('scroll', throttleScroll);
@@ -66,6 +45,14 @@ function renderMarkup(currentPage, previousPage) {
   pageDone = localStorage.getItem('page');
   removeDoneDotExp();
   clearDoneLineExp();
+
+  renderContentMarkup(currentPage);
+
+  removeOldActiveDotExp(previousPage);
+  window.addEventListener('scroll', throttleScroll);
+}
+
+function renderContentMarkup(pageDone) {
   if (pages[pageDone - 1].type === 'quiz') {
     addBackgroundExp(pages, pageDone, backgroundsLinks);
     addHeaderIconExp(pages, pageDone, svg);
@@ -81,16 +68,14 @@ function renderMarkup(currentPage, previousPage) {
     addQuestionExp(pages, pageDone);
     addChoiceMarkupExp({ pages, pageDone, svg, gender });
   }
-
-  removeOldActiveDotExp(previousPage);
-  window.addEventListener('scroll', throttleScroll);
 }
 
 // -----------------------------------------
 
-ref.answers.addEventListener('click', onQuestion);
+ref.answerList.addEventListener('click', onQuestion);
 ref.backButton.addEventListener('click', onBack);
 ref.cardNextButton.addEventListener('click', onCardNext);
+ref.choiceForm.addEventListener('submit', onSendForm);
 
 function onCardNext() {
   const oldPage = pageDone;
@@ -113,4 +98,9 @@ function onBack(e) {
   const oldPage = pageDone;
   const newPage = Number(pageDone) - 1;
   renderMarkup(newPage, oldPage);
+}
+
+function onSendForm(e) {
+  e.preventDefault();
+  sendFormToStorageExp(e, pages, pageDone);
 }

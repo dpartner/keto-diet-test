@@ -19,6 +19,7 @@ function addAnswersMarkup({ pages, pageDone: currentPage, gender }) {
   const markup = createAnswersMarkup({ pages, currentPage, gender });
   ref.heading.style.display = '';
   ref.answerList.style.display = '';
+  ref.choiceForm.style.display = 'none';
   ref.cardWrap.style.display = 'none';
   ref.containerHero.classList.remove('hero__container--card');
   ref.backgroundMask.classList.remove('hero__mask-svg--card');

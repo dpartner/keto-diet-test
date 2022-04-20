@@ -13,6 +13,7 @@ function addCardMarkup({ pages, pageDone: currentPage, svg: links, gender }) {
   const markup = createCardMarkup({ pages, currentPage, links });
   ref.heading.style.display = 'none';
   ref.answerList.style.display = 'none';
+  ref.choiceForm.style.display = 'none';
   ref.cardWrap.style.display = '';
   ref.containerHero.classList.add('hero__container--card');
   ref.containerHero.style.backgroundImage = '';

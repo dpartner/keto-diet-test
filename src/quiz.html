@@ -57,28 +57,62 @@
               </a>
             </div>
           </div>
-          <div class="quiz__choice-wrap">
-            <form action="">
-              <input
-                class="visually-hidden pork-hidden-checkbox"
-                type="checkbox"
-                name="email"
-                id="pork"
-              />
-              <label class="quiz__choice-label" for="pork">
-                <svg class="quiz__choice-icon">
-                  <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-pork"></use>
-                </svg>
-                <span class="quiz__choice-desc">pork</span>
-                <div class="quiz__choice-plus-wrap plus-wrap">
-                  <div class="plus-wrap__symbols-wrap">
-                    <span class="plus-wrap__symbol"></span>
-                    <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+          <form class="quiz__choice-form" action="">
+            <div class="quiz__choice-form-wrap">
+              <div class="quiz__choice-form-element">
+                <input
+                  class="visually-hidden pork-hidden-checkbox"
+                  type="checkbox"
+                  name="meet"
+                  id="pork"
+                  value="pork"
+                />
+                <label class="quiz__choice-label" for="pork">
+                  <svg class="quiz__choice-icon">
+                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-pork"></use>
+                  </svg>
+                  <span class="quiz__choice-desc">pork</span>
+                  <div class="quiz__choice-plus-wrap plus-wrap">
+                    <div class="plus-wrap__symbols-wrap">
+                      <span class="plus-wrap__symbol"></span>
+                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </form>
-          </div>
+                </label>
+              </div>
+              <div class="quiz__choice-form-element">
+                <input
+                  class="visually-hidden pork-hidden-checkbox"
+                  type="checkbox"
+                  name="meet"
+                  id="beef"
+                  value="beef"
+                />
+                <label class="quiz__choice-label" for="beef">
+                  <svg class="quiz__choice-icon">
+                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-beef"></use>
+                  </svg>
+                  <span class="quiz__choice-desc">beef</span>
+                  <div class="quiz__choice-plus-wrap plus-wrap">
+                    <div class="plus-wrap__symbols-wrap">
+                      <span class="plus-wrap__symbol"></span>
+                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="quiz__choice__button-wrap">
+              <button type="submit" class="quiz__choice__button-link">
+                Continue<svg class="quiz__choice__button-icon">
+                  <use
+                    class="quiz__choice__button-svg"
+                    href="./images/symbol-defs.svg#icon-next"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </section>
       <section class="section progress__section">

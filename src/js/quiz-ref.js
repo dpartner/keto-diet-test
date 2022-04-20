@@ -1,4 +1,7 @@
 export const ref = {
+  progressStart: document.querySelector('.progress__section'),
+  backButton: document.querySelector('.progress__button-link--back'),
+  cardNextButton: document.querySelector('.card__button-link'),
   answerList: document.querySelector('.quiz-list'),
   answerListItem: document.querySelector('.quiz-list__item'),
   question: document.querySelector('.hero__heading'),
@@ -9,7 +12,9 @@ export const ref = {
   backgroundMask: document.querySelector('.hero__mask-svg'),
   cardWrapContent: document.querySelector('.card-wrap__content'),
   cardButtonWrap: document.querySelector('.card__button-wrap '),
-  choiceWrap: document.querySelector('.quiz__choice-wrap'),
+  choiceForm: document.querySelector('.quiz__choice-form'),
+  choiceFormWrap: document.querySelector('.quiz__choice-form-wrap'),
+  choiceButtonWrap: document.querySelector('.quiz__choice__button-wrap'),
   dotParent: document.querySelector('.progress-bar__dot'),
   allDot: document.querySelector('.progress-bar__dot').children,
   line: document.querySelector('.progress-bar__line-done'),

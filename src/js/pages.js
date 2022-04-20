@@ -93,7 +93,10 @@ export const pages = [
     type: 'choice',
     name: 'Meat',
     question: 'Meat',
-    answers: '',
+    answers: [
+      { name: 'meet', value: 'pork', svg: 'icon-pork' },
+      { name: 'meet', value: 'beef', svg: 'icon-beef' },
+    ],
     icon: 'icon-meat',
     background: 'bg-6',
     p: 'Please select which meat you would like to be included:',
