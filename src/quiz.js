@@ -8,6 +8,7 @@ import {
   addQuestion,
   addHeaderIcon,
   addBackground,
+  sendAnswer,
 } from './js/add-markup-answers';
 import { addProgressDotMarkup } from './js/add-markup-progress';
 import { addCardMarkup } from './js/add-markup-card';
@@ -110,6 +111,7 @@ function onQuestion(e) {
   e.preventDefault();
   const oldPage = pageDone;
   const newPage = Number(pageDone) + 1;
+  sendAnswer({ e, pages, oldPage });
   renderMarkup(newPage, oldPage);
 }
 

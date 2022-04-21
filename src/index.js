@@ -14,10 +14,12 @@ import './js/menu';
 const ref = {
   female: document.querySelector('.select-gender__wrap--female'),
   male: document.querySelector('.select-gender__wrap--male'),
+  resetButton: document.querySelector('.reset-button'),
 };
 
 ref.female.addEventListener('click', onFemale);
 ref.male.addEventListener('click', onMale);
+ref.resetButton.addEventListener('click', onResetLocalStorage);
 
 function onFemale() {
   const page = 1;
@@ -29,4 +31,8 @@ function onMale() {
   const page = 1;
   localStorage.setItem('page', `${page}`);
   localStorage.setItem('gender', 'male');
+}
+
+function onResetLocalStorage() {
+  localStorage.clear();
 }

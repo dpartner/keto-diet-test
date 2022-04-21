@@ -1,4 +1,5 @@
 import { ref } from './quiz-ref';
+import { save, load } from './storage';
 
 function createAnswersMarkup({ pages, currentPage, gender }) {
   try {
@@ -29,6 +30,16 @@ const addAnswersMarkup = ({ pages, pageDone: currentPage, gender }) => {
   ref.answerList.insertAdjacentHTML('beforeend', markup);
 };
 
+const sendAnswer = ({ e, pages, oldPage: currentPage }) => {
+  const sendObject = {};
+  pages[currentPage - 1].answers.forEach(answer => {
+    sendObject[answer] = false;
+  });
+
+  sendObject[e.target.textContent] = true;
+  save(currentPage, sendObject);
+};
+
 const addQuestion = (objects, currentPage) => {
   const question = objects.find(obj => obj.page === Number(currentPage)).question;
   ref.question.textContent = `${question}`;
@@ -48,4 +59,4 @@ const addHeaderIcon = (arrObj, currentPage, links) => {
   ref.headerLogo.setAttribute('href', `${svgLink}#${iconId}`);
 };
 
-export { addAnswersMarkup, addQuestion, addHeaderIcon, addBackground };
+export { addAnswersMarkup, addQuestion, addHeaderIcon, addBackground, sendAnswer };
