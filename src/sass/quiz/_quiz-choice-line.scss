@@ -46,7 +46,6 @@
   }
   &:checked + .quiz__choice-line-label {
     border-color: var(--primary-color);
-    background-color: hsla(0, 0%, 100%, 0.05);
   }
   &:checked + .quiz__choice-line-label .quiz__choice-line-content {
     color: var(--primary-color);
@@ -125,11 +124,12 @@
   background: transparent;
   width: 100%;
   min-height: 100%;
-  padding: 5px 60px 0 30px;
+  padding: 0 60px 0 30px;
   border: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  text-align: left;
 
   @media screen and (min-width: 768px) {
     font-size: 22px;
@@ -141,7 +141,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 12px;
+  top: 7px;
   right: 13px;
   background: rgba(99, 97, 113, 0.7);
   width: 44px;
@@ -150,6 +150,10 @@
   border-radius: 50%;
   transition: all 0.35s ease;
   padding: 10px;
+
+  @media screen and (min-width: 768px) {
+    top: 12px;
+  }
 
   &::before {
     content: '';
