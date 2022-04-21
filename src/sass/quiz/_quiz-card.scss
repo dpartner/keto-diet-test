@@ -16,6 +16,9 @@
   @media screen and (min-width: 768px) {
     width: 480px;
   }
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .card-wrap__content {
@@ -29,10 +32,14 @@
 
 .card-wrap__desc {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 300;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 .card-wrap__img {
@@ -42,6 +49,10 @@
 
   @media screen and (min-width: 768px) {
     height: 450px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    height: 600px;
   }
 }
 

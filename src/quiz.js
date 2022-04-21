@@ -11,7 +11,12 @@ import {
 } from './js/add-markup-answers';
 import { addProgressDotMarkupExp } from './js/add-markup-progress';
 import { addCardMarkupExp } from './js/add-markup-card';
-import { addChoiceMarkupExp, sendFormToStorageExp } from './js/add-markup-choice';
+import {
+  addChoiceMarkupExp,
+  sendFormToStorageExp,
+  actionFormCheckboxExp,
+  checkboxDisableSendButtonExp,
+} from './js/add-markup-choice';
 
 import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
@@ -67,6 +72,7 @@ function renderContentMarkup(pageDone) {
     addHeaderIconExp(pages, pageDone, svg);
     addQuestionExp(pages, pageDone);
     addChoiceMarkupExp({ pages, pageDone, svg, gender });
+    checkboxDisableSendButtonExp();
   }
 }
 
@@ -76,6 +82,7 @@ ref.answerList.addEventListener('click', onQuestion);
 ref.backButton.addEventListener('click', onBack);
 ref.cardNextButton.addEventListener('click', onCardNext);
 ref.choiceForm.addEventListener('submit', onSendForm);
+ref.choiceForm.addEventListener('change', onFormSelect);
 
 function onCardNext() {
   const oldPage = pageDone;
@@ -102,5 +109,13 @@ function onBack(e) {
 
 function onSendForm(e) {
   e.preventDefault();
-  sendFormToStorageExp(e, pages, pageDone);
+  sendFormToStorageExp({ e, pages, pageDone });
+  const oldPage = pageDone;
+  const newPage = Number(pageDone) + 1;
+  renderMarkup(newPage, oldPage);
+}
+
+function onFormSelect(e) {
+  actionFormCheckboxExp({ e, pages, pageDone });
+  checkboxDisableSendButtonExp();
 }

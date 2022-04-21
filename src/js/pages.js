@@ -94,11 +94,68 @@ export const pages = [
     name: 'Meat',
     question: 'Meat',
     answers: [
-      { name: 'meet', value: 'pork', svg: 'icon-pork' },
-      { name: 'meet', value: 'beef', svg: 'icon-beef' },
+      { name: 'meet', value: 'chicken', svg: 'icon-chicken', type: 'answer' }, ///имя у всех чекбоксов должно быть одинаково
+      { name: 'meet', value: 'pork', svg: 'icon-pork', type: 'answer' },
+      { name: 'meet', value: 'beef', svg: 'icon-beef', type: 'answer' },
+      { name: 'meet', value: 'bacon', svg: 'icon-bacon', type: 'answer' },
+      { name: 'meet', value: 'cod', svg: 'icon-cod', type: 'answer' },
+      { name: 'meet', value: 'salmon', svg: 'icon-salmon', type: 'answer' },
+      { name: 'meet', value: 'tuna', svg: 'icon-tuna', type: 'answer' },
+      { name: 'meet', value: 'no-meat', svg: 'icon-no-meat', type: 'none' }, ///отрицательный тип ответа должен стоять всегда вконце
     ],
     icon: 'icon-meat',
     background: 'bg-6',
     p: 'Please select which meat you would like to be included:',
+  },
+  {
+    page: 9,
+    type: 'choice',
+    name: 'Veggies',
+    question: 'Veggies',
+    answers: [
+      { name: 'veggies', value: 'broccoli', svg: 'icon-broccoli', type: 'answer' }, ///имя у всех чекбоксов должно быть одинаково
+      { name: 'veggies', value: 'mushrooms', svg: 'icon-mushrooms', type: 'answer' },
+      { name: 'veggies', value: 'zucchini', svg: 'icon-zucchini', type: 'answer' },
+      { name: 'veggies', value: 'cauliflower', svg: 'icon-cauliflower', type: 'answer' },
+      { name: 'veggies', value: 'aspargus', svg: 'icon-aspargus', type: 'answer' },
+      { name: 'veggies', value: 'avocado', svg: 'icon-avocado', type: 'answer' }, ///отрицательный тип ответа должен стоять всегда вконце и type: 'none'
+    ],
+    icon: 'icon-veggies',
+    background: 'bg-7',
+    p: 'Please select which veggies you would like to be included:',
+  },
+  {
+    page: 10,
+    type: 'choice',
+    name: 'Products',
+    question: 'Products',
+    answers: [
+      { name: 'products', value: 'eggs', svg: 'icon-eggs', type: 'answer' }, ///имя у всех чекбоксов должно быть одинаково
+      { name: 'products', value: 'nuts', svg: 'icon-nuts', type: 'answer' },
+      { name: 'products', value: 'cheese', svg: 'icon-cheese', type: 'answer' },
+      { name: 'products', value: 'cottage-cheese', svg: 'icon-cottagecheese', type: 'answer' },
+      { name: 'products', value: 'butter', svg: 'icon-butter', type: 'answer' },
+      { name: 'products', value: 'coconut', svg: 'icon-coconut', type: 'answer' },
+      { name: 'products', value: 'tofu', svg: 'icon-tofu', type: 'answer' }, ///отрицательный тип ответа должен стоять всегда вконце и type: 'none'
+    ],
+    icon: 'icon-products',
+    background: 'bg-8',
+    p: 'Please select which products you would like to be included:',
+  },
+  {
+    page: 11,
+    type: 'quiz',
+    name: 'Everyday',
+    question: 'Describe a typical day for you',
+    answers: [
+      'AT THE OFFICE',
+      'AT THE OFFICE, BUT I GO OUT ON A REGULAR BASIS',
+      'I SPEND THE BETTER PART OF THE DAY ON FOOT',
+      'MANUAL LABOR',
+      'I MOSTLY STAY AT HOME',
+    ],
+    icon: 'icon-sunday',
+    background: 'bg-9',
+    p: '',
   },
 ];
