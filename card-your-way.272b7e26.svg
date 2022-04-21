@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="404px" height="372px" viewBox="0 0 404 372" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>card-your-way</title>
+    <defs>
+        <linearGradient x1="100%" y1="100.228311%" x2="100%" y2="-35.6164384%" id="linearGradient-1">
+            <stop stop-color="#A7E231" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#A7E231" stop-opacity="0.6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100.41841%" x2="100%" y2="-148.535565%" id="linearGradient-2">
+            <stop stop-color="#F53373" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#F53373" stop-opacity="0.6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="card-your-way">
+            <path d="M392,0 L12,0 C5.37258,0 0,5.37259 0,12 L0,354 C0,360.627 5.37258,366 12,366 L392,366 C398.627,366 404,360.627 404,354 L404,12 C404,5.37258 398.627,0 392,0 Z" id="card-bgr" fill="#151226" fill-rule="nonzero"></path>
+            <g id="chart" transform="translate(28.500000, 87.000000)">
+                <g id="lines" stroke="#FFFFFF" stroke-dasharray="4" stroke-linecap="round" stroke-opacity="0.1">
+                    <line x1="0" y1="0.5" x2="351" y2="0.5" id="Line-12"></line>
+                    <line x1="0" y1="25.5" x2="351" y2="25.5" id="Line-13"></line>
+                    <line x1="0" y1="50.5" x2="351" y2="50.5" id="Line-14"></line>
+                    <line x1="0" y1="75.5" x2="351" y2="75.5" id="Line-15"></line>
+                    <line x1="0" y1="100.5" x2="351" y2="100.5" id="Line-16"></line>
+                    <line x1="0" y1="125.5" x2="351" y2="125.5" id="Line-17"></line>
+                    <line x1="0" y1="150.5" x2="351" y2="150.5" id="Line-18"></line>
+                    <line x1="0" y1="175.5" x2="351" y2="175.5" id="Line-19"></line>
+                    <line x1="0" y1="200.5" x2="351" y2="200.5" id="Line-20"></line>
+                    <line x1="0" y1="225.5" x2="351" y2="225.5" id="Line-21"></line>
+                </g>
+                <path d="M350.5,231.5 L350.5,12.5 L239.594,46.03 C201.262,57.619 170.903,87.033 158.108,124.98 C143.566,168.11 106.529,199.783 61.664,207.455 L0,218 L0,231.5 L350.5,231.5 Z" id="solid-green" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M350.5,12.5 L239.594,46.03 C201.262,57.619 170.903,87.033 158.108,124.98 L158.108,124.98 C143.566,168.11 106.529,199.783 61.664,207.455 L0,218" id="curve-green" stroke="#A7E231" stroke-width="4" stroke-linecap="round"></path>
+                <path d="M350.5,231.5 L350.5,112 L292.617,126.471 C271.568,131.733 255.041,148.018 249.468,168.987 C243.409,191.791 224.467,208.874 201.16,212.554 L173,217 L173,231.5 L350.5,231.5 Z" id="solid-red" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                <path d="M350.5,112 L292.617,126.471 C271.568,131.733 255.041,148.018 249.468,168.987 L249.468,168.987 C243.409,191.791 224.467,208.874 201.16,212.554 L173,217" id="curve-red" stroke="#F53373" stroke-width="4" stroke-linecap="round"></path>
+                <g id="pointers" transform="translate(344.500000, 8.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#151226" stroke-width="4">
+                    <circle id="Ellipse" cx="6" cy="104" r="6"></circle>
+                    <circle id="Ellipse_2" cx="6" cy="6" r="6"></circle>
+                </g>
+            </g>
+            <text id="Half-way-to-your-goa" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="28" font-weight="normal" fill="#FFFFFF">
+                <tspan x="22" y="54">Half way to your goal</tspan>
+            </text>
+            <text id="Today" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="12" font-weight="normal" fill="#FFFFFF">
+                <tspan x="25" y="344">Today</tspan>
+            </text>
+            <text id="In-1-week" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="12" font-weight="normal" fill="#FFFFFF">
+                <tspan x="170.818359" y="344">In 1 week</tspan>
+            </text>
+            <text id="In-4-weeks" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="12" font-weight="normal" fill="#FFFFFF">
+                <tspan x="315.818359" y="344">In 4 weeks</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" x="313" y="61" width="63" height="16" rx="4"></rect>
+            <polygon id="Triangle" fill="#D8D8D8" transform="translate(361.345214, 76.774417) rotate(16.000000) translate(-361.345214, -76.774417) " points="361.345214 63.7744167 372.345214 89.7744167 350.345214 78.7622365"></polygon>
+            <text id="Keto-journey" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="10" font-weight="normal" fill="#000000">
+                <tspan x="315.92627" y="72">Keto journey</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" x="303" y="157" width="79" height="16" rx="4"></rect>
+            <polygon id="Triangle" fill="#D8D8D8" transform="translate(367.345214, 172.774417) rotate(16.000000) translate(-367.345214, -172.774417) " points="367.345214 159.774417 378.345214 185.774417 356.345214 174.762236"></polygon>
+            <text id="Аchieved-results" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="10" font-weight="normal" fill="#000000">
+                <tspan x="305.31543" y="168">Аchieved results</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
