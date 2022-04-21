@@ -10,9 +10,9 @@ function createProgressDotMarkup(arrObj) {
     .join('');
 }
 
-function addProgressDotMarkup(arr) {
+const addProgressDotMarkup = arr => {
   const allDotMarkup = createProgressDotMarkup(arr);
   ref.dotParent.insertAdjacentHTML('beforeend', allDotMarkup);
-}
+};
 
-export const addProgressDotMarkupExp = arr => addProgressDotMarkup(arr);
+export { addProgressDotMarkup };

@@ -1,22 +1,28 @@
 import throttle from 'lodash.throttle';
 import onPercentage from './js/progress-percent';
-import { onDoneDotExp, removeOldActiveDotExp, removeDoneDotExp } from './js/progress-dot';
-import { onDoneLineExp, clearDoneLineExp } from './js/progress-line';
+import { onDoneDot, removeOldActiveDot, removeDoneDot } from './js/progress-dot';
+import { onDoneLine, clearDoneLine } from './js/progress-line';
 import { pages } from './js/pages';
 import {
-  addAnswersMarkupExp,
-  addQuestionExp,
-  addBackgroundExp,
-  addHeaderIconExp,
+  addAnswersMarkup,
+  addQuestion,
+  addHeaderIcon,
+  addBackground,
 } from './js/add-markup-answers';
-import { addProgressDotMarkupExp } from './js/add-markup-progress';
-import { addCardMarkupExp } from './js/add-markup-card';
+import { addProgressDotMarkup } from './js/add-markup-progress';
+import { addCardMarkup } from './js/add-markup-card';
 import {
-  addChoiceMarkupExp,
-  sendFormToStorageExp,
-  actionFormCheckboxExp,
-  checkboxDisableSendButtonExp,
+  addChoiceMarkup,
+  sendFormToStorage,
+  actionFormCheckbox,
+  checkboxDisableSendButton,
 } from './js/add-markup-choice';
+import {
+  addChoiceMarkupLine,
+  sendFormToStorageLine,
+  actionFormCheckboxLine,
+  checkboxDisableSendButtonLine,
+} from './js/add-markup-choice-line';
 
 import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
@@ -28,7 +34,7 @@ const qtyPages = pages.length;
 
 renderContentMarkup(pageDone);
 
-addProgressDotMarkupExp(pages);
+addProgressDotMarkup(pages);
 
 const throttleScroll = throttle(renderProgress, 700);
 
@@ -39,8 +45,8 @@ function renderProgress() {
   const isInViewport = rect.top <= document.documentElement.clientHeight;
   if (isInViewport) {
     onPercentage(pageDone, qtyPages);
-    onDoneDotExp(pageDone);
-    onDoneLineExp(pageDone, qtyPages);
+    onDoneDot(pageDone);
+    onDoneLine(pageDone, qtyPages);
     return window.removeEventListener('scroll', throttleScroll);
   }
 }
@@ -48,31 +54,39 @@ function renderProgress() {
 function renderMarkup(currentPage, previousPage) {
   localStorage.setItem('page', `${currentPage}`);
   pageDone = localStorage.getItem('page');
-  removeDoneDotExp();
-  clearDoneLineExp();
+  removeDoneDot();
+  clearDoneLine();
 
   renderContentMarkup(currentPage);
 
-  removeOldActiveDotExp(previousPage);
+  removeOldActiveDot(previousPage);
+  renderProgress();
   window.addEventListener('scroll', throttleScroll);
 }
 
 function renderContentMarkup(pageDone) {
   if (pages[pageDone - 1].type === 'quiz') {
-    addBackgroundExp(pages, pageDone, backgroundsLinks);
-    addHeaderIconExp(pages, pageDone, svg);
-    addQuestionExp(pages, pageDone);
-    addAnswersMarkupExp({ pages, pageDone, svg, gender });
+    addBackground(pages, pageDone, backgroundsLinks);
+    addHeaderIcon(pages, pageDone, svg);
+    addQuestion(pages, pageDone);
+    addAnswersMarkup({ pages, pageDone, svg, gender });
   }
   if (pages[pageDone - 1].type === 'card') {
-    addCardMarkupExp({ pages, pageDone, svg, gender });
+    addCardMarkup({ pages, pageDone, svg, gender });
   }
   if (pages[pageDone - 1].type === 'choice') {
-    addBackgroundExp(pages, pageDone, backgroundsLinks);
-    addHeaderIconExp(pages, pageDone, svg);
-    addQuestionExp(pages, pageDone);
-    addChoiceMarkupExp({ pages, pageDone, svg, gender });
-    checkboxDisableSendButtonExp();
+    addBackground(pages, pageDone, backgroundsLinks);
+    addHeaderIcon(pages, pageDone, svg);
+    addQuestion(pages, pageDone);
+    addChoiceMarkup({ pages, pageDone, svg, gender });
+    checkboxDisableSendButton();
+  }
+  if (pages[pageDone - 1].type === 'choice-line') {
+    addBackground(pages, pageDone, backgroundsLinks);
+    addHeaderIcon(pages, pageDone, svg);
+    addQuestion(pages, pageDone);
+    addChoiceMarkupLine({ pages, pageDone, svg, gender });
+    checkboxDisableSendButtonLine();
   }
 }
 
@@ -83,6 +97,8 @@ ref.backButton.addEventListener('click', onBack);
 ref.cardNextButton.addEventListener('click', onCardNext);
 ref.choiceForm.addEventListener('submit', onSendForm);
 ref.choiceForm.addEventListener('change', onFormSelect);
+ref.choiceFormLine.addEventListener('submit', onSendLineForm);
+ref.choiceFormLine.addEventListener('change', onFormLineSelect);
 
 function onCardNext() {
   const oldPage = pageDone;
@@ -109,13 +125,26 @@ function onBack(e) {
 
 function onSendForm(e) {
   e.preventDefault();
-  sendFormToStorageExp({ e, pages, pageDone });
+  sendFormToStorage({ e, pages, pageDone });
   const oldPage = pageDone;
   const newPage = Number(pageDone) + 1;
   renderMarkup(newPage, oldPage);
 }
 
 function onFormSelect(e) {
-  actionFormCheckboxExp({ e, pages, pageDone });
-  checkboxDisableSendButtonExp();
+  actionFormCheckbox({ e, pages, pageDone });
+  checkboxDisableSendButton();
+}
+
+function onSendLineForm(e) {
+  e.preventDefault();
+  sendFormToStorageLine({ e, pages, pageDone });
+  const oldPage = pageDone;
+  const newPage = Number(pageDone) + 1;
+  renderMarkup(newPage, oldPage);
+}
+
+function onFormLineSelect(e) {
+  actionFormCheckboxLine({ e, pages, pageDone });
+  checkboxDisableSendButtonLine();
 }

@@ -2,14 +2,11 @@ import { ref } from './quiz-ref';
 import { save, load } from './storage';
 
 function createChoiceMarkup({ pages, currentPage, svg }) {
-  console.log(pages[currentPage - 1].answers);
   const arrValues = pages[currentPage - 1].answers.map(answer => answer.value);
   const arrSvg = pages[currentPage - 1].answers.map(answer => answer.svg);
   const arrType = pages[currentPage - 1].answers.map(answer => answer.type);
   const name = pages[currentPage - 1].answers[0].name;
   const svgLink = svg['symbol-defs'];
-  console.log(arrValues);
-  console.log(arrSvg);
   return arrValues
     .map((value, index) => {
       return `<div class="quiz__choice-form-element">
@@ -38,10 +35,12 @@ function createChoiceMarkup({ pages, currentPage, svg }) {
     .join('');
 }
 
-function addChoiceMarkup({ pages, currentPage, svg, gender }) {
+const addChoiceMarkup = ({ pages, pageDone: currentPage, svg, gender }) => {
   ref.heading.style.display = '';
   ref.choiceForm.style.display = '';
   ref.cardWrap.style.display = 'none';
+  ref.answerList.style.display = 'none';
+  ref.choiceFormLine.style.display = 'none';
   ref.containerHero.classList.remove('hero__container--card');
   ref.backgroundMask.classList.remove('hero__mask-svg--card');
   gender === 'male'
@@ -55,29 +54,27 @@ function addChoiceMarkup({ pages, currentPage, svg, gender }) {
   const choiceMarkup = createChoiceMarkup({ pages, currentPage, svg });
   ref.choiceFormWrap.innerHTML = '';
   ref.choiceFormWrap.insertAdjacentHTML('beforeend', choiceMarkup);
-}
+};
 
-function sendFormToStorage({ e, pages, pageDone: currentPage }) {
+const sendFormToStorage = ({ e, pages, pageDone: currentPage }) => {
   const arrNames = pages[currentPage - 1].answers.map(answer => answer.value);
   const pageName = pages[currentPage - 1].answers[0].name;
   const formValues = {};
   for (let i = 0; i < arrNames.length; i += 1) {
     const isChecked = e.currentTarget[pageName][i].checked;
-    console.log(isChecked);
     isChecked ? (formValues[arrNames[i]] = true) : (formValues[arrNames[i]] = false);
   }
 
   save(`${currentPage}`, formValues);
-}
+};
 
-function actionFormCheckbox({ e, pages, pageDone }) {
-  console.log(4);
+const actionFormCheckbox = ({ e, pages, pageDone }) => {
   const allCheckboxes = ref.choiceFormWrap.children;
   const qtyNotLastCheckbox = allCheckboxes.length - 1;
   const arrNames = pages[pageDone - 1].answers.map(answer => answer.value);
 
   if (e.target.dataset.type !== 'none') {
-    sendFormToStorageExp({ e, pages, pageDone });
+    sendFormToStorage({ e, pages, pageDone });
   }
 
   if (e.target.dataset.type === 'none' && e.target.checked === false) {
@@ -92,34 +89,24 @@ function actionFormCheckbox({ e, pages, pageDone }) {
       allCheckboxes[i].children[0].setAttribute('disabled', 'true');
     }
   }
-}
+};
 
-function checkboxDisableSendButton() {
+const checkboxDisableSendButton = () => {
   const allCheckboxes = ref.choiceFormWrap.children;
   let qtyCheckedCheckboxes = 0;
 
   for (let i = 0; i < allCheckboxes.length; i += 1) {
     if (allCheckboxes[i].children[0].checked === false) {
       qtyCheckedCheckboxes += 1;
-      console.log(1);
     }
   }
   if (qtyCheckedCheckboxes === allCheckboxes.length) {
     ref.choiceButton.setAttribute('disabled', 'true');
-    console.log(2);
+    ref.choiceButtonWrap.classList.add('quiz__choice__button-wrap--disabled');
   } else {
     ref.choiceButton.removeAttribute('disabled');
-    console.log(3);
+    ref.choiceButtonWrap.classList.remove('quiz__choice__button-wrap--disabled');
   }
-}
+};
 
-export const addChoiceMarkupExp = ({ pages, pageDone: currentPage, svg, gender }) =>
-  addChoiceMarkup({ pages, currentPage, svg, gender });
-
-export const sendFormToStorageExp = ({ e, pages, pageDone }) =>
-  sendFormToStorage({ e, pages, pageDone });
-
-export const actionFormCheckboxExp = ({ e, pages, pageDone }) =>
-  actionFormCheckbox({ e, pages, pageDone });
-
-export const checkboxDisableSendButtonExp = () => checkboxDisableSendButton();
+export { addChoiceMarkup, sendFormToStorage, actionFormCheckbox, checkboxDisableSendButton };

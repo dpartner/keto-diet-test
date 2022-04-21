@@ -1,6 +1,6 @@
 import { ref } from './quiz-ref';
 
-function onDoneDot(page) {
+const onDoneDot = page => {
   let delay = 2200;
   ref.allDot[page].classList.add('active');
 
@@ -8,7 +8,7 @@ function onDoneDot(page) {
     makePromise(i, delay).then(value => addClass(value));
     delay = delay + 600;
   }
-}
+};
 
 function makePromise(number, delay) {
   return new Promise(resolve => {
@@ -20,19 +20,21 @@ function addClass(numberOfChild) {
   ref.allDot[numberOfChild].classList.add('done');
 }
 
-function removeOldActiveDot(page) {
+const removeOldActiveDot = page => {
   ref.allDot[page].classList.remove('active');
-}
+};
 
-function removeDoneDot() {
+const removeDoneDot = () => {
   const qtyPages = ref.allDot.length;
   for (let i = 0; i < qtyPages; i += 1) {
     if (ref.allDot[i].classList.contains('done')) {
       ref.allDot[i].classList.remove('done');
     }
   }
-}
+};
 
-export const onDoneDotExp = page => onDoneDot(page);
-export const removeOldActiveDotExp = page => removeOldActiveDot(page);
-export const removeDoneDotExp = () => removeDoneDot();
+export { onDoneDot, removeOldActiveDot, removeDoneDot };
+
+// export const onDoneDotExp = page => onDoneDot(page);
+// export const removeOldActiveDotExp = page => removeOldActiveDot(page);
+// export const removeDoneDotExp = () => removeDoneDot();

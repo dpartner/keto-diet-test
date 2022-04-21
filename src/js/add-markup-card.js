@@ -9,11 +9,12 @@ function createCardMarkup({ pages, currentPage, links }) {
               <img class="card-wrap__img" src="${svgLink}" alt="" />`;
 }
 
-function addCardMarkup({ pages, pageDone: currentPage, svg: links, gender }) {
+const addCardMarkup = ({ pages, pageDone: currentPage, svg: links, gender }) => {
   const markup = createCardMarkup({ pages, currentPage, links });
   ref.heading.style.display = 'none';
   ref.answerList.style.display = 'none';
   ref.choiceForm.style.display = 'none';
+  ref.choiceFormLine.style.display = 'none';
   ref.cardWrap.style.display = '';
   ref.containerHero.classList.add('hero__container--card');
   ref.containerHero.style.backgroundImage = '';
@@ -24,7 +25,6 @@ function addCardMarkup({ pages, pageDone: currentPage, svg: links, gender }) {
 
   ref.cardWrapContent.innerHTML = '';
   ref.cardWrapContent.insertAdjacentHTML('beforeend', markup);
-}
+};
 
-export const addCardMarkupExp = ({ pages, pageDone, svg, gender }) =>
-  addCardMarkup({ pages, pageDone, svg, gender });
+export { addCardMarkup };
