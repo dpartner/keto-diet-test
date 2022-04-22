@@ -35,7 +35,7 @@ function createChoiceMarkup({ pages, currentPage, svg }) {
     .join('');
 }
 
-const addChoiceMarkup = ({ pages, pageDone: currentPage, svg, gender }) => {
+const addChoiceMarkup = ({ pages, newPage: currentPage, svg, gender }) => {
   ref.heading.style.display = '';
   ref.choiceForm.style.display = '';
   ref.cardWrap.style.display = 'none';
@@ -69,6 +69,7 @@ const sendFormToStorage = ({ e, pages, pageDone: currentPage }) => {
 };
 
 const actionFormCheckbox = ({ e, pages, pageDone }) => {
+  console.log(pageDone);
   const allCheckboxes = ref.choiceFormWrap.children;
   const qtyNotLastCheckbox = allCheckboxes.length - 1;
   const arrNames = pages[pageDone - 1].answers.map(answer => answer.value);

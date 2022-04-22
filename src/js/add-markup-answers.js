@@ -16,7 +16,7 @@ function createAnswersMarkup({ pages, currentPage, gender }) {
   }
 }
 
-const addAnswersMarkup = ({ pages, pageDone: currentPage, gender }) => {
+const addAnswersMarkup = ({ pages, newPage: currentPage, gender }) => {
   const markup = createAnswersMarkup({ pages, currentPage, gender });
   ref.heading.style.display = '';
   ref.answerList.style.display = '';
@@ -32,6 +32,7 @@ const addAnswersMarkup = ({ pages, pageDone: currentPage, gender }) => {
 
 const sendAnswer = ({ e, pages, oldPage: currentPage }) => {
   const sendObject = {};
+  // console.log(currentPage);
   pages[currentPage - 1].answers.forEach(answer => {
     sendObject[answer] = false;
   });

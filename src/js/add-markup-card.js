@@ -9,7 +9,7 @@ function createCardMarkup({ pages, currentPage, links }) {
               <img class="card-wrap__img" src="${svgLink}" alt="" />`;
 }
 
-const addCardMarkup = ({ pages, pageDone: currentPage, svg: links, gender }) => {
+const addCardMarkup = ({ pages, newPage: currentPage, svg: links, gender }) => {
   const markup = createCardMarkup({ pages, currentPage, links });
   ref.heading.style.display = 'none';
   ref.answerList.style.display = 'none';

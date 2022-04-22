@@ -40,7 +40,7 @@ function createChoiceMarkupLine({ pages, currentPage, svg }) {
     .join('');
 }
 
-const addChoiceMarkupLine = ({ pages, pageDone: currentPage, svg, gender }) => {
+const addChoiceMarkupLine = ({ pages, newPage: currentPage, svg, gender }) => {
   ref.heading.style.display = '';
   ref.choiceFormLine.style.display = '';
   ref.cardWrap.style.display = 'none';

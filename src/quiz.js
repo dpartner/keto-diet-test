@@ -30,9 +30,14 @@ import svg from './images/*.svg';
 import { ref } from './js/quiz-ref';
 
 let pageDone = Number(localStorage.getItem('page'));
+if (pageDone === 0) {
+  pageDone = 1;
+}
 let gender = localStorage.getItem('gender');
+if (gender === null) {
+  gender = 'female';
+}
 const qtyPages = pages.length;
-
 renderContentMarkup(pageDone);
 
 addProgressDotMarkup(pages);
@@ -52,41 +57,43 @@ function renderProgress() {
   }
 }
 
-function renderMarkup(currentPage, previousPage) {
-  localStorage.setItem('page', `${currentPage}`);
+function renderMarkup({ newPage, oldPage }) {
+  console.log(newPage);
+  console.log(oldPage);
+  localStorage.setItem('page', `${newPage}`);
   pageDone = localStorage.getItem('page');
   removeDoneDot();
   clearDoneLine();
 
-  renderContentMarkup(currentPage);
+  renderContentMarkup(newPage);
 
-  removeOldActiveDot(previousPage);
+  removeOldActiveDot(oldPage);
   renderProgress();
   window.addEventListener('scroll', throttleScroll);
 }
 
-function renderContentMarkup(pageDone) {
-  if (pages[pageDone - 1].type === 'quiz') {
-    addBackground(pages, pageDone, backgroundsLinks);
-    addHeaderIcon(pages, pageDone, svg);
-    addQuestion(pages, pageDone);
-    addAnswersMarkup({ pages, pageDone, svg, gender });
+function renderContentMarkup(newPage) {
+  if (pages[newPage - 1].type === 'quiz') {
+    addBackground(pages, newPage, backgroundsLinks);
+    addHeaderIcon(pages, newPage, svg);
+    addQuestion(pages, newPage);
+    addAnswersMarkup({ pages, newPage, svg, gender });
   }
-  if (pages[pageDone - 1].type === 'card') {
-    addCardMarkup({ pages, pageDone, svg, gender });
+  if (pages[newPage - 1].type === 'card') {
+    addCardMarkup({ pages, newPage, svg, gender });
   }
-  if (pages[pageDone - 1].type === 'choice') {
-    addBackground(pages, pageDone, backgroundsLinks);
-    addHeaderIcon(pages, pageDone, svg);
-    addQuestion(pages, pageDone);
-    addChoiceMarkup({ pages, pageDone, svg, gender });
+  if (pages[newPage - 1].type === 'choice') {
+    addBackground(pages, newPage, backgroundsLinks);
+    addHeaderIcon(pages, newPage, svg);
+    addQuestion(pages, newPage);
+    addChoiceMarkup({ pages, newPage, svg, gender });
     checkboxDisableSendButton();
   }
-  if (pages[pageDone - 1].type === 'choice-line') {
-    addBackground(pages, pageDone, backgroundsLinks);
-    addHeaderIcon(pages, pageDone, svg);
-    addQuestion(pages, pageDone);
-    addChoiceMarkupLine({ pages, pageDone, svg, gender });
+  if (pages[newPage - 1].type === 'choice-line') {
+    addBackground(pages, newPage, backgroundsLinks);
+    addHeaderIcon(pages, newPage, svg);
+    addQuestion(pages, newPage);
+    addChoiceMarkupLine({ pages, newPage, svg, gender });
     checkboxDisableSendButtonLine();
   }
 }
@@ -102,17 +109,17 @@ ref.choiceFormLine.addEventListener('submit', onSendLineForm);
 ref.choiceFormLine.addEventListener('change', onFormLineSelect);
 
 function onCardNext() {
-  const oldPage = pageDone;
+  const oldPage = Number(pageDone);
   const newPage = Number(pageDone) + 1;
-  renderMarkup(newPage, oldPage);
+  renderMarkup({ newPage, oldPage });
 }
 
 function onQuestion(e) {
   e.preventDefault();
-  const oldPage = pageDone;
+  const oldPage = Number(pageDone);
   const newPage = Number(pageDone) + 1;
   sendAnswer({ e, pages, oldPage });
-  renderMarkup(newPage, oldPage);
+  renderMarkup({ newPage, oldPage });
 }
 
 function onBack(e) {
@@ -120,17 +127,17 @@ function onBack(e) {
     return;
   }
   e.preventDefault();
-  const oldPage = pageDone;
+  const oldPage = Number(pageDone);
   const newPage = Number(pageDone) - 1;
-  renderMarkup(newPage, oldPage);
+  renderMarkup({ newPage, oldPage });
 }
 
 function onSendForm(e) {
   e.preventDefault();
   sendFormToStorage({ e, pages, pageDone });
-  const oldPage = pageDone;
+  const oldPage = Number(pageDone);
   const newPage = Number(pageDone) + 1;
-  renderMarkup(newPage, oldPage);
+  renderMarkup({ newPage, oldPage });
 }
 
 function onFormSelect(e) {
@@ -141,9 +148,9 @@ function onFormSelect(e) {
 function onSendLineForm(e) {
   e.preventDefault();
   sendFormToStorageLine({ e, pages, pageDone });
-  const oldPage = pageDone;
+  const oldPage = Number(pageDone);
   const newPage = Number(pageDone) + 1;
-  renderMarkup(newPage, oldPage);
+  renderMarkup({ newPage, oldPage });
 }
 
 function onFormLineSelect(e) {
