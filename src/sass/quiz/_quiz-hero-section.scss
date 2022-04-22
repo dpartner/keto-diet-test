@@ -45,7 +45,7 @@
 
   @media screen and (min-width: 768px) {
     transform: rotate(180deg) scale(1.8) translateX(-150px);
-    bottom: -36%;
+    // bottom: -36%;
   }
 }
 
@@ -162,10 +162,13 @@
   font-size: 50px;
   font-weight: 100;
   color: var(--primary-color);
+  width: 100%;
   max-width: 520px;
   text-align: center;
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 30px 15px 0;
   margin-left: auto;
   margin-right: auto;
