@@ -410,4 +410,14 @@ export const pages = [
     background: 'bg-24',
     p: 'You can choose multiple options:',
   },
+  {
+    page: 32,
+    type: 'measurements',
+    name: 'Measurements',
+    question: '',
+    answers: '',
+    icon: '',
+    background: '',
+    p: '', //последняя страница для снятия замеров
+  },
 ];
