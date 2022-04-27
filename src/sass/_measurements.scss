@@ -322,3 +322,27 @@
   right: 20px;
   fill: currentColor;
 }
+
+.loader__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+}
+
+.loader__bg {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  background-color: rgba(204, 114, 237, 0.05);
+  box-shadow: inset 0 0 24px 0 rgb(247 106 153 / 33%);
+  border-radius: 50%;
+}

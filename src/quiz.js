@@ -40,7 +40,7 @@ if (gender === null) {
 const qtyPages = pages.length;
 renderContentMarkup(pageDone);
 
-addProgressDotMarkup(pages);
+addProgressDotMarkup(pages, pageDone);
 
 const throttleScroll = throttle(renderProgress, 700);
 
@@ -62,6 +62,7 @@ function renderMarkup({ newPage, oldPage }) {
   console.log(oldPage);
   localStorage.setItem('page', `${newPage}`);
   pageDone = localStorage.getItem('page');
+  addProgressDotMarkup(pages, newPage);
   removeDoneDot();
   clearDoneLine();
 
@@ -95,6 +96,9 @@ function renderContentMarkup(newPage) {
     addQuestion(pages, newPage);
     addChoiceMarkupLine({ pages, newPage, svg, gender });
     checkboxDisableSendButtonLine();
+  }
+  if (pages[newPage - 1].type === 'measurements') {
+    window.location = './measurements.html';
   }
 }
 

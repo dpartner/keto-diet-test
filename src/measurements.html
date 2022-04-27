@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="stylesheet" type="text/css" href="./loading/loading-bar.css" />
     <title>User-data-input</title>
   </head>
   <body>
@@ -304,6 +305,12 @@
               </div>
             </form>
           </div>
+          <div class="loader__wrap">
+            <div class="ldBar loader label-center" id="loader" style="width: 350px; height: 350px">
+              <div class="loader__bg"></div>
+            </div>
+            <div class="loader__desc"></div>
+          </div>
         </div>
       </section>
       <section class="section progress__section">
@@ -313,7 +320,7 @@
             <a
               type="button"
               class="progress__button-link progress__button-link--back"
-              href="/index.html"
+              href="./quiz.html"
             >
               <svg class="progress__button-icon">
                 <use
@@ -328,9 +335,9 @@
                 <div class="progress-bar__line-done"></div>
               </div>
               <div class="progress-bar__dot">
-                <div class="progress-bar__circle">
+                <!-- <div class="progress-bar__circle">
                   <span class="progress-bar__dot-desc">Gender</span>
-                </div>
+                </div> -->
               </div>
             </div>
             <button type="button" class="progress__button-link">

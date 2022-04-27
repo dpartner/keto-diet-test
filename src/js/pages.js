@@ -421,3 +421,5 @@ export const pages = [
     p: '', //последняя страница для снятия замеров
   },
 ];
+
+export const qtyPages = pages.length;
