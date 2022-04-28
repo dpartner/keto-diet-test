@@ -25,6 +25,7 @@ const ref = {
   submitButtonWrap: document.querySelectorAll('.measurements__form-button-wrap'),
   backButton: document.querySelector('.progress__button-link--back'),
   percentage: document.querySelector('.progress__percentage-value'),
+  loaderDescWrap: document.querySelector('.loader__desc-wrap'),
 };
 
 let gender = localStorage.getItem('gender');
@@ -177,7 +178,6 @@ function loadFromLocalStorage() {
   const data = getDataFromStorage();
 
   if (data) {
-    console.log(ref.formImperialInputs);
     for (const input of ref.formImperialInputs) {
       input.value = data[input.id];
     }
@@ -214,9 +214,40 @@ function onLoader() {
     stroke: '#f00',
     'stroke-width': 5,
     value: 0,
-    duration: 20,
+    duration: 12,
     'pattern-size': 200,
   });
   const getBar = document.querySelector('#loader').ldBar;
   barElement.set(100);
 }
+
+onLoaderDesc();
+
+function timeOut(delay) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(delay), 2000);
+  });
+}
+
+function addActiveLoaderDesc({ i: number, arrDesc, transform }) {
+  arrDesc[number].classList.add('desc--active');
+  ref.loaderDescWrap.style.transform = `translateX(${transform}px)`;
+  try {
+    arrDesc[number - 1].classList.remove('desc--active');
+  } catch (error) {}
+}
+
+async function onLoaderDesc() {
+  const arrDesc = ref.loaderDescWrap.children;
+  let delay = 1000;
+  let transform = 0;
+
+  for (let i = 0; i < arrDesc.length; i += 1) {
+    const timer = await timeOut(delay);
+    addActiveLoaderDesc({ i, arrDesc, transform });
+    transform -= 400;
+    delay += 3000;
+  }
+}
+
+// style="transform: translateX(0px)"
