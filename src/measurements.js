@@ -306,5 +306,5 @@ async function onLoaderDesc() {
     // delay += 3000;
   }
   const timer = await timeOut(delay);
-  window.location.href = '/';
+  window.location.href = './index.html';
 }
