@@ -1,0 +1,86 @@
+.final__hero-section {
+  background-image: url('../images/final-background.jpeg');
+  position: relative;
+  padding: 200px 0 220px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.final__hero-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.final__hero-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 430px;
+  margin-right: 50px;
+}
+
+.final__hero-cta-heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: 100;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.final__hero-button-wrap {
+  position: relative;
+  height: 90px;
+  border-radius: 45px;
+  border: 1px solid;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+}
+
+.final__hero-button-wrap-male::before {
+  background-image: linear-gradient(90deg, #33f5e0, #5172e8);
+  opacity: 0.9;
+}
+.final__hero-button-wrap-female::before {
+  background-image: linear-gradient(90deg, #f53373, #bf51e8);
+  opacity: 0.9;
+}
+
+.final__hero-button {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 45px;
+  border: 1px solid;
+  font-size: 33px;
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.final__hero-phone-wrap {
+  position: relative;
+  width: 430px;
+  height: 470px;
+}
+
+.final__hero-phone {
+  position: absolute;
+  height: 600px;
+  top: 0;
+  left: 0;
+}

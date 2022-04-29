@@ -25,6 +25,7 @@ const ref = {
   loaderWrap: document.querySelector('.loader__wrap'),
   loaderDesc: document.querySelector('.loader__desc'),
   loaderDescWrap: document.querySelector('.loader__desc-wrap'),
+  progressSection: document.querySelector('.progress__section'),
 };
 
 let gender = localStorage.getItem('gender');
@@ -182,6 +183,7 @@ function sendFormToStorageImperial(e) {
   ref.changeFormButtonWrap.style.display = 'none';
   ref.formWrap.style.display = 'none';
   ref.loaderDesc.style.display = 'flex';
+  ref.progressSection.style.display = 'none';
 
   onLoaderDesc();
 
@@ -214,6 +216,7 @@ function sendFormToStorageMetric(e) {
   ref.changeFormButtonWrap.style.display = 'none';
   ref.formWrap.style.display = 'none';
   ref.loaderDesc.style.display = 'flex';
+  ref.progressSection.style.display = 'none';
 
   onLoaderDesc();
 
@@ -306,5 +309,5 @@ async function onLoaderDesc() {
     // delay += 3000;
   }
   const timer = await timeOut(delay);
-  window.location.href = './index.html';
+  window.location.href = './final.html';
 }
