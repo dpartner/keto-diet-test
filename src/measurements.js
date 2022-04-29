@@ -3,11 +3,7 @@ import onPercentage from './js/progress-percent';
 import { onDoneLine } from './js/progress-line';
 import { addProgressDotMarkup } from './js/add-markup-progress';
 import { onDoneDot } from './js/progress-dot';
-import './loading/loading-bar';
-// const qtyPages = import('./js/pages').then(function (page) {
-//   // Render page
-//   page.pages;
-// });
+import CircleProgress from 'js-circle-progress';
 
 const ref = {
   changeFormButtonImperial: document.querySelector(
@@ -17,6 +13,7 @@ const ref = {
     '.measurements__select-button[data-action="metric"]',
   ),
   changeFormButtonWrap: document.querySelector('.measurements__select-list'),
+  formWrap: document.querySelector('.measurements__form-wrap'),
   formImperial: document.querySelector('.measurements__form--imperial'),
   formImperialInputs: document.querySelectorAll('.measurements__form--imperial input'),
   formImperialSubmit: document.querySelector('.measurements__form-submit--imperial'),
@@ -25,6 +22,8 @@ const ref = {
   submitButtonWrap: document.querySelectorAll('.measurements__form-button-wrap'),
   backButton: document.querySelector('.progress__button-link--back'),
   percentage: document.querySelector('.progress__percentage-value'),
+  loaderWrap: document.querySelector('.loader__wrap'),
+  loaderDesc: document.querySelector('.loader__desc'),
   loaderDescWrap: document.querySelector('.loader__desc-wrap'),
 };
 
@@ -128,17 +127,71 @@ function checkingValid(e, dataName, dataType) {
   }
 }
 
+function onSendValidation(input, formName) {
+  // const dataType = input.dataset.type;
+  if (input.dataset.type === `${formName}-age`) {
+    const dataName = `${formName}-age`;
+    checkingValidSend(input, dataName);
+  }
+  if (input.dataset.type === `${formName}-height-cm`) {
+    const dataName = `${formName}-height-cm`;
+    checkingValidSend(input, dataName);
+  }
+  if (input.dataset.type === `${formName}-height-ft`) {
+    const dataName = `${formName}-height-ft`;
+    checkingValidSend(input, dataName);
+  }
+  if (input.dataset.type === `${formName}-height-inch`) {
+    const dataName = `${formName}-height-inch`;
+    checkingValidSend(input, dataName);
+  }
+  if (input.dataset.type === `${formName}-weight`) {
+    const dataName = `${formName}-weight`;
+    checkingValidSend(input, dataName);
+  }
+  if (input.dataset.type === `${formName}-target-weight`) {
+    const dataName = `${formName}-target-weight`;
+    checkingValidSend(input, dataName);
+  }
+}
+
+function checkingValidSend(input, dataName) {
+  const inputNotification = document.querySelector(
+    `.measurements__form-notification[data-type="${dataName}"]`,
+  );
+  inputNotification.textContent = 'This field is required.';
+  inputNotification.classList.add('active');
+}
+
 function sendFormToStorageImperial(e) {
   e.preventDefault();
   const keys = {};
 
   for (const input of ref.formImperialInputs) {
+    if (input.value === '') {
+      const formName = 'imperial';
+      onSendValidation(input, formName);
+      return;
+    }
     if (!input.validity.valid) {
       return;
     }
     keys[input.id] = input.value;
   }
   localStorage.setItem('measurements-imperic', JSON.stringify(keys));
+  ref.changeFormButtonWrap.style.display = 'none';
+  ref.formWrap.style.display = 'none';
+  ref.loaderDesc.style.display = 'flex';
+
+  onLoaderDesc();
+
+  const cp = new CircleProgress('.progress', {
+    value: 100,
+    max: 100,
+    animation: 'easeInOutCubic',
+    animationDuration: 12000,
+    textFormat: 'percent',
+  });
 }
 
 function sendFormToStorageMetric(e) {
@@ -146,12 +199,31 @@ function sendFormToStorageMetric(e) {
   const keys = {};
 
   for (const input of ref.formMetricInputs) {
+    if (input.value === '') {
+      const formName = 'metric';
+      onSendValidation(input, formName);
+      return;
+    }
     if (!input.validity.valid) {
       return;
     }
     keys[input.id] = input.value;
   }
   localStorage.setItem('measurements-metric', JSON.stringify(keys));
+
+  ref.changeFormButtonWrap.style.display = 'none';
+  ref.formWrap.style.display = 'none';
+  ref.loaderDesc.style.display = 'flex';
+
+  onLoaderDesc();
+
+  const cp = new CircleProgress('.progress', {
+    value: 100,
+    max: 100,
+    animation: 'easeInOutCubic',
+    animationDuration: 12000,
+    textFormat: 'percent',
+  });
 }
 
 function saveInputsToStorage(e, dataName, dataType) {
@@ -207,25 +279,10 @@ function setGender(gender) {
       : button.classList.add('measurements__form-button-wrap--female');
   }
 }
-onLoader();
-function onLoader() {
-  const barElement = new ldBar('#loader', {
-    preset: 'circle',
-    stroke: '#f00',
-    'stroke-width': 5,
-    value: 0,
-    duration: 12,
-    'pattern-size': 200,
-  });
-  const getBar = document.querySelector('#loader').ldBar;
-  barElement.set(100);
-}
-
-onLoaderDesc();
 
 function timeOut(delay) {
   return new Promise(resolve => {
-    setTimeout(() => resolve(delay), 2000);
+    setTimeout(() => resolve(delay), delay);
   });
 }
 
@@ -239,15 +296,17 @@ function addActiveLoaderDesc({ i: number, arrDesc, transform }) {
 
 async function onLoaderDesc() {
   const arrDesc = ref.loaderDescWrap.children;
-  let delay = 1000;
+  let delay = 2000;
   let transform = 0;
 
   for (let i = 0; i < arrDesc.length; i += 1) {
     const timer = await timeOut(delay);
     addActiveLoaderDesc({ i, arrDesc, transform });
-    transform -= 400;
-    delay += 3000;
+    transform -= 410;
+    // delay += 3000;
   }
+  const timer = await timeOut(delay);
+  window.location.href = '/';
 }
 
 // style="transform: translateX(0px)"

@@ -26,6 +26,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "js-circle-progress": "^0.2.3",
     "lodash.throttle": "^4.1.1",
     "throttle": "^1.0.3"
   }
