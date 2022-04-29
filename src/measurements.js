@@ -308,5 +308,3 @@ async function onLoaderDesc() {
   const timer = await timeOut(delay);
   window.location.href = '/';
 }
-
-// style="transform: translateX(0px)"
