@@ -25,9 +25,11 @@ if (typeMeasurements === null) {
 }
 const throttleScrollWeight = throttle(onWeight, 700);
 const throttleScrollBody = throttle(onBody, 700);
+const throttleScrollPeople = throttle(onPeople, 700);
 
 window.addEventListener('scroll', throttleScrollWeight);
 window.addEventListener('scroll', throttleScrollBody);
+window.addEventListener('scroll', throttleScrollPeople);
 
 console.log(clientMeasurementsImperic);
 
@@ -41,6 +43,10 @@ function onLoad() {
   gender === 'male'
     ? (document.querySelector('.summary-card__body-img--woman').style.display = 'none')
     : (document.querySelector('.summary-card__body-img--man').style.display = 'none');
+
+  gender === 'male'
+    ? (document.querySelector('.summary-card__people-img-women').style.display = 'none')
+    : (document.querySelector('.summary-card__people-img-men').style.display = 'none');
 
   loadProfileCards();
 }
@@ -114,7 +120,7 @@ function onWeight() {
 async function dynamycWeight(clientWeight, newWeight) {
   const delta = clientWeight - newWeight;
   for (let i = 0; i <= delta * 10 + 1; i += 1) {
-    const timer = await timeOut(50);
+    const timer = await timeOut(20);
     ref.weightValue.textContent = `${clientWeight - i / 10}`;
     ref.weightToValue.textContent = `${clientWeight - i / 10}`;
   }
@@ -131,9 +137,21 @@ function onBody() {
   const isInViewport = rect.top <= document.documentElement.clientHeight;
 
   if (isInViewport) {
-    console.log(1);
     gender === 'male'
       ? document.querySelector('#silhouette-male-1_to').classList.add('active')
       : document.querySelector('#silhouette-female-green-female-1_to').classList.add('active');
+    window.removeEventListener('scroll', throttleScrollBody);
+  }
+}
+
+function onPeople() {
+  const rect = document.querySelector('.summary-card__people-img-wrap').getBoundingClientRect();
+  const isInViewport = rect.top <= document.documentElement.clientHeight;
+
+  if (isInViewport) {
+    gender === 'male'
+      ? document.querySelector('#silhouette-male-purple-male-2').classList.add('active')
+      : document.querySelector('#silhouette-female-purple-female-2').classList.add('active');
+    window.removeEventListener('scroll', throttleScrollPeople);
   }
 }
