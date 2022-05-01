@@ -96,7 +96,7 @@
 }
 
 .measurements__form-wrap--metric-active {
-  transform: translateX(-52%);
+  transform: translateX(-55%);
 }
 
 .measurements__form--imperial {
@@ -118,6 +118,7 @@
   font-weight: 300;
   opacity: 0;
   transition: all 0.35s ease;
+  transform-origin: right;
 }
 
 .measurements__form-input {
@@ -326,6 +327,7 @@
 
 .loader__wrap {
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -355,29 +357,53 @@
 
 .loader__desc {
   position: relative;
-  width: 100%;
-  height: 50px;
+  min-width: 400px;
+  height: 100px;
   display: none;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    min-width: 100%;
+    height: 50px;
+    overflow: visible;
+    // width: 100%;
+  }
 }
 .loader__desc-wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 40%;
+  left: 50%;
+
   // width: 1200px;
   // width: 100%;
-  transform: translateX(400px);
+  transform: translate(-50%, 100px);
   transition: transform 0.7s ease;
+
+  @media screen and (min-width: 768px) {
+    top: 20%;
+    left: 0;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: translateX(400px);
+  }
 }
 
 .desc {
   width: 300px;
   transition: opacity 1s ease, transform 1s ease;
-  &:not(:last-child) {
-    margin-right: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
   }
 }
 .desc--hidden {

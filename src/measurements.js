@@ -180,6 +180,9 @@ function sendFormToStorageImperial(e) {
     keys[input.id] = input.value;
   }
   localStorage.setItem('measurements-imperic', JSON.stringify(keys));
+
+  localStorage.setItem('final', 'imperic');
+
   ref.changeFormButtonWrap.style.display = 'none';
   ref.formWrap.style.display = 'none';
   ref.loaderDesc.style.display = 'flex';
@@ -212,6 +215,8 @@ function sendFormToStorageMetric(e) {
     keys[input.id] = input.value;
   }
   localStorage.setItem('measurements-metric', JSON.stringify(keys));
+
+  localStorage.setItem('final', 'metric');
 
   ref.changeFormButtonWrap.style.display = 'none';
   ref.formWrap.style.display = 'none';
@@ -290,11 +295,19 @@ function timeOut(delay) {
 }
 
 function addActiveLoaderDesc({ i: number, arrDesc, transform }) {
-  arrDesc[number].classList.add('desc--active');
-  ref.loaderDescWrap.style.transform = `translateX(${transform}px)`;
-  try {
-    arrDesc[number - 1].classList.remove('desc--active');
-  } catch (error) {}
+  if (window.screen.width >= 768) {
+    arrDesc[number].classList.add('desc--active');
+    ref.loaderDescWrap.style.transform = `translateX(${transform}px)`;
+    try {
+      arrDesc[number - 1].classList.remove('desc--active');
+    } catch (error) {}
+  } else {
+    arrDesc[number].classList.add('desc--active');
+    ref.loaderDescWrap.style.transform = `translate(-50%,${transform}px)`;
+    try {
+      arrDesc[number - 1].classList.remove('desc--active');
+    } catch (error) {}
+  }
 }
 
 async function onLoaderDesc() {
@@ -302,12 +315,22 @@ async function onLoaderDesc() {
   let delay = 2000;
   let transform = 0;
 
-  for (let i = 0; i < arrDesc.length; i += 1) {
-    const timer = await timeOut(delay);
-    addActiveLoaderDesc({ i, arrDesc, transform });
-    transform -= 410;
-    // delay += 3000;
+  if (window.screen.width >= 768) {
+    for (let i = 0; i < arrDesc.length; i += 1) {
+      const timer = await timeOut(delay);
+      addActiveLoaderDesc({ i, arrDesc, transform });
+      transform -= 410;
+      // delay += 3000;
+    }
+  } else {
+    for (let i = 0; i < arrDesc.length; i += 1) {
+      const timer = await timeOut(delay);
+      addActiveLoaderDesc({ i, arrDesc, transform });
+      transform -= 37;
+      // delay += 3000;
+    }
   }
+
   const timer = await timeOut(delay);
   window.location.href = './final.html';
 }
