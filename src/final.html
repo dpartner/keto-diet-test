@@ -699,98 +699,11 @@
           <div class="final__summary-card">
             <div class="final__summary-bmi-head">
               <h3 class="final__summary-card-heading">Your current <span class="final__summary-card-heading-bmi--color">BMI</span></h3>
-              <div class="final__summary-bmi-subtitle">Underweight
+              <div class="final__summary-bmi-subtitle">
               </div>
             </div>
             <svg id="bmi-phase-3" class="final__summary-bmi-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 345 167" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-<style>
-          
-          #bmi-phase-3-chart-gradient {
-            animation: bmi-phase-3-chart-gradient_c_o 3000ms linear 1 normal forwards
-          }
 
-          @keyframes  bmi-phase-3-chart-gradient_c_o {
-            0% {
-              opacity: 0
-            }
-
-            3.333333% {
-              opacity: 0
-            }
-
-            20% {
-              opacity: 1
-            }
-
-            100% {
-              opacity: 1
-            }
-          }
-
-          #bmi-phase-3-chart-curve {
-            animation: bmi-phase-3-chart-curve_s_do 3000ms linear 1 normal forwards
-          }
-
-          @keyframes  bmi-phase-3-chart-curve_s_do {
-            0% {
-              stroke-dashoffset: 385.9
-            }
-
-            16.666667% {
-              stroke-dashoffset: 0
-            }
-
-            100% {
-              stroke-dashoffset: 0
-            }
-          }
-
-          #bmi-phase-3-pointer-3_ts {
-            animation: bmi-phase-3-pointer-3_ts__ts 3000ms linear 1 normal forwards
-          }
-
-          @keyframes  bmi-phase-3-pointer-3_ts__ts {
-            0% {
-              transform: translate(192px, 59px) scale(0, 0)
-            }
-
-            3.333333% {
-              transform: translate(192px, 59px) scale(0, 0);
-              animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1)
-            }
-
-            20% {
-              transform: translate(192px, 59px) scale(1, 1)
-            }
-
-            100% {
-              transform: translate(192px, 59px) scale(1, 1)
-            }
-          }
-
-          #bmi-phase-3-value-3 {
-            animation: bmi-phase-3-value-3_c_o 3000ms linear 1 normal forwards
-          }
-
-          @keyframes  bmi-phase-3-value-3_c_o {
-            0% {
-              opacity: 0
-            }
-
-            10% {
-              opacity: 0
-            }
-
-            20% {
-              opacity: 1
-            }
-
-            100% {
-              opacity: 1
-            }
-          }
-          
-        </style>
 <defs>
 <linearGradient id="bmi-phase-3-chart-gradient-fill" x1="172.5" y1="2" x2="172.5" y2="167" spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)">
 <stop id="bmi-phase-3-chart-gradient-fill-0" offset="0%" stop-color="hsla(0,0%,100%,0.1)"></stop>
@@ -811,7 +724,7 @@
 <g id="bmi-phase-3-pointer-3_ts" transform="translate(192,59) scale(0,0)">
 <circle id="bmi-phase-3-pointer-3" r="9" transform="translate(0,0)" fill="#fff" stroke="#151226" stroke-width="4"></circle>
 </g><text id="bmi-phase-3-value-3" dx="0" dy="0" font-family="Roboto" font-size="34" font-weight="700" opacity="0" fill="#fff">
-<tspan id="bmi-phase-3-tspan1" x="213.268" y="89.6211" font-family="Roboto" font-size="34" font-weight="700" font-style="normal" fill="#fff">14.5</tspan>
+<tspan id="bmi-phase-3-tspan1" class="final__summary-bmi-img-value" x="213.268" y="89.6211" font-family="Roboto" font-size="34" font-weight="700" font-style="normal" fill="#fff">14.5</tspan>
 </text>
 </g>
 <style>
@@ -824,7 +737,26 @@
           }
           
         </style>
-</svg>
+            </svg>
+            <div class="final__summary-desc final__summary-bmi-bottom">
+              Based on the WHO, <span class="final__summary-desc--bold">recommended BMI is</span> <span class="final__summary-desc--colored">22.5</span> to be within a healthy range
+              <svg class="final__summary-bmi-bottom-logo">
+                <use href="./images/symbol-defs.svg#who-logo">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <!-- <div class="final__summary-card">
+            <h3 class="final__summary-card-heading">Metabolic Age</h3>
+            <p class="final__summary-desc">The <span class="final__summary-desc--bold">metabolic age</span> is an indicator for the age of your body</p>
+          </div> -->
+          <div class="final__summary-card">
+            <h3 class="final__summary-card-heading">Daily Calories</h3>
+            <p class="final__summary-desc final__summary-desc--bmr">Recommended</p>
+            <p class="final__summary-card-heading final__summary-card-heading--calories"></p>
+            <div class="calorie_animations">
+
+            </div>
           </div>
         </div>
       </section>
