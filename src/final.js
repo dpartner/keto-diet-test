@@ -15,6 +15,7 @@ const ref = {
   bmiSubtitle: document.querySelector('.final__summary-bmi-subtitle'),
   caloriesSvg: document.querySelector('.calorie_animations'),
   caloriesSubtitle: document.querySelector('.calories-subtitle'),
+  bottleContainer: document.querySelector('.bottle-container'),
 };
 
 const clientMeasurementsImperic = load('measurements-imperic');
@@ -32,12 +33,14 @@ const throttleScrollBody = throttle(onBody, 700);
 const throttleScrollPeople = throttle(onPeople, 700);
 const throttleScrollBmi = throttle(onBmi, 700);
 const throttleScrollCalories = throttle(onCalories, 700);
+const throttleScrollWater = throttle(onWater, 700);
 
 window.addEventListener('scroll', throttleScrollWeight);
 window.addEventListener('scroll', throttleScrollBody);
 window.addEventListener('scroll', throttleScrollPeople);
 window.addEventListener('scroll', throttleScrollBmi);
 window.addEventListener('scroll', throttleScrollCalories);
+window.addEventListener('scroll', throttleScrollWater);
 
 onLoad();
 
@@ -711,4 +714,128 @@ function createCaloriesMarkup(bmrValue) {
   }
   if (bmrValue > 3750) {
   }
+}
+
+function onWater() {
+  const rect = ref.bottleContainer.getBoundingClientRect();
+  const isInViewport = rect.top <= document.documentElement.clientHeight;
+
+  if (isInViewport) {
+    if (clientMeasurementsImperic !== undefined && typeMeasurements === 'imperic') {
+      const clientWeight = clientMeasurementsImperic['weight-imperic'];
+      const waterVolume = (clientWeight * 0.04) / 2.204;
+      console.log(waterVolume);
+      addWaterMarkup(waterVolume);
+      window.removeEventListener('scroll', throttleScrollWater);
+    }
+    if (clientMeasurementsMetric !== undefined && typeMeasurements === 'metric') {
+      const clientWeight = clientMeasurementsMetric['weight-metric'];
+      const waterVolume = clientWeight * 0.04;
+      console.log(waterVolume);
+      addWaterMarkup(waterVolume);
+      window.removeEventListener('scroll', throttleScrollWater);
+    }
+  }
+}
+
+function addWaterMarkup(waterVolume) {
+  const bottles = ref.bottleContainer.children;
+  const fullBottles = Math.floor(waterVolume);
+  console.log(fullBottles);
+  console.log(bottles.length);
+
+  for (let i = 0; i <= fullBottles && i < bottles.length; i += 1) {
+    bottles[i].classList.add('single-bottle');
+  }
+
+  if (bottles.length - fullBottles > 0) {
+    bottles[fullBottles].classList.add('single-bottle--semifilled');
+    console.log(bottles[fullBottles]);
+  }
+  document.querySelector('.water-intake-value').textContent = waterVolume.toFixed(1);
+  const style = createWaterMarkup(waterVolume);
+  ref.bottleContainer.insertAdjacentHTML('afterend', style);
+}
+
+function createWaterMarkup(waterVolume) {
+  const fullHight = 65;
+  const indexOfPoint = String(waterVolume).indexOf('.');
+  const partBootle = Math.floor(
+    (fullHight / 10) * Number(String(waterVolume.toFixed(1)).slice(indexOfPoint + 1)),
+  );
+  console.log(partBootle);
+  return `<style>
+        .bottle-container {
+          display: flex;
+          height: 80px;
+        }
+
+        [dir="rtl"] .bottle-container {
+          height: 100%;
+        }
+
+        .single-bottle {
+          width: 27px;
+          position: relative;
+        }
+
+        .single-bottle:not(:first-child) {
+          margin-left: 3px;
+        }
+
+        .single-bottle svg {
+          width: 100%;
+          height: 100%;
+        }
+
+        .single-bottle span {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: auto;
+          background-color: #33c6f5;
+          animation: 2s bottle;
+          animation-fill-mode: forwards;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+
+        [dir="rtl"] .single-bottle {
+          margin-left: 3px;
+        }
+
+        [dir="rtl"] .single-bottle span {
+          bottom: 3px;
+        }
+
+        .single-bottle--semifilled span {
+          animation: 2s bottleSemifilled;
+          animation-fill-mode: forwards
+        }
+
+        @keyframes  bottle {
+          0% {
+            height: 1px;
+            opacity: 0
+          }
+
+          100% {
+            height: 65px;
+            opacity: 1
+          }
+        }
+
+        @keyframes  bottleSemifilled {
+          0% {
+            height: 1px;
+            opacity: 0
+          }
+
+          100% {
+            height: ${partBootle}px;
+            opacity: 1
+          }
+        }
+                </style>`;
 }
