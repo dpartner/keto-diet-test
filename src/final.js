@@ -16,6 +16,10 @@ const ref = {
   caloriesSvg: document.querySelector('.calorie_animations'),
   caloriesSubtitle: document.querySelector('.calories-subtitle'),
   bottleContainer: document.querySelector('.bottle-container'),
+  helpModalsButtonsWrap: document.querySelector('.help-modal__open-close-wrap'),
+  openModals: document.querySelectorAll('.help-modal__open-button'),
+  closeModals: document.querySelectorAll('.help-modal__close-button'),
+  helpModals: document.querySelectorAll('.final__help-modal-wrap'),
 };
 
 const clientMeasurementsImperic = load('measurements-imperic');
@@ -41,6 +45,21 @@ window.addEventListener('scroll', throttleScrollPeople);
 window.addEventListener('scroll', throttleScrollBmi);
 window.addEventListener('scroll', throttleScrollCalories);
 window.addEventListener('scroll', throttleScrollWater);
+document
+  .querySelector('.help-modal__open-close-wrap[data-modal="weight"]')
+  .addEventListener('click', onHelpModal);
+document
+  .querySelector('.help-modal__open-close-wrap[data-modal="body"]')
+  .addEventListener('click', onHelpModal);
+document
+  .querySelector('.help-modal__open-close-wrap[data-modal="bmi"]')
+  .addEventListener('click', onHelpModal);
+document
+  .querySelector('.help-modal__open-close-wrap[data-modal="bmr"]')
+  .addEventListener('click', onHelpModal);
+document
+  .querySelector('.help-modal__open-close-wrap[data-modal="water"]')
+  .addEventListener('click', onHelpModal);
 
 onLoad();
 
@@ -724,14 +743,12 @@ function onWater() {
     if (clientMeasurementsImperic !== undefined && typeMeasurements === 'imperic') {
       const clientWeight = clientMeasurementsImperic['weight-imperic'];
       const waterVolume = (clientWeight * 0.04) / 2.204;
-      console.log(waterVolume);
       addWaterMarkup(waterVolume);
       window.removeEventListener('scroll', throttleScrollWater);
     }
     if (clientMeasurementsMetric !== undefined && typeMeasurements === 'metric') {
       const clientWeight = clientMeasurementsMetric['weight-metric'];
       const waterVolume = clientWeight * 0.04;
-      console.log(waterVolume);
       addWaterMarkup(waterVolume);
       window.removeEventListener('scroll', throttleScrollWater);
     }
@@ -741,8 +758,6 @@ function onWater() {
 function addWaterMarkup(waterVolume) {
   const bottles = ref.bottleContainer.children;
   const fullBottles = Math.floor(waterVolume);
-  console.log(fullBottles);
-  console.log(bottles.length);
 
   for (let i = 0; i <= fullBottles && i < bottles.length; i += 1) {
     bottles[i].classList.add('single-bottle');
@@ -750,7 +765,6 @@ function addWaterMarkup(waterVolume) {
 
   if (bottles.length - fullBottles > 0) {
     bottles[fullBottles].classList.add('single-bottle--semifilled');
-    console.log(bottles[fullBottles]);
   }
   document.querySelector('.water-intake-value').textContent = waterVolume.toFixed(1);
   const style = createWaterMarkup(waterVolume);
@@ -763,7 +777,6 @@ function createWaterMarkup(waterVolume) {
   const partBootle = Math.floor(
     (fullHight / 10) * Number(String(waterVolume.toFixed(1)).slice(indexOfPoint + 1)),
   );
-  console.log(partBootle);
   return `<style>
         .bottle-container {
           display: flex;
@@ -838,4 +851,47 @@ function createWaterMarkup(waterVolume) {
           }
         }
                 </style>`;
+}
+
+function onHelpModal(e) {
+  e.preventDefault();
+  const dataModal = e.target.dataset.modal;
+  const dataAction = e.target.dataset.action;
+  if (dataAction === 'open') {
+    for (const button of ref.closeModals) {
+      if (button.dataset.modal === dataModal) {
+        button.style.display = 'flex';
+      }
+    }
+    for (const button of ref.openModals) {
+      if (button.dataset.modal === dataModal) {
+        button.style.display = 'none';
+      }
+    }
+
+    for (const help of ref.helpModals) {
+      if (help.dataset.modal === dataModal) {
+        help.style.opacity = '1';
+      }
+    }
+  }
+
+  if (dataAction === 'close') {
+    for (const button of ref.closeModals) {
+      if (button.dataset.modal === dataModal) {
+        button.style.display = 'none';
+      }
+    }
+    for (const button of ref.openModals) {
+      if (button.dataset.modal === dataModal) {
+        button.style.display = 'flex';
+      }
+    }
+
+    for (const help of ref.helpModals) {
+      if (help.dataset.modal === dataModal) {
+        help.style.opacity = '0';
+      }
+    }
+  }
 }
