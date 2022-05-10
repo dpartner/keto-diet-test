@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header section header-quiz">
+      <div class="header__container container">
+        <div class="logo-link logo-link--header" href="./index.html">
+          <svg class="logo">
+            <use class="header__logo-svg" href="./images/symbol-defs.svg#icon-keto-icon"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section hero__section">
+        <div class="hero__container container">
+          <svg class="hero__mask-svg hero__mask-svg--card">
+            <use href="./images/symbol-defs.svg#icon-head-mask"></use>
+          </svg>
+          <div class="hero__heading-wrap">
+            <div class="hero__heading-circle-wrap heading-circle">
+              <div class="heading-circle--first"></div>
+              <div class="heading-circle--second"></div>
+              <div class="heading-circle--third"></div>
+              <div class="heading-circle__content back">
+                <svg class="heading__logo">
+                  <use class="heading__logo-svg"></use>
+                </svg>
+              </div>
+            </div>
+            <h1 class="hero__heading"></h1>
+          </div>
+        </div>
+      </section>
+      <section class="section quiz__section">
+        <div class="container quiz-container quiz-container--card">
+          <ul class="quiz-list"></ul>
+          <div class="quiz__card-wrap card-wrap">
+            <div class="card-wrap__content"></div>
+            <div class="card__button-wrap">
+              <a class="card__button-link">
+                Continue<svg class="card__button-icon">
+                  <use class="card__button-svg" href="./images/symbol-defs.svg#icon-next"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <form class="quiz__choice-form" action="">
+            <p class="quiz__choice-form-desc"></p>
+            <div class="quiz__choice-form-wrap">
+              <!-- <div class="quiz__choice-form-element">
+                <input
+                  class="visually-hidden pork-hidden-checkbox"
+                  type="checkbox"
+                  name="meet"
+                  id="pork"
+                  value="pork"
+                />
+                <label class="quiz__choice-label" for="pork">
+                  <svg class="quiz__choice-icon">
+                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-pork"></use>
+                  </svg>
+                  <span class="quiz__choice-desc">pork</span>
+                  <div class="quiz__choice-plus-wrap plus-wrap">
+                    <div class="plus-wrap__symbols-wrap">
+                      <span class="plus-wrap__symbol"></span>
+                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="quiz__choice-form-element">
+                <input
+                  class="visually-hidden pork-hidden-checkbox"
+                  type="checkbox"
+                  name="meet"
+                  id="beef"
+                  value="beef"
+                />
+                <label class="quiz__choice-label" for="beef">
+                  <svg class="quiz__choice-icon">
+                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-beef"></use>
+                  </svg>
+                  <span class="quiz__choice-desc">beef</span>
+                  <div class="quiz__choice-plus-wrap plus-wrap">
+                    <div class="plus-wrap__symbols-wrap">
+                      <span class="plus-wrap__symbol"></span>
+                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
+                    </div>
+                  </div>
+                </label>
+              </div> -->
+            </div>
+            <div class="quiz__choice__button-wrap">
+              <button type="submit" class="quiz__choice__button-link">
+                Continue<svg class="quiz__choice__button-icon">
+                  <use
+                    class="quiz__choice__button-svg"
+                    href="./images/symbol-defs.svg#icon-next"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <form class="quiz__choice-line-form" action="">
+            <p class="quiz__choice-line-form-desc">It is possible to select multiple answers:</p>
+            <div class="quiz__choice-line-form-wrap"></div>
+            <div class="quiz__choice-line__button-wrap">
+              <button type="submit" class="quiz__choice-line__button-link">
+                Continue<svg class="quiz__choice-line__button-icon">
+                  <use
+                    class="quiz__choice__button-svg"
+                    href="./images/symbol-defs.svg#icon-next"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section progress__section">
+        <div class="container progress__container">
+          <div class="progress__percentage"><span class="progress__percentage-value">0</span>%</div>
+          <div class="progress__wrap">
+            <a
+              type="button"
+              class="progress__button-link progress__button-link--back"
+              href="/index.html"
+            >
+              <svg class="progress__button-icon">
+                <use
+                  class="progress__button-svg"
+                  href="./images/symbol-defs.svg#icon-back-circled"
+                ></use></svg
+              >Back
+            </a>
+            <div class="progress-bar__wrap">
+              <div class="progress-bar__line">
+                <div class="progress-bar__line-back"></div>
+                <div class="progress-bar__line-done"></div>
+              </div>
+              <div class="progress-bar__dot">
+                <div class="progress-bar__circle">
+                  <span class="progress-bar__dot-desc">Gender</span>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="progress__button-link">
+              Help<svg class="progress__button-icon progress__button-icon--help">
+                <use
+                  class="progress__button-svg"
+                  href="./images/symbol-defs.svg#icon-help-thinner"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer class="section footer__section">
+      <div class="container footer__container">
+        <ul class="footer__menu">
+          <li class="footer__menu-item"><a class="footer__menu-link" href="">Блог</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="">Общие условия</a></li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="">Политика защиты данных</a>
+          </li>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="">Обработка куки-файлов</a>
+          </li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="">Центр помощи</a></li>
+        </ul>
+        <a class="logo-link logo-link--footer" href="./index.html"
+          ><svg class="logo logo--footer">
+            <use class="logo-svg--footer" href="./images/symbol-defs.svg#icon-keto-icon"></use>
+          </svg>
+        </a>
+        <div class="footer__license-wrap">
+          <h3 class="footer__license-heading">2022 ВСЕ ПРАВА ЗАЩИЩЕНЫ</h3>
+          <p class="footer__license-desc">Разработано Dimas IT</p>
+        </div>
+      </div>
+    </footer> -->
+    <!-- <script src="./index.js"></script> -->
+    <script src="./quiz.js"></script>
+  </body>
+</html>
