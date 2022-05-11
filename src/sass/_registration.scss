@@ -1,0 +1,31 @@
+.body-registration {
+  background-image: url('../images/meal-plan.jpeg');
+  background-color: #201d34;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hero__container--reg::before {
+  display: none;
+}
+
+.reg__section {
+  padding-top: 40px;
+}
+
+.reg__form-desc {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 40px;
+  padding: 0 15px;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.reg__form-input {
+  text-align: left;
+}

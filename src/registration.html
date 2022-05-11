@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <title>Registration page</title>
   </head>
-  <body>
+  <body class="body-registration">
     <header class="header section header-quiz">
       <div class="header__container container">
         <div class="logo-link logo-link--header" href="./index.html">
@@ -18,10 +25,10 @@
     </header>
     <main>
       <section class="section hero__section">
-        <div class="hero__container container">
-          <svg class="hero__mask-svg hero__mask-svg--card">
-            <use href="./images/symbol-defs.svg#icon-head-mask"></use>
-          </svg>
+        <svg class="hero__mask-svg hero__mask-svg--card">
+          <use href="./images/symbol-defs.svg#icon-head-mask"></use>
+        </svg>
+        <div class="hero__container container hero__container--reg">
           <div class="hero__heading-wrap">
             <div class="hero__heading-circle-wrap heading-circle">
               <div class="heading-circle--first"></div>
@@ -33,97 +40,42 @@
                 </svg>
               </div>
             </div>
-            <h1 class="hero__heading"></h1>
+            <h1 class="hero__heading">
+              Your personalized KETO DIET for your target weight is ready
+            </h1>
           </div>
         </div>
       </section>
-      <section class="section quiz__section">
-        <div class="container quiz-container quiz-container--card">
-          <ul class="quiz-list"></ul>
-          <div class="quiz__card-wrap card-wrap">
-            <div class="card-wrap__content"></div>
-            <div class="card__button-wrap">
-              <a class="card__button-link">
-                Continue<svg class="card__button-icon">
-                  <use class="card__button-svg" href="./images/symbol-defs.svg#icon-next"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <form class="quiz__choice-form" action="">
-            <p class="quiz__choice-form-desc"></p>
-            <div class="quiz__choice-form-wrap">
-              <!-- <div class="quiz__choice-form-element">
-                <input
-                  class="visually-hidden pork-hidden-checkbox"
-                  type="checkbox"
-                  name="meet"
-                  id="pork"
-                  value="pork"
-                />
-                <label class="quiz__choice-label" for="pork">
-                  <svg class="quiz__choice-icon">
-                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-pork"></use>
+      <section class="section quiz__section reg__section">
+        <div class="container reg-container quiz-container quiz-container--card">
+          <form action="">
+            <p class="reg__form-desc">
+              Enter the e-mail address you want to receive your meal plan on:
+            </p>
+            <div class="measurements__form-input-wrap">
+              <input
+                class="measurements__form-input reg__form-input"
+                type="email"
+                id="email"
+                required=""
+                placeholder="Email"
+                autocomplete="off"
+              />
+              <label class="measurements__form-label" for="email">Email</label>
+              <span></span> <span class="measurements__form-bottom-line"></span>
+              <div class="measurements__form-notification" data-type="imperial-age"></div>
+              <div class="measurements__form-button-wrap measurements__form-button-wrap--female">
+                <button type="submit" class="measurements__form-button" data-action="imperial">
+                  Continue<svg class="measurements__form-button-icon">
+                    <use href="./images/symbol-defs.svg#icon-next"></use>
                   </svg>
-                  <span class="quiz__choice-desc">pork</span>
-                  <div class="quiz__choice-plus-wrap plus-wrap">
-                    <div class="plus-wrap__symbols-wrap">
-                      <span class="plus-wrap__symbol"></span>
-                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
-                    </div>
-                  </div>
-                </label>
+                </button>
               </div>
-              <div class="quiz__choice-form-element">
-                <input
-                  class="visually-hidden pork-hidden-checkbox"
-                  type="checkbox"
-                  name="meet"
-                  id="beef"
-                  value="beef"
-                />
-                <label class="quiz__choice-label" for="beef">
-                  <svg class="quiz__choice-icon">
-                    <use class="quiz__choice-svg" href="./images/symbol-defs.svg#icon-beef"></use>
-                  </svg>
-                  <span class="quiz__choice-desc">beef</span>
-                  <div class="quiz__choice-plus-wrap plus-wrap">
-                    <div class="plus-wrap__symbols-wrap">
-                      <span class="plus-wrap__symbol"></span>
-                      <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>
-                    </div>
-                  </div>
-                </label>
-              </div> -->
-            </div>
-            <div class="quiz__choice__button-wrap">
-              <button type="submit" class="quiz__choice__button-link">
-                Continue<svg class="quiz__choice__button-icon">
-                  <use
-                    class="quiz__choice__button-svg"
-                    href="./images/symbol-defs.svg#icon-next"
-                  ></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-          <form class="quiz__choice-line-form" action="">
-            <p class="quiz__choice-line-form-desc">It is possible to select multiple answers:</p>
-            <div class="quiz__choice-line-form-wrap"></div>
-            <div class="quiz__choice-line__button-wrap">
-              <button type="submit" class="quiz__choice-line__button-link">
-                Continue<svg class="quiz__choice-line__button-icon">
-                  <use
-                    class="quiz__choice__button-svg"
-                    href="./images/symbol-defs.svg#icon-next"
-                  ></use>
-                </svg>
-              </button>
             </div>
           </form>
         </div>
       </section>
-      <section class="section progress__section">
+      <!-- <section class="section progress__section">
         <div class="container progress__container">
           <div class="progress__percentage"><span class="progress__percentage-value">0</span>%</div>
           <div class="progress__wrap">
@@ -160,7 +112,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- <footer class="section footer__section">
       <div class="container footer__container">
@@ -187,6 +139,6 @@
       </div>
     </footer> -->
     <!-- <script src="./index.js"></script> -->
-    <script src="./quiz.js"></script>
+    <!-- <script src="./quiz.js"></script> -->
   </body>
 </html>
