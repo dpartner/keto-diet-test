@@ -18,6 +18,17 @@
   padding-top: 40px;
 }
 
+.reg__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg__form-input-wrap {
+  margin-bottom: 50px;
+}
+
 .reg__form-desc {
   font-size: 20px;
   font-weight: 100;
@@ -28,4 +39,149 @@
 
 .reg__form-input {
   text-align: left;
+}
+
+.reg__form-checkbox-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+.reg__form-checkbox:checked ~ .reg__form-checkbox-custom::after {
+  transform: scale(1);
+}
+
+.reg__form-checkbox-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: #201d34;
+  border: 1px solid rgba(99, 97, 113, 0.7);
+  margin-right: 20px;
+}
+
+.reg__form-checkbox-label {
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  ::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    background-color: var(--valid-color);
+    border: 1px solid var(--valid-color);
+    transform: scale(0);
+    transition: transform 0.35s ease;
+  }
+}
+
+.reg__form-link {
+  color: var(--valid-color);
+  margin-left: 5px;
+}
+
+.reg__button-wrap {
+  box-shadow: 0 20px 30px 0 rgb(13 38 102 / 60%);
+  position: relative;
+  height: 70px;
+  width: 320px;
+  min-width: 160px;
+  margin-top: 60px;
+
+  @media screen and (max-width: 439px) {
+    height: 60px;
+    width: 250px;
+    font-size: 22px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 40px;
+    transition: opacity 0.35s ease;
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    background-image: linear-gradient(90deg, #ceef31, #91ef31);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.reg__button-wrap--disabled {
+  opacity: 0.2;
+}
+
+.reg__button-wrap--male {
+  &::before {
+    background-image: linear-gradient(90deg, #33f5e0, #5172e8);
+  }
+}
+
+.reg__button-wrap--female {
+  &::before {
+    background-image: linear-gradient(90deg, #f53373, #bf51e8);
+  }
+}
+
+.reg__button {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 300;
+  transition: color 0.35s ease;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+}
+
+.reg__button-icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 20px;
+  fill: currentColor;
 }
