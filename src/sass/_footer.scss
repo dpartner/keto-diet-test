@@ -100,3 +100,43 @@
   background: transparent;
   border: transparent;
 }
+
+.cookie__wrap {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  z-index: 1000000;
+  font-size: 0.65em;
+  font-family: Arial;
+  line-height: 15px;
+}
+
+.cookie__wrap-desc {
+  max-width: 140px;
+  margin-right: 10px;
+}
+
+.cookie__button {
+  border-radius: 3px;
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 30%);
+  padding: 7px 15px;
+  font-weight: 700;
+  background: #555;
+  color: #ccc;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.cookie__button--accept {
+  background: green;
+  color: var(--primary-color);
+}
