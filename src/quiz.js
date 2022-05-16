@@ -1,4 +1,5 @@
 import throttle from 'lodash.throttle';
+import * as basicLightbox from 'basiclightbox';
 import onPercentage from './js/progress-percent';
 import { onDoneDot, removeOldActiveDot, removeDoneDot } from './js/progress-dot';
 import { onDoneLine, clearDoneLine } from './js/progress-line';
@@ -24,6 +25,7 @@ import {
   actionFormCheckboxLine,
   checkboxDisableSendButtonLine,
 } from './js/add-markup-choice-line';
+import { onHelp } from './js/add-markup-help';
 
 import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
@@ -58,8 +60,6 @@ function renderProgress() {
 }
 
 function renderMarkup({ newPage, oldPage }) {
-  console.log(newPage);
-  console.log(oldPage);
   localStorage.setItem('page', `${newPage}`);
   pageDone = localStorage.getItem('page');
   addProgressDotMarkup(pages, newPage);
@@ -160,4 +160,12 @@ function onSendLineForm(e) {
 function onFormLineSelect(e) {
   actionFormCheckboxLine({ e, pages, pageDone });
   checkboxDisableSendButtonLine();
+}
+
+document.querySelector('#helpButton').addEventListener('click', onOpenHelpModal);
+
+function onOpenHelpModal(event) {
+  event.preventDefault();
+
+  onHelp({ pages, pageDone, event, gender, svg, basicLightbox });
 }

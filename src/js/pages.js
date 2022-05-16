@@ -14,6 +14,7 @@ export const pages = [
     icon: 'icon-physical-activity',
     background: 'bg-1',
     p: '',
+    help: 'Your level of physical activity is the single most important factor which determines the amount of food in your meal program. Please select the answer most closely corresponding to your lifestyle in order to achieve your target weight.',
   },
   {
     page: 2,
@@ -29,6 +30,7 @@ export const pages = [
     icon: 'icon-have-energy',
     background: 'bg-2',
     p: '',
+    help: 'The ketogenic diet is proven to increase the number of mitochondria, also known as the energy factories of brain cells.',
   },
   {
     page: 3,
@@ -43,6 +45,7 @@ export const pages = [
     icon: 'icon-easy-to-lose-weight',
     background: 'bg-3',
     p: '',
+    help: 'Keto will completely change how your organism process food by switching your main fuel source from carbs to fats. This will only make the weight loss process faster for you.',
   },
   {
     page: 4,
