@@ -2,11 +2,11 @@
   "name": "parcel-project-template",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "homepage": "https://dpartner.github.io/keto-diet-test",
   "scripts": {
-    "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /keto-diet-test/"
+    "dev": "parcel src/*.html src/*.js src/*.php",
+    "build": "parcel build src/*.html src/*.js src/*.php src/phpmailer/*.php"
   },
   "repository": {
     "type": "git",

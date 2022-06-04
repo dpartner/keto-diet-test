@@ -6,19 +6,22 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
+// $name = $_POST['name'];
 $email = $_POST['email'];
-$text = $_POST['text'];
-$file = $_FILES['myfile'];
+// $text = $_POST['text'];
+// $file = $_FILES['myfile'];
 
 // Формирование самого письма
 $title = "Заявка с сайта KETO";
 $body = "
 <h2>Новое письмо</h2>
-<b>Имя:</b> $name<br>
+// <b>Имя:</b> $name<br>
 <b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+// <b>Сообщение:</b><br>$text
 ";
+if(!empty($_POST['height-metric'])){
+    $body.='<p><strong>Рост:</strong>' .$_POST['height-metric'].'</p>';
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -31,14 +34,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'bartsimpson147'; // Логин на почте
-    $mail->Password   = 'BartS147BartS147'; // Пароль на почте
+    $mail->Username   = 'bartforsendmail'; // Логин на почте
+    $mail->Password   = 'BartS147'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('bartsimpson147@gmail.com', 'Dimas'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('bartforsendmail@gmail.com', 'Dimas'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('d.partner.ua@gmail.com');  
+    $mail->addAddress('bartsimpson147@gmail.com');  
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
@@ -70,3 +73,6 @@ else {$result = "error";}
 
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+
+header('Location: index.html');
+exit();

@@ -1,9 +1,9 @@
 // import { ref } from './js/quiz-ref';
 import throttle from 'lodash.throttle';
-import php from './send.php';
-console.log(php);
+import { save, load } from './js/storage';
 
 const ref = {
+  form: document.querySelector('.reg__form'),
   buttonWrap: document.querySelector('.reg__button-wrap'),
   regButton: document.querySelector('.reg__button'),
   regCheckbox: document.querySelector('.reg__form-checkbox'),
@@ -19,12 +19,30 @@ let gender = localStorage.getItem('gender');
 if (gender === null) {
   gender = 'female';
 }
+
+const typeData =  localStorage.getItem('final');
+
+console.log(typeData);
+if (typeData==='metric') {
+  const measurements = load('measurements-metric');
+  console.log(measurements);
+  addHiddenInputs(measurements);
+}
+
+function addHiddenInputs (measurements) {
+  const keys = Object.keys(measurements);
+  const markup = keys.map(key => `<input type="hidden" name="${key}" value="${measurements[key]}"/>`).join('');
+  console.log(markup);
+  ref.form.insertAdjacentHTML('afterbegin', markup);
+}
+
+
 const throttleEmail = throttle(onEmailChange, 700);
 const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 ref.emailInput.addEventListener('change', onEmailInput);
 ref.emailInput.addEventListener('input', throttleEmail);
-ref.regButton.addEventListener('click', onSendReg);
+// ref.regButton.addEventListener('click', onSendReg);
 ref.regCheckboxLabel.addEventListener('click', onCheckbox);
 
 onLoad(gender);
@@ -57,65 +75,33 @@ function onEmailChange() {
   ref.inputBottomLine.style.backgroundColor = '';
 }
 
-function onSendReg(e) {
-  const email = ref.emailInput.value;
-  e.preventDefault();
+// function onSendReg(e) {
+//   const email = ref.emailInput.value;
+//   e.preventDefault();
 
-  if (email.match(patternEmail) && ref.regCheckbox.checked) {
-    console.log(1);
-    send({ e, php });
-  } else if (!email.match(patternEmail) && ref.regCheckbox.checked) {
-    ref.inputNotification.textContent = 'This field is required.';
-    ref.inputNotification.classList.add('active');
-    ref.inputButtonLine.style.backgroundColor = '#ee2020';
-  } else if (email.match(patternEmail) && !ref.regCheckbox.checked) {
-    console.log(2);
-    ref.regCustomCheckbox.style.borderColor = '#ee2020';
-    ref.regCheckboxLabelText.style.borderBottom = '1px solid #ee2020';
-  } else {
-    ref.inputNotification.textContent = 'This field is required.';
-    ref.inputNotification.classList.add('active');
-    ref.emailInput.style.borderBottomColor = '#ee2020';
-    ref.regCustomCheckbox.style.borderColor = '#ee2020';
-    ref.regCheckboxLabelText.style.borderBottom = '1px solid #ee2020';
-  }
-}
+//   if (email.match(patternEmail) && ref.regCheckbox.checked) {
+//     console.log(1);
+//     send({ e, php });
+//   } else if (!email.match(patternEmail) && ref.regCheckbox.checked) {
+//     ref.inputNotification.textContent = 'This field is required.';
+//     ref.inputNotification.classList.add('active');
+//     ref.inputButtonLine.style.backgroundColor = '#ee2020';
+//   } else if (email.match(patternEmail) && !ref.regCheckbox.checked) {
+//     console.log(2);
+//     ref.regCustomCheckbox.style.borderColor = '#ee2020';
+//     ref.regCheckboxLabelText.style.borderBottom = '1px solid #ee2020';
+//   } else {
+//     ref.inputNotification.textContent = 'This field is required.';
+//     ref.inputNotification.classList.add('active');
+//     ref.emailInput.style.borderBottomColor = '#ee2020';
+//     ref.regCustomCheckbox.style.borderColor = '#ee2020';
+//     ref.regCheckboxLabelText.style.borderBottom = '1px solid #ee2020';
+//   }
+// }
 
 function onCheckbox() {
   ref.regCustomCheckbox.style.borderColor = '';
   ref.regCheckboxLabelText.style.borderBottom = '';
 }
 
-document.querySelector('#form').addEventListener('submit', send);
 
-// Отправка данных на сервер
-function send({ e: event, php }) {
-  console.log('Отправка запроса');
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-  var req = new XMLHttpRequest();
-  req.open('POST', php, true);
-  req.onload = function () {
-    if (req.status >= 200 && req.status < 400) {
-      json = JSON.parse(this.response); // Ебанный internet explorer 11
-      console.log(json);
-
-      // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-      if (json.result == 'success') {
-        // Если сообщение отправлено
-        alert('Сообщение отправлено');
-      } else {
-        // Если произошла ошибка
-        alert('Ошибка. Сообщение не отправлено');
-      }
-      // Если не удалось связаться с php файлом
-    } else {
-      alert('Ошибка сервера. Номер: ' + req.status);
-    }
-  };
-
-  // Если не удалось отправить запрос. Стоит блок на хостинге
-  req.onerror = function () {
-    alert('Ошибка отправки запроса');
-  };
-  req.send(new FormData(event.target));
-}

@@ -69,7 +69,6 @@ const sendFormToStorage = ({ e, pages, pageDone: currentPage }) => {
 };
 
 const actionFormCheckbox = ({ e, pages, pageDone }) => {
-  console.log(pageDone);
   const allCheckboxes = ref.choiceFormWrap.children;
   const qtyNotLastCheckbox = allCheckboxes.length - 1;
   const arrNames = pages[pageDone - 1].answers.map(answer => answer.value);
