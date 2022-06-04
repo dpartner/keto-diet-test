@@ -24,114 +24,114 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{"./quiz-ref":"CXGo"}],"Z2Gu":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.addCardMarkup=void 0;var e=require("./quiz-ref");function r({pages:e,currentPage:r,links:a}){return`<p class="card-wrap__desc">${e[r-1].p}</p>\n              <img class="card-wrap__img" src="${a[e[r-1].background]}" alt="" />`}const a=({pages:a,newPage:s,svg:n,gender:t})=>{const d=r({pages:a,currentPage:s,links:n});e.ref.heading.style.display="none",e.ref.answerList.style.display="none",e.ref.choiceForm.style.display="none",e.ref.choiceFormLine.style.display="none",e.ref.cardWrap.style.display="",e.ref.containerHero.classList.add("hero__container--card"),e.ref.containerHero.style.backgroundImage="",e.ref.backgroundMask.classList.add("hero__mask-svg--card"),"male"===t?e.ref.cardButtonWrap.classList.add("card__button-wrap--male"):e.ref.cardButtonWrap.classList.add("card__button-wrap--female"),e.ref.cardWrapContent.innerHTML="",e.ref.cardWrapContent.insertAdjacentHTML("beforeend",d)};exports.addCardMarkup=a;
 },{"./quiz-ref":"CXGo"}],"rDXu":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.checkboxDisableSendButton=exports.actionFormCheckbox=exports.sendFormToStorage=exports.addChoiceMarkup=void 0;var e=require("./quiz-ref"),s=require("./storage");function a({pages:e,currentPage:s,svg:a}){const c=e[s-1].answers.map(e=>e.value),r=e[s-1].answers.map(e=>e.svg),o=e[s-1].answers.map(e=>e.type),t=e[s-1].answers[0].name,n=a["symbol-defs"];return c.map((e,s)=>`<div class="quiz__choice-form-element">\n    <input\n      class="visually-hidden quiz__choice-hidden-checkbox"\n      type="checkbox"\n      name="${t}"\n      id="${e}"\n      value="${e}"\n      data-type="${o[s]}"\n    />\n    <label class="quiz__choice-label" for="${e}">\n      <svg class="quiz__choice-icon">\n        <use class="quiz__choice-svg" href="${n}#${r[s]}"></use>\n      </svg>\n      <span class="quiz__choice-desc">${e}</span>\n      <div class="quiz__choice-plus-wrap plus-wrap">\n        <div class="plus-wrap__symbols-wrap">\n          <span class="plus-wrap__symbol"></span>\n          <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>\n        </div>\n      </div>\n    </label>\n  </div>`).join("")}const c=({pages:s,newPage:c,svg:r,gender:o})=>{e.ref.heading.style.display="",e.ref.choiceForm.style.display="",e.ref.cardWrap.style.display="none",e.ref.answerList.style.display="none",e.ref.choiceFormLine.style.display="none",e.ref.containerHero.classList.remove("hero__container--card"),e.ref.backgroundMask.classList.remove("hero__mask-svg--card"),"male"===o?e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--male"):e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--female"),"male"===o?e.ref.choiceFormDesc.classList.add("quiz__choice-form-desc--male"):e.ref.choiceFormDesc.classList.add("quiz__choice-form-desc--female"),e.ref.choiceFormDesc.textContent=`${s[c-1].p}`;const t=a({pages:s,currentPage:c,svg:r});e.ref.choiceFormWrap.innerHTML="",e.ref.choiceFormWrap.insertAdjacentHTML("beforeend",t)};exports.addChoiceMarkup=c;const r=({e:e,pages:a,pageDone:c})=>{const r=a[c-1].answers.map(e=>e.value),o=a[c-1].answers[0].name,t={};for(let s=0;s<r.length;s+=1){const a=e.currentTarget[o][s].checked;t[r[s]]=!!a}(0,s.save)(`${c}`,t)};exports.sendFormToStorage=r;const o=({e:a,pages:c,pageDone:o})=>{console.log(o);const t=e.ref.choiceFormWrap.children,n=t.length-1,i=c[o-1].answers.map(e=>e.value);if("none"!==a.target.dataset.type&&r({e:a,pages:c,pageDone:o}),"none"===a.target.dataset.type&&!1===a.target.checked)for(let e=0;e<n;e+=1)t[e].children[0].removeAttribute("disabled"),t[e].children[0].checked=(0,s.load)(o)[i[e]];if("none"===a.target.dataset.type&&!0===a.target.checked)for(let e=0;e<n;e+=1)t[e].children[0].checked=!1,t[e].children[0].setAttribute("disabled","true")};exports.actionFormCheckbox=o;const t=()=>{const s=e.ref.choiceFormWrap.children;let a=0;for(let e=0;e<s.length;e+=1)!1===s[e].children[0].checked&&(a+=1);a===s.length?(e.ref.choiceButton.setAttribute("disabled","true"),e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--disabled")):(e.ref.choiceButton.removeAttribute("disabled"),e.ref.choiceButtonWrap.classList.remove("quiz__choice__button-wrap--disabled"))};exports.checkboxDisableSendButton=t;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.checkboxDisableSendButton=exports.actionFormCheckbox=exports.sendFormToStorage=exports.addChoiceMarkup=void 0;var e=require("./quiz-ref"),s=require("./storage");function a({pages:e,currentPage:s,svg:a}){const r=e[s-1].answers.map(e=>e.value),c=e[s-1].answers.map(e=>e.svg),t=e[s-1].answers.map(e=>e.type),o=e[s-1].answers[0].name,n=a["symbol-defs"];return r.map((e,s)=>`<div class="quiz__choice-form-element">\n    <input\n      class="visually-hidden quiz__choice-hidden-checkbox"\n      type="checkbox"\n      name="${o}"\n      id="${e}"\n      value="${e}"\n      data-type="${t[s]}"\n    />\n    <label class="quiz__choice-label" for="${e}">\n      <svg class="quiz__choice-icon">\n        <use class="quiz__choice-svg" href="${n}#${c[s]}"></use>\n      </svg>\n      <span class="quiz__choice-desc">${e}</span>\n      <div class="quiz__choice-plus-wrap plus-wrap">\n        <div class="plus-wrap__symbols-wrap">\n          <span class="plus-wrap__symbol"></span>\n          <span class="plus-wrap__symbol plus-wrap__symbol--plus"></span>\n        </div>\n      </div>\n    </label>\n  </div>`).join("")}const r=({pages:s,newPage:r,svg:c,gender:t})=>{e.ref.heading.style.display="",e.ref.choiceForm.style.display="",e.ref.cardWrap.style.display="none",e.ref.answerList.style.display="none",e.ref.choiceFormLine.style.display="none",e.ref.containerHero.classList.remove("hero__container--card"),e.ref.backgroundMask.classList.remove("hero__mask-svg--card"),"male"===t?e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--male"):e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--female"),"male"===t?e.ref.choiceFormDesc.classList.add("quiz__choice-form-desc--male"):e.ref.choiceFormDesc.classList.add("quiz__choice-form-desc--female"),e.ref.choiceFormDesc.textContent=`${s[r-1].p}`;const o=a({pages:s,currentPage:r,svg:c});e.ref.choiceFormWrap.innerHTML="",e.ref.choiceFormWrap.insertAdjacentHTML("beforeend",o)};exports.addChoiceMarkup=r;const c=({e:e,pages:a,pageDone:r})=>{const c=a[r-1].answers.map(e=>e.value),t=a[r-1].answers[0].name,o={};for(let s=0;s<c.length;s+=1){const a=e.currentTarget[t][s].checked;o[c[s]]=!!a}(0,s.save)(`${r}`,o)};exports.sendFormToStorage=c;const t=({e:a,pages:r,pageDone:t})=>{const o=e.ref.choiceFormWrap.children,n=o.length-1,i=r[t-1].answers.map(e=>e.value);if("none"!==a.target.dataset.type&&c({e:a,pages:r,pageDone:t}),"none"===a.target.dataset.type&&!1===a.target.checked)for(let e=0;e<n;e+=1)o[e].children[0].removeAttribute("disabled"),o[e].children[0].checked=(0,s.load)(t)[i[e]];if("none"===a.target.dataset.type&&!0===a.target.checked)for(let e=0;e<n;e+=1)o[e].children[0].checked=!1,o[e].children[0].setAttribute("disabled","true")};exports.actionFormCheckbox=t;const o=()=>{const s=e.ref.choiceFormWrap.children;let a=0;for(let e=0;e<s.length;e+=1)!1===s[e].children[0].checked&&(a+=1);a===s.length?(e.ref.choiceButton.setAttribute("disabled","true"),e.ref.choiceButtonWrap.classList.add("quiz__choice__button-wrap--disabled")):(e.ref.choiceButton.removeAttribute("disabled"),e.ref.choiceButtonWrap.classList.remove("quiz__choice__button-wrap--disabled"))};exports.checkboxDisableSendButton=o;
 },{"./quiz-ref":"CXGo","./storage":"qhja"}],"HkkF":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.checkboxDisableSendButtonLine=exports.actionFormCheckboxLine=exports.sendFormToStorageLine=exports.addChoiceMarkupLine=void 0;var e=require("./quiz-ref"),n=require("./storage");function c({pages:e,currentPage:n,svg:c}){const i=e[n-1].answers.map(e=>e.value),s=e[n-1].answers.map(e=>e.type),o=e[n-1].answers[0].name,r=c["symbol-defs"];return i.map((e,n)=>`<div class="quiz__choice-line-form-element">\n                <input\n                  class="visually-hidden quiz__choice-line-hidden-checkbox"\n                  type="checkbox"\n                  name="${o}"\n                  id="${n}"\n                  value="${e}"\n                  data-type="${s[n]}"\n                />\n                <label class="quiz__choice-line-label" for="${n}">\n                  <div class="quiz__choice-line-content">${e}</div>\n                  <div class="quiz__choice-line-icon-wrap">\n                    <div class="quiz__choice-line-checked-icons">\n                      <svg class="quiz__choice-line-icon">\n                        <use\n                          class="quiz__choice-svg"\n                          href="${r}#icon-check-chk"\n                        ></use></svg\n                      ><svg class="quiz__choice-line-icon">\n                        <use\n                          class="quiz__choice-svg"\n                          href="${r}#icon-close-chk"\n                        ></use>\n                      </svg>\n                    </div>\n                  </div>\n                </label>\n              </div>`).join("")}const i=({pages:n,newPage:i,svg:s,gender:o})=>{e.ref.heading.style.display="",e.ref.choiceFormLine.style.display="",e.ref.cardWrap.style.display="none",e.ref.answerList.style.display="none",e.ref.choiceForm.style.display="none",e.ref.containerHero.classList.remove("hero__container--card"),e.ref.backgroundMask.classList.remove("hero__mask-svg--card"),"male"===o?e.ref.choiceLineButtonWrap.classList.add("quiz__choice-line__button-wrap--male"):e.ref.choiceLineButtonWrap.classList.add("quiz__choice-line__button-wrap--female"),"male"===o?e.ref.choiceFormLineDesc.classList.add("quiz__choice-line-form-desc--male"):e.ref.choiceFormLineDesc.classList.add("quiz__choice-line-form-desc--female"),e.ref.choiceFormLineDesc.textContent=`${n[i-1].p}`;const r=c({pages:n,currentPage:i,svg:s});e.ref.choiceFormLineWrap.innerHTML="",e.ref.choiceFormLineWrap.insertAdjacentHTML("beforeend",r)};exports.addChoiceMarkupLine=i;const s=({e:e,pages:c,pageDone:i})=>{const s=c[i-1].answers.map(e=>e.value),o=c[i-1].answers[0].name,r={};for(let n=0;n<s.length;n+=1){const c=e.currentTarget[o][n].checked;r[s[n]]=!!c}(0,n.save)(`${i}`,r)};exports.sendFormToStorageLine=s;const o=({e:c,pages:i,pageDone:o})=>{const r=e.ref.choiceFormLineWrap.children,t=r.length-1,a=i[o-1].answers.map(e=>e.value);if("none"!==c.target.dataset.type&&s({e:c,pages:i,pageDone:o}),"none"===c.target.dataset.type&&!1===c.target.checked)for(let e=0;e<t;e+=1)r[e].children[0].removeAttribute("disabled"),r[e].children[0].checked=(0,n.load)(o)[a[e]];if("none"===c.target.dataset.type&&!0===c.target.checked)for(let e=0;e<t;e+=1)r[e].children[0].checked=!1,r[e].children[0].setAttribute("disabled","true")};exports.actionFormCheckboxLine=o;const r=()=>{const n=e.ref.choiceFormLineWrap.children;let c=0;for(let e=0;e<n.length;e+=1)!1===n[e].children[0].checked&&(c+=1);c===n.length?(e.ref.choiceLineButton.setAttribute("disabled","true"),e.ref.choiceLineButtonWrap.classList.add("quiz__choice__button-wrap--disabled")):(e.ref.choiceLineButton.removeAttribute("disabled"),e.ref.choiceLineButtonWrap.classList.remove("quiz__choice__button-wrap--disabled"))};exports.checkboxDisableSendButtonLine=r;
 },{"./quiz-ref":"CXGo","./storage":"qhja"}],"u0AD":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.onHelp=void 0;const e=({pages:e,pageDone:o,event:n,gender:l,svg:s,basicLightbox:a})=>{n.preventDefault();const c=e[o-1].help,d="male"===l?"help__modal-icon-wrap--male":"help__modal-icon-wrap--female",t=s["symbol-defs"],i=a.create(`<div class="help__modal-wrap">\n        <a href="#" class="help__modal-close-wrap" data-modal="close">\n          <svg class="help__modal-close-icon" data-modal="close">\n            <use href="${t}#icon-close-modal" data-modal="close"></use>\n          </svg>\n        </a>\n        <div class="help__modal-icon-wrap ${d}">\n          <svg class="help__modal-icon">\n            <use href="${t}#icon-help-thinner"></use>\n          </svg>\n        </div>\n        <div class="help__modal-desc">\n          ${c}\n        </div>\n      </div>`,{onShow:e=>{window.addEventListener("keydown",p),document.querySelector("body").addEventListener("click",r)},onClose:e=>{window.removeEventListener("keydown",p),document.querySelector("body").removeEventListener("click",r)}});function r(e){"close"===e.target.dataset.modal&&i.close()}function p(e){"Escape"===e.code&&i.close()}i.show()};function o(){}exports.onHelp=e;
 },{}],"EJ9j":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-1.6f84262e.jpeg";
+module.exports="/bg-1.6f84262e.jpeg";
 },{}],"VW0r":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-10.5220f112.jpeg";
+module.exports="/bg-10.5220f112.jpeg";
 },{}],"lXsp":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-11.62147d26.jpeg";
+module.exports="/bg-11.62147d26.jpeg";
 },{}],"m4MI":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-12.9436b869.jpeg";
+module.exports="/bg-12.9436b869.jpeg";
 },{}],"ITWR":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-13.ffe6460e.jpeg";
+module.exports="/bg-13.ffe6460e.jpeg";
 },{}],"Rkyx":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-14.e414f408.jpeg";
+module.exports="/bg-14.e414f408.jpeg";
 },{}],"zwIs":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-15.5038da82.jpeg";
+module.exports="/bg-15.5038da82.jpeg";
 },{}],"XSl3":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-16.f9e1b0d4.jpeg";
+module.exports="/bg-16.f9e1b0d4.jpeg";
 },{}],"Nlig":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-17.afa28510.jpeg";
+module.exports="/bg-17.afa28510.jpeg";
 },{}],"Zjxv":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-18.19f719f6.jpeg";
+module.exports="/bg-18.19f719f6.jpeg";
 },{}],"MnR1":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-19.260ebdf0.jpeg";
+module.exports="/bg-19.260ebdf0.jpeg";
 },{}],"LagP":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-2.513056b5.jpeg";
+module.exports="/bg-2.513056b5.jpeg";
 },{}],"Zf7z":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-20.46ee4188.jpeg";
+module.exports="/bg-20.46ee4188.jpeg";
 },{}],"Yttb":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-21.ce29e347.jpeg";
+module.exports="/bg-21.ce29e347.jpeg";
 },{}],"DPfe":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-22.5917b107.jpeg";
+module.exports="/bg-22.5917b107.jpeg";
 },{}],"VOwp":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-23.53840e60.jpeg";
+module.exports="/bg-23.53840e60.jpeg";
 },{}],"OlPL":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-24.d684dcbf.jpeg";
+module.exports="/bg-24.d684dcbf.jpeg";
 },{}],"IGAf":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-25.797be1ae.jpeg";
+module.exports="/bg-25.797be1ae.jpeg";
 },{}],"U35R":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-26.1812c5a7.jpeg";
+module.exports="/bg-26.1812c5a7.jpeg";
 },{}],"AWuY":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-3.5cdad454.jpeg";
+module.exports="/bg-3.5cdad454.jpeg";
 },{}],"nMNg":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-4.cf3532c9.jpeg";
+module.exports="/bg-4.cf3532c9.jpeg";
 },{}],"f3HK":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-5.3caef439.jpeg";
+module.exports="/bg-5.3caef439.jpeg";
 },{}],"vgb8":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-6.678ee0cc.jpeg";
+module.exports="/bg-6.678ee0cc.jpeg";
 },{}],"M5eQ":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-7.ae305bbb.jpeg";
+module.exports="/bg-7.ae305bbb.jpeg";
 },{}],"jVLH":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-8.0bf6d513.jpeg";
+module.exports="/bg-8.0bf6d513.jpeg";
 },{}],"PHE4":[function(require,module,exports) {
-module.exports="/keto-diet-test/bg-9.74774687.jpeg";
+module.exports="/bg-9.74774687.jpeg";
 },{}],"S67B":[function(require,module,exports) {
 module.exports={"bg-1":require("./bg-1.jpeg"),"bg-10":require("./bg-10.jpeg"),"bg-11":require("./bg-11.jpeg"),"bg-12":require("./bg-12.jpeg"),"bg-13":require("./bg-13.jpeg"),"bg-14":require("./bg-14.jpeg"),"bg-15":require("./bg-15.jpeg"),"bg-16":require("./bg-16.jpeg"),"bg-17":require("./bg-17.jpeg"),"bg-18":require("./bg-18.jpeg"),"bg-19":require("./bg-19.jpeg"),"bg-2":require("./bg-2.jpeg"),"bg-20":require("./bg-20.jpeg"),"bg-21":require("./bg-21.jpeg"),"bg-22":require("./bg-22.jpeg"),"bg-23":require("./bg-23.jpeg"),"bg-24":require("./bg-24.jpeg"),"bg-25":require("./bg-25.jpeg"),"bg-26":require("./bg-26.jpeg"),"bg-3":require("./bg-3.jpeg"),"bg-4":require("./bg-4.jpeg"),"bg-5":require("./bg-5.jpeg"),"bg-6":require("./bg-6.jpeg"),"bg-7":require("./bg-7.jpeg"),"bg-8":require("./bg-8.jpeg"),"bg-9":require("./bg-9.jpeg")};
 },{"./bg-1.jpeg":"EJ9j","./bg-10.jpeg":"VW0r","./bg-11.jpeg":"lXsp","./bg-12.jpeg":"m4MI","./bg-13.jpeg":"ITWR","./bg-14.jpeg":"Rkyx","./bg-15.jpeg":"zwIs","./bg-16.jpeg":"XSl3","./bg-17.jpeg":"Nlig","./bg-18.jpeg":"Zjxv","./bg-19.jpeg":"MnR1","./bg-2.jpeg":"LagP","./bg-20.jpeg":"Zf7z","./bg-21.jpeg":"Yttb","./bg-22.jpeg":"DPfe","./bg-23.jpeg":"VOwp","./bg-24.jpeg":"OlPL","./bg-25.jpeg":"IGAf","./bg-26.jpeg":"U35R","./bg-3.jpeg":"AWuY","./bg-4.jpeg":"nMNg","./bg-5.jpeg":"f3HK","./bg-6.jpeg":"vgb8","./bg-7.jpeg":"M5eQ","./bg-8.jpeg":"jVLH","./bg-9.jpeg":"PHE4"}],"xscj":[function(require,module,exports) {
-module.exports="/keto-diet-test/calories.4e221656.svg";
+module.exports="/calories.4e221656.svg";
 },{}],"HCnt":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-appetite.e3f44e09.svg";
+module.exports="/card-appetite.e3f44e09.svg";
 },{}],"VRzF":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-blood-sugar.0ce57ee1.svg";
+module.exports="/card-blood-sugar.0ce57ee1.svg";
 },{}],"NQhD":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-junk-food.b16370f9.svg";
+module.exports="/card-junk-food.b16370f9.svg";
 },{}],"G3pO":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-restaurants.007c5b22.svg";
+module.exports="/card-restaurants.007c5b22.svg";
 },{}],"GkWv":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-target-weight.3fa19c16.svg";
+module.exports="/card-target-weight.3fa19c16.svg";
 },{}],"VYWQ":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-water.7389aece.svg";
+module.exports="/card-water.7389aece.svg";
 },{}],"IGAJ":[function(require,module,exports) {
-module.exports="/keto-diet-test/card-your-way.272b7e26.svg";
+module.exports="/card-your-way.272b7e26.svg";
 },{}],"qRRe":[function(require,module,exports) {
-module.exports="/keto-diet-test/dev.1ff0f9bc.svg";
+module.exports="/dev.1ff0f9bc.svg";
 },{}],"Cpbe":[function(require,module,exports) {
-module.exports="/keto-diet-test/fast.13b1ae89.svg";
+module.exports="/fast.13b1ae89.svg";
 },{}],"p7Pd":[function(require,module,exports) {
-module.exports="/keto-diet-test/final-weight-card.be112b6d.svg";
+module.exports="/final-weight-card.be112b6d.svg";
 },{}],"UmfP":[function(require,module,exports) {
-module.exports="/keto-diet-test/free-profile.d9c1dbbc.svg";
+module.exports="/free-profile.d9c1dbbc.svg";
 },{}],"NzAr":[function(require,module,exports) {
-module.exports="/keto-diet-test/gender-man.1aaaedd4.svg";
+module.exports="/gender-man.1aaaedd4.svg";
 },{}],"ydcr":[function(require,module,exports) {
-module.exports="/keto-diet-test/gender-women.78c560e1.svg";
+module.exports="/gender-women.78c560e1.svg";
 },{}],"pEjg":[function(require,module,exports) {
-module.exports="/keto-diet-test/gid.18d71647.svg";
+module.exports="/gid.18d71647.svg";
 },{}],"HZji":[function(require,module,exports) {
-module.exports="/keto-diet-test/head-mask.93add8fd.svg";
+module.exports="/head-mask.93add8fd.svg";
 },{}],"ajjJ":[function(require,module,exports) {
-module.exports="/keto-diet-test/icon-physical-activity.2159a4df.svg";
+module.exports="/icon-physical-activity.2159a4df.svg";
 },{}],"xF82":[function(require,module,exports) {
-module.exports="/keto-diet-test/keto-icon.0d88012b.svg";
+module.exports="/keto-icon.0d88012b.svg";
 },{}],"rFnr":[function(require,module,exports) {
-module.exports="/keto-diet-test/list.f645be28.svg";
+module.exports="/list.f645be28.svg";
 },{}],"okQu":[function(require,module,exports) {
-module.exports="/keto-diet-test/progress-percentage-bg.f5898a9b.svg";
+module.exports="/progress-percentage-bg.f5898a9b.svg";
 },{}],"ftzE":[function(require,module,exports) {
-module.exports="/keto-diet-test/promises.9aae2532.svg";
+module.exports="/promises.9aae2532.svg";
 },{}],"yKQK":[function(require,module,exports) {
-module.exports="/keto-diet-test/subscribe.219aee54.svg";
+module.exports="/subscribe.219aee54.svg";
 },{}],"bKpA":[function(require,module,exports) {
-module.exports="/keto-diet-test/symbol-defs.99671aac.svg";
+module.exports="/symbol-defs.99671aac.svg";
 },{}],"uUbn":[function(require,module,exports) {
 module.exports={calories:require("./calories.svg"),"card-appetite":require("./card-appetite.svg"),"card-blood-sugar":require("./card-blood-sugar.svg"),"card-junk-food":require("./card-junk-food.svg"),"card-restaurants":require("./card-restaurants.svg"),"card-target-weight":require("./card-target-weight.svg"),"card-water":require("./card-water.svg"),"card-your-way":require("./card-your-way.svg"),dev:require("./dev.svg"),fast:require("./fast.svg"),"final-weight-card":require("./final-weight-card.svg"),"free-profile":require("./free-profile.svg"),"gender-man":require("./gender-man.svg"),"gender-women":require("./gender-women.svg"),gid:require("./gid.svg"),"head-mask":require("./head-mask.svg"),"icon-physical-activity":require("./icon-physical-activity.svg"),"keto-icon":require("./keto-icon.svg"),list:require("./list.svg"),"progress-percentage-bg":require("./progress-percentage-bg.svg"),promises:require("./promises.svg"),subscribe:require("./subscribe.svg"),"symbol-defs":require("./symbol-defs.svg")};
 },{"./calories.svg":"xscj","./card-appetite.svg":"HCnt","./card-blood-sugar.svg":"VRzF","./card-junk-food.svg":"NQhD","./card-restaurants.svg":"G3pO","./card-target-weight.svg":"GkWv","./card-water.svg":"VYWQ","./card-your-way.svg":"IGAJ","./dev.svg":"qRRe","./fast.svg":"Cpbe","./final-weight-card.svg":"p7Pd","./free-profile.svg":"UmfP","./gender-man.svg":"NzAr","./gender-women.svg":"ydcr","./gid.svg":"pEjg","./head-mask.svg":"HZji","./icon-physical-activity.svg":"ajjJ","./keto-icon.svg":"xF82","./list.svg":"rFnr","./progress-percentage-bg.svg":"okQu","./promises.svg":"ftzE","./subscribe.svg":"yKQK","./symbol-defs.svg":"bKpA"}],"rAAd":[function(require,module,exports) {
 "use strict";var e=v(require("lodash.throttle")),r=b(require("basiclightbox")),t=v(require("./js/progress-percent")),a=require("./js/progress-dot"),n=require("./js/progress-line"),o=require("./js/pages"),s=require("./js/add-markup-answers"),d=require("./js/add-markup-progress"),u=require("./js/add-markup-card"),i=require("./js/add-markup-choice"),g=require("./js/add-markup-choice-line"),c=require("./js/add-markup-help"),p=v(require("./images/quiz-bg/*.jpeg")),l=v(require("./images/*.svg")),f=require("./js/quiz-ref");function m(){if("function"!=typeof WeakMap)return null;var e=new WeakMap;return m=function(){return e},e}function b(e){if(e&&e.__esModule)return e;if(null===e||"object"!=typeof e&&"function"!=typeof e)return{default:e};var r=m();if(r&&r.has(e))return r.get(e);var t={},a=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var n in e)if(Object.prototype.hasOwnProperty.call(e,n)){var o=a?Object.getOwnPropertyDescriptor(e,n):null;o&&(o.get||o.set)?Object.defineProperty(t,n,o):t[n]=e[n]}return t.default=e,r&&r.set(e,t),t}function v(e){return e&&e.__esModule?e:{default:e}}let h=Number(localStorage.getItem("page"));0===h&&(h=1);let k=localStorage.getItem("gender");null===k&&(k="female");const w=o.pages.length;q(h),(0,d.addProgressDotMarkup)(o.pages,h);const D=(0,e.default)(P,700);function P(){if(f.ref.progressStart.getBoundingClientRect().top<=document.documentElement.clientHeight)return(0,t.default)(h,w),(0,a.onDoneDot)(h),(0,n.onDoneLine)(h,w),window.removeEventListener("scroll",D)}function L({newPage:e,oldPage:r}){localStorage.setItem("page",`${e}`),h=localStorage.getItem("page"),(0,d.addProgressDotMarkup)(o.pages,e),(0,a.removeDoneDot)(),(0,n.clearDoneLine)(),q(e),(0,a.removeOldActiveDot)(r),P(),window.addEventListener("scroll",D)}function q(e){"quiz"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,l.default),(0,s.addQuestion)(o.pages,e),(0,s.addAnswersMarkup)({pages:o.pages,newPage:e,svg:l.default,gender:k})),"card"===o.pages[e-1].type&&(0,u.addCardMarkup)({pages:o.pages,newPage:e,svg:l.default,gender:k}),"choice"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,l.default),(0,s.addQuestion)(o.pages,e),(0,i.addChoiceMarkup)({pages:o.pages,newPage:e,svg:l.default,gender:k}),(0,i.checkboxDisableSendButton)()),"choice-line"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,l.default),(0,s.addQuestion)(o.pages,e),(0,g.addChoiceMarkupLine)({pages:o.pages,newPage:e,svg:l.default,gender:k}),(0,g.checkboxDisableSendButtonLine)()),"measurements"===o.pages[e-1].type&&(window.location="./measurements.html")}function j(){const e=Number(h);L({newPage:Number(h)+1,oldPage:e})}function y(e){e.preventDefault();const r=Number(h),t=Number(h)+1;(0,s.sendAnswer)({e:e,pages:o.pages,oldPage:r}),L({newPage:t,oldPage:r})}function N(e){if(1===Number(h))return;e.preventDefault();const r=Number(h);L({newPage:Number(h)-1,oldPage:r})}function E(e){e.preventDefault(),(0,i.sendFormToStorage)({e:e,pages:o.pages,pageDone:h});const r=Number(h);L({newPage:Number(h)+1,oldPage:r})}function S(e){(0,i.actionFormCheckbox)({e:e,pages:o.pages,pageDone:h}),(0,i.checkboxDisableSendButton)()}function B(e){e.preventDefault(),(0,g.sendFormToStorageLine)({e:e,pages:o.pages,pageDone:h});const r=Number(h);L({newPage:Number(h)+1,oldPage:r})}function M(e){(0,g.actionFormCheckboxLine)({e:e,pages:o.pages,pageDone:h}),(0,g.checkboxDisableSendButtonLine)()}function x(e){e.preventDefault(),(0,c.onHelp)({pages:o.pages,pageDone:h,event:e,gender:k,svg:l.default,basicLightbox:r})}window.addEventListener("scroll",D),f.ref.answerList.addEventListener("click",y),f.ref.backButton.addEventListener("click",N),f.ref.cardNextButton.addEventListener("click",j),f.ref.choiceForm.addEventListener("submit",E),f.ref.choiceForm.addEventListener("change",S),f.ref.choiceFormLine.addEventListener("submit",B),f.ref.choiceFormLine.addEventListener("change",M),document.querySelector("#helpButton").addEventListener("click",x);
 },{"lodash.throttle":"FNyO","basiclightbox":"BNjD","./js/progress-percent":"xtzB","./js/progress-dot":"tuDp","./js/progress-line":"wFNr","./js/pages":"KUk1","./js/add-markup-answers":"a6HF","./js/add-markup-progress":"v3Z2","./js/add-markup-card":"Z2Gu","./js/add-markup-choice":"rDXu","./js/add-markup-choice-line":"HkkF","./js/add-markup-help":"u0AD","./images/quiz-bg/*.jpeg":"S67B","./images/*.svg":"uUbn","./js/quiz-ref":"CXGo"}]},{},["rAAd"], null)
-//# sourceMappingURL=/keto-diet-test/quiz.ed3b411b.js.map
+//# sourceMappingURL=/quiz.js.map
