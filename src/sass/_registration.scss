@@ -57,12 +57,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   border-radius: 6px;
   background-color: #201d34;
   border: 1px solid rgba(99, 97, 113, 0.7);
   margin-right: 20px;
+  position: relative;
 }
 
 .reg__form-checkbox-label {
@@ -77,13 +78,14 @@
   ::after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 4px;
+    left: 4px;
     width: 22px;
     height: 22px;
     border-radius: 2px;
     background-color: var(--valid-color);
     border: 1px solid var(--valid-color);
+    transform-origin: center center;
     transform: scale(0);
     transition: transform 0.35s ease;
   }

@@ -5,7 +5,7 @@
   "main": "index.html",
   "homepage": "https://dpartner.github.io/keto-diet-test",
   "scripts": {
-    "dev": "parcel src/*.html src/*.js src/*.php",
+    "dev": "parcel src/*.html src/*.js src/*.php src/phpmailer/*.php",
     "build": "parcel build src/*.html src/*.js src/*.php src/phpmailer/*.php"
   },
   "repository": {

@@ -4,6 +4,9 @@ import { onDoneLine } from './js/progress-line';
 import { addProgressDotMarkup } from './js/add-markup-progress';
 import { onDoneDot } from './js/progress-dot';
 import CircleProgress from 'js-circle-progress';
+import * as basicLightbox from 'basiclightbox';
+import svg from './images/*.svg';
+import { onHelp } from './js/add-markup-help';
 
 const ref = {
   changeFormButtonImperial: document.querySelector(
@@ -333,4 +336,15 @@ async function onLoaderDesc() {
 
   const timer = await timeOut(delay);
   window.location.href = './final.html';
+}
+
+document.querySelector('#helpButton').addEventListener('click', onOpenHelpModal);
+
+function onOpenHelpModal(event) {
+  event.preventDefault();
+  let pageDone = Number(localStorage.getItem('page'));
+if (pageDone === 0) {
+  pageDone = 1;
+}
+  onHelp({ pages, pageDone, event, gender, svg, basicLightbox });
 }

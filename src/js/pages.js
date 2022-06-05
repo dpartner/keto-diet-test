@@ -56,6 +56,7 @@ export const pages = [
     icon: '',
     background: 'card-target-weight',
     p: 'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
+    help: 'Keto can be really effective even without excercising. On average people following a keto diet for several months are able to get sustainable results without a yo-yo effect.',
   },
   {
     page: 5,
@@ -66,6 +67,7 @@ export const pages = [
     icon: 'icon-since-desired-weight',
     background: 'bg-4',
     p: '',
+    help: "You don't need to worry about your desired weight anymore. AFter filling this quiz you will get a projection about your potential results after the first month on Keto.",
   },
   {
     page: 6,
@@ -80,6 +82,7 @@ export const pages = [
     icon: 'icon-care-about-calories',
     background: 'bg-5',
     p: '',
+    help: "With Your Keto meal plan, you will be able to stick to a calorie deficit without the need to count the calories in each product. Just follow the quantities in your daily recipes, and the results will come.",
   },
   {
     page: 7,
@@ -90,6 +93,7 @@ export const pages = [
     icon: '',
     background: 'card-junk-food',
     p: "With YourKeto diet you can forget about calorie counting. Each one of your meals is pre-calculated and contains only the products that you've selected during the quiz.",
+    help: "With YourKeto diet you can forget about calorie counting. Each one of your meals is pre-calculated and contains only the products that you've selected during the quiz.",
   },
   {
     page: 8,
@@ -109,6 +113,7 @@ export const pages = [
     icon: 'icon-meat',
     background: 'bg-6',
     p: 'Please select which meat you would like to be included:',
+    help: "The products that you choose to be Excluded will not be found in your personalized meal plan. We recommend you to exclude only the food that you are allergic to, should not eat due to a medical condition or a dietary restriction, or foods that you absolutely hate. The more products you include, the more diverse and effective your diet will be.",
   },
   {
     page: 9,
@@ -126,6 +131,7 @@ export const pages = [
     icon: 'icon-veggies',
     background: 'bg-7',
     p: 'Please select which veggies you would like to be included:',
+    help: 'The vegetables you have designated as "INCLUDE" may also be included, so that your diet is well-balanced. To completely exclude a product, click on the "EXCLUDE" column.',
   },
   {
     page: 10,
@@ -144,6 +150,7 @@ export const pages = [
     icon: 'icon-products',
     background: 'bg-8',
     p: 'Please select which products you would like to be included:',
+    help: "We recommend you to exclude only the food that you are allergic to, should not eat due to a medical condition or a dietary restriction, or foods that you absolutely hate. The more products you include, the more diverse and effective your diet will be.",
   },
   {
     page: 11,
@@ -160,6 +167,7 @@ export const pages = [
     icon: 'icon-sunday',
     background: 'bg-9',
     p: '',
+    help: "Your lifestyle has a significant impact on the amount of food included in your personalized meal program. If you can not find the exact answer choose the one that most closely corresponds to your daily life.",
   },
   {
     page: 12,
@@ -170,6 +178,7 @@ export const pages = [
     icon: 'icon-sleep-per-night',
     background: 'bg-10',
     p: '',
+    help: "Getting enough sleep will boost your Keto Transformation.",
   },
   {
     page: 13,
@@ -180,6 +189,8 @@ export const pages = [
     icon: 'icon-stressed-out',
     background: 'bg-11',
     p: '',
+    help: "Following a ketogenic meal plan is proven to be beneficial for treating mood disorders, including stress and depression. Using fats instead of carbs as a main fuel source for the body exerts positive effects on the brain and nervous system overall.",
+
   },
   {
     page: 14,
@@ -195,6 +206,7 @@ export const pages = [
     icon: 'icon-blood-sugar',
     background: 'bg-12',
     p: '',
+    help: "Blood glucose is a primary marker for determining the risk of diabetes and heart disease. Keto has the potential to seriously decrease the levels of sugar in our blood.",
   },
   {
     page: 15,
@@ -205,6 +217,7 @@ export const pages = [
     icon: '',
     background: 'card-blood-sugar',
     p: 'Reducing the daily carb intake to 5% or under can drastically reduce your blood sugar levels. Medical specialists often recommend ketogenic diet to people with diabetes 2 because carbohydrates turn into sugar and can cause blood sugar spikes.',
+    help: "Reducing the daily carb intake to 5% or under can drastically reduce your blood sugar levels. Medical specialists often recommend ketogenic diet to people with diabetes 2 because carbohydrates turn into sugar and can cause blood sugar spikes.",
   },
   {
     page: 16,
@@ -222,6 +235,7 @@ export const pages = [
     icon: 'icon-true',
     background: 'bg-13',
     p: 'It is possible to select multiple answers:',
+    help: "To be sure you'll achieve your goal, it is necessary to take your harmful habits into consideration. This should help you follow your diet.",
   },
   {
     page: 17,
@@ -232,6 +246,7 @@ export const pages = [
     icon: 'icon-hungry-most',
     background: 'bg-14',
     p: '',
+    help: "Combining Keto with intermittent fasting may further help you reach your weight loss goals.",
   },
   {
     page: 18,
@@ -242,6 +257,7 @@ export const pages = [
     icon: '',
     background: 'card-appetite',
     p: 'Keto diet is a proven method for appetite reduction. After you get into ketosis you will suddenly forget about your carb cravings, while the variety of foods and precalculated portions will keep you full during the day.',
+    help: "Keto diet is a proven method for appetite reduction. After you get into ketosis you will suddenly forget about your carb cravings, while the variety of foods and precalculated portions will keep you full during the day.",
   },
   {
     page: 19,
@@ -252,6 +268,7 @@ export const pages = [
     icon: 'icon-emotional-eating',
     background: 'bg-15',
     p: '',
+    help: "The Keto diet is proven to reduce cravings. Following your meal plan will make you eat the right food at the right time, so you feel energetic and well-fed during the day.",
   },
   {
     page: 20,
@@ -268,6 +285,7 @@ export const pages = [
     icon: 'icon-eat-junk-food',
     background: 'bg-16',
     p: '',
+    help: "It's great that with Keto you can still enjoy a variety of tasty meals and snacks.",
   },
   {
     page: 21,
@@ -278,6 +296,7 @@ export const pages = [
     icon: 'icon-eat-out-week',
     background: 'bg-17',
     p: '',
+    help: "Low carb diets like Keto work anywhere. Even if you don't have enough time for cooking today you can always substitute your meal with a Keto dish in the local restaurant.",
   },
   {
     page: 22,
@@ -288,6 +307,7 @@ export const pages = [
     icon: '',
     background: 'card-restaurants',
     p: "Keto diet doesn't require that you prepare all your meals by yourself. There are plenty of options you can find at the local restaurant, or even the supermarket.",
+    help: "Keto diet doesn't require that you prepare all your meals by yourself. There are plenty of options you can find at the local restaurant, or even the supermarket.",
   },
   {
     page: 23,
@@ -303,6 +323,7 @@ export const pages = [
     icon: 'icon-cooking-skills',
     background: 'bg-18',
     p: '',
+    help: "Even if you start Keto with beginner cooking skills, following your personalized meal plan will help you start enjoying the process of preparing your food.",
   },
   {
     page: 24,
@@ -321,6 +342,7 @@ export const pages = [
     icon: 'icon-drink-during-day',
     background: 'bg-19',
     p: 'You can choose multiple options:',
+    help: "Some drinks may increase your carb intake, so it is better to follow the instructions of your meal plan, where you will find what is best to drink during Keto.",
   },
   {
     page: 25,
@@ -337,6 +359,7 @@ export const pages = [
     icon: 'icon-water-per-day',
     background: 'bg-20',
     p: '',
+    help: "The Keto diet has a diuretic effect which increases the hydration needs of the organism. Drinking enough water will help you make the process of changing your body fuel quicker.",
   },
   {
     page: 26,
@@ -347,6 +370,7 @@ export const pages = [
     icon: '',
     background: 'card-water',
     p: 'Most people got even better results combining Keto with higher water intake. At the end of the quiz we will recommend you a personal daily water intake during your Keto transformation.',
+    help: "Most people got even better results combining Keto with higher water intake. At the end of the quiz we will recommend you a personal daily water intake during your Keto transformation.",
   },
   {
     page: 27,
@@ -357,6 +381,7 @@ export const pages = [
     icon: 'icon-consume-alcohol',
     background: 'bg-21',
     p: '',
+    help: "There are some alcohols which are low-carb and Keto-friendly like wine, vodka, whiskey, gin, tequila, rum and others. Of course, you can consume them in limited quantity as they are high in calories which can impact the weight loss process.",
   },
   {
     page: 28,
@@ -375,6 +400,7 @@ export const pages = [
     icon: 'icon-motivates-you-most',
     background: 'bg-22',
     p: 'You can choose multiple options:',
+    help: "The main factor behind your healthy weight-loss transformation is your motivation. Every journey starts with the right mindset, so find what drives you forward, and we will help with the rest.",
   },
   {
     page: 29,
@@ -385,6 +411,7 @@ export const pages = [
     icon: 'icon-start-keto-journey',
     background: 'bg-23',
     p: '',
+    help: "The earlier you start, the sooner you will reach your goals.",
   },
   {
     page: 30,
@@ -395,6 +422,7 @@ export const pages = [
     icon: '',
     background: 'card-your-way',
     p: "Actually, Your Keto journey has already started with a small step towards your target. Filling this quiz made you think about your lifestyle, and brain activity is one of the things that make our body uses a lot of energy.Now let's keep up with the progress and use that first step as a building block to your success. Continue to the next step to learn about important metrics, such as BMI, Metabolic age, Daily water intake and more useful info.",
+    help: "Now let's keep up with the progress and use that first step as a building block to your success. Continue to the next step to learn about important metrics, such as BMI, Metabolic age, Daily water intake and more useful info.",
   },
   {
     page: 31,
@@ -412,6 +440,7 @@ export const pages = [
     icon: 'icon-body-parts',
     background: 'bg-24',
     p: 'You can choose multiple options:',
+    help: "Ketogenic diet tend to reduce total weight and body fat percentage much more effective than low-fat diets.",
   },
   {
     page: 32,
@@ -422,6 +451,7 @@ export const pages = [
     icon: '',
     background: '',
     p: '', //последняя страница для снятия замеров
+    help: "This meal program is individual and takes your body measurements into consideration.",
   },
 ];
 

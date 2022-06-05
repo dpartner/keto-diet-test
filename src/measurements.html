@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="stylesheet" href="../node_modules/basiclightbox/dist/basicLightbox.min.css" />
     <title>User-data-input</title>
   </head>
   <body>
@@ -321,8 +322,7 @@
                 <use
                   class="progress__button-svg"
                   href="./images/symbol-defs.svg#icon-back-circled"
-                ></use></svg
-              >Back
+                ></use></svg>Back
             </a>
             <div class="progress-bar__wrap">
               <div class="progress-bar__line">
@@ -335,7 +335,7 @@
                 </div> -->
               </div>
             </div>
-            <button type="button" class="progress__button-link">
+            <button type="button" id="helpButton" class="progress__button-link">
               Help<svg class="progress__button-icon progress__button-icon--help">
                 <use
                   class="progress__button-svg"

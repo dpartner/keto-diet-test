@@ -2,6 +2,7 @@
 import throttle from 'lodash.throttle';
 import { save, load } from './js/storage';
 
+
 const ref = {
   form: document.querySelector('.reg__form'),
   buttonWrap: document.querySelector('.reg__button-wrap'),
@@ -22,17 +23,18 @@ if (gender === null) {
 
 const typeData =  localStorage.getItem('final');
 
-console.log(typeData);
 if (typeData==='metric') {
   const measurements = load('measurements-metric');
-  console.log(measurements);
+  addHiddenInputs(measurements);
+}
+if (typeData==='imperic') {
+  const measurements = load('measurements-imperic');
   addHiddenInputs(measurements);
 }
 
 function addHiddenInputs (measurements) {
   const keys = Object.keys(measurements);
   const markup = keys.map(key => `<input type="hidden" name="${key}" value="${measurements[key]}"/>`).join('');
-  console.log(markup);
   ref.form.insertAdjacentHTML('afterbegin', markup);
 }
 

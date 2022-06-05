@@ -67,7 +67,6 @@ function onLoad() {
     console.log(1);
   } else {
     ref.cookieWrap.style.display = 'flex';
-    console.log(2);
   }
 }
 

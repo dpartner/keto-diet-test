@@ -14,14 +14,38 @@ $email = $_POST['email'];
 // Формирование самого письма
 $title = "Заявка с сайта KETO";
 $body = "
-<h2>Новое письмо</h2>
-// <b>Имя:</b> $name<br>
+<h2>Заявка с сайта KETO-DIET</h2>
 <b>Почта:</b> $email<br><br>
-// <b>Сообщение:</b><br>$text
 ";
+if(!empty($_POST['age-metric'])){
+    $body.='<p><strong>Возраст:</strong>' .$_POST['age-metric'].'</p>';
+}
 if(!empty($_POST['height-metric'])){
     $body.='<p><strong>Рост:</strong>' .$_POST['height-metric'].'</p>';
 }
+if(!empty($_POST['weight-metric'])){
+    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-metric'].'</p>';
+}
+if(!empty($_POST['target-weight-metric'])){
+    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-metric'].'</p>';
+}
+
+if(!empty($_POST['age-imperic'])){
+    $body.='<p><strong>Возраст:</strong>' .$_POST['age-imperic'].'</p>';
+}
+if(!empty($_POST['height-ft'])){
+    $body.='<p><strong>Рост футов:</strong>' .$_POST['height-ft'].'</p>';
+}
+if(!empty($_POST['height-inch'])){
+    $body.='<p><strong>Рост дюймов:</strong>' .$_POST['height-inch'].'</p>';
+}
+if(!empty($_POST['weight-imperic'])){
+    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-imperic'].'</p>';
+}
+if(!empty($_POST['target-weight-imperic'])){
+    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-imperic'].'</p>';
+}
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
