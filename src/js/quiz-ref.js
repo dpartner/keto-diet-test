@@ -28,4 +28,6 @@ export const ref = {
   line: document.querySelector('.progress-bar__line-done'),
   lineWrap: document.querySelector('.progress-bar__line'),
   percentage: document.querySelector('.progress__percentage-value'),
+  payFormLabel: document.querySelector('.pay__payment-icon-wrap'),
+  payFormIconWrap: document.querySelector('.pay__payment-icon-wrap'),
 };

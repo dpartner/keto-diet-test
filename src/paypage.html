@@ -13,7 +13,7 @@
     <title>Pay-page</title>
 </head>
 
-<body>
+<body class="pay__body">
     <header class="header section header-quiz">
         <div class="header__container container">
             <div class="logo-link logo-link--header" href="./index.html">
@@ -37,7 +37,7 @@
             class="final__hero-parallax-image--second"
             alt="image-23"
             style="transform: matrix(1, 0, 0, 1, 20.9, -7.78604)"
-          /> -->
+                /> -->
                 <img src="./images/image-24.png" class="final__hero-parallax-image--third" alt="image-24"
                     style="transform: matrix(1, 0, 0, 1, 7.8375, -19.4651)" />
                 <img src="./images/image-25.png" class="final__hero-parallax-image--fourth" alt="image-25"
@@ -45,13 +45,155 @@
             </div>
         </section>
         <section class="section pay__payment-section">
-            <h3 class="pay__payment-heading">Your Plan</h3>
-            <form action="" class="pay__form">
-                <label class="pay__form-checkbox-label" for="1">
-                    <input type="checkbox" id="1">
-                    <div></div>
-                </label>
-            </form>
+            <div class="container pay__container">
+                <h3 class="pay__payment-heading">Your Plan</h3>
+                <form action="" class="pay__form">
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="1" name="first-payment">
+                    <label class="pay__form-checkbox-label" for="1">
+                        <div class="pay__form-checkbox-wrap">
+                            <div class="pay__payment-icon-wrap">
+                                <div class="pay__payment-checked-icons">
+                                    <svg class="pay__payment-icon">
+                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                        </use>
+                                    </svg>
+                                    <svg class="pay__payment-icon">
+                                        <use
+                                        class="pay__choice-svg"
+                                        href="./images/symbol-defs.svg#icon-close-chk"
+                                        >
+                                        </use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="pay__payment-price-title-wrap">
+                                <span class="pay__payment-price-title">
+                                    2 month(s) <br> Keto diet
+                                </span>
+                                <span class="pay__payment-price-subtitle">
+                                    Billed every 2 months
+                                </span>
+                            </div>
+                            <div class="pay__payment-price-wrap">
+                                <span class="pay__payment-price-old">
+                                    $1.60
+                                </span>
+                                <span class="pay__payment-price-new">
+                                    $0.80
+                                </span>
+                                <span class="pay__payment-price-period">
+                                    per day
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="2" name="first-payment" checked>
+                    <label class="pay__form-checkbox-label" for="2">
+                        <div class="pay__form-checkbox-wrap">
+                            <div class="pay__payment-icon-wrap">
+                                <div class="pay__payment-checked-icons">
+                                    <svg class="pay__payment-icon">
+                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                        </use>
+                                    </svg>
+                                    <svg class="pay__payment-icon">
+                                        <use
+                                        class="pay__choice-svg"
+                                        href="./images/symbol-defs.svg#icon-close-chk"
+                                        >
+                                        </use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="pay__payment-price-title-wrap">
+                                <span class="pay__payment-price-title">
+                                    1 month(s) <br> Keto diet
+                                </span>
+                                <span class="pay__payment-price-subtitle">
+                                    Billed every 1 month
+                                </span>
+                            </div>
+                            <div class="pay__payment-price-wrap">
+                                <span class="pay__payment-price-old">
+                                    $1.60
+                                </span>
+                                <span class="pay__payment-price-new">
+                                    $1.00
+                                </span>
+                                <span class="pay__payment-price-period">
+                                    per day
+                                </span>
+                            </div>
+                            <div class="pay__payment-price-popular">MOST POPULAR - SAVE 40%</div>
+                        </div>
+                    </label>
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="3" name="first-payment">
+                    <label class="pay__form-checkbox-label" for="3">
+                        <div class="pay__form-checkbox-wrap">
+                            <div class="pay__payment-icon-wrap">
+                                <div class="pay__payment-checked-icons">
+                                    <svg class="pay__payment-icon">
+                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                        </use>
+                                    </svg>
+                                    <svg class="pay__payment-icon">
+                                        <use
+                                        class="pay__choice-svg"
+                                        href="./images/symbol-defs.svg#icon-close-chk"
+                                        >
+                                        </use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="pay__payment-price-title-wrap">
+                                <span class="pay__payment-price-title">
+                                    Lifetime access <br> Keto diet
+                                </span>
+                                <span class="pay__payment-price-subtitle">
+                                    One time payment
+                                </span>
+                            </div>
+                            <div class="pay__payment-price-wrap">
+                                <span class="pay__payment-price-old">
+                                    $622.00
+                                </span>
+                                <span class="pay__payment-price-new">
+                                    $199.00
+                                </span>
+                                <span class="pay__payment-price-period">
+                                    price today
+                                </span>
+                            </div>
+                        </div>
+                    </label>
+                    <div class="pay__payment-total-wrap">
+                        <div class="pay__payment-total-wrap-top">
+                            <div class="pay__payment-total-discount-wrap">
+                                <span class="pay__payment-total-discount-heading-name">
+                                    Keto diet <br>
+                                    + Vip content
+                                </span>
+                                <span>
+                                    Discount - 68%
+                                </span>
+                            </div>
+                            <div class="pay__payment-total-price-wrap">
+                                <span class="pay__payment-total-price-old">$622.00</span>
+                                <span class="pay__payment-total-price-new">-$423.00</span>
+                            </div>
+                        </div>
+                        <div class="pay__payment-total-wrap-bottom">
+                            <span class="pay__payment-total">Total</span>
+                            <span class="pay__payment-total-price">$29.90</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="pay__button"><span class="pay__button-text">PAY VIA CARD</span>
+                        <svg class="pay__button-icon">
+                        <use href="./images/symbol-defs.svg#icon-debit-card"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </section>
         
     </main>
@@ -81,7 +223,7 @@
             </div>
         </div>
     </footer>
-    <script src="./final.js"></script>
+    <script src="./paypage.js"></script>
 </body>
 
 </html>

@@ -28,6 +28,7 @@ let gender = localStorage.getItem('gender');
 if (gender === null) {
   gender = 'female';
 }
+
 let typeMeasurements = localStorage.getItem('final');
 if (typeMeasurements === null) {
   typeMeasurements = 'imperic';
