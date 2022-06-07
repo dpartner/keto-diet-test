@@ -12,38 +12,16 @@ $email = $_POST['email'];
 // $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Заявка с сайта KETO";
+$title = "Заявка с сайта KETO – ТАРИФ";
 $body = "
-<h2>Заявка с сайта KETO-DIET</h2>
+<h2>Заявка с сайта KETO-DIET — ТАРИФ</h2>
 <b>Почта:</b> $email<br><br>
 ";
-if(!empty($_POST['age-metric'])){
-    $body.='<p><strong>Возраст:</strong>' .$_POST['age-metric'].'</p>';
+if(!empty($_POST['firstPayment'])){
+    $body.='<p><strong>Выбрал(а) тариф:</strong>' .$_POST['firstPayment'].'</p>';
 }
-if(!empty($_POST['height-metric'])){
-    $body.='<p><strong>Рост:</strong>' .$_POST['height-metric'].'</p>';
-}
-if(!empty($_POST['weight-metric'])){
-    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-metric'].'</p>';
-}
-if(!empty($_POST['target-weight-metric'])){
-    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-metric'].'</p>';
-}
-
-if(!empty($_POST['age-imperic'])){
-    $body.='<p><strong>Возраст:</strong>' .$_POST['age-imperic'].'</p>';
-}
-if(!empty($_POST['height-ft'])){
-    $body.='<p><strong>Рост футов:</strong>' .$_POST['height-ft'].'</p>';
-}
-if(!empty($_POST['height-inch'])){
-    $body.='<p><strong>Рост дюймов:</strong>' .$_POST['height-inch'].'</p>';
-}
-if(!empty($_POST['weight-imperic'])){
-    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-imperic'].'</p>';
-}
-if(!empty($_POST['target-weight-imperic'])){
-    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-imperic'].'</p>';
+if(!empty($_POST['secondPayment'])){
+    $body.='<p><strong>Выбрал(а) тариф:</strong>' .$_POST['secondPayment'].'</p>';
 }
 
 
@@ -98,5 +76,5 @@ else {$result = "error";}
 // Отображение результата
 echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
 
-header('Location: paypage.html');
+header('Location: thanks-page.html');
 exit();
