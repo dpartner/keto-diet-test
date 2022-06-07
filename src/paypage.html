@@ -47,8 +47,8 @@
         <section class="section pay__payment-section">
             <div class="container pay__container">
                 <h3 class="pay__payment-heading">Your Plan</h3>
-                <form action="" class="pay__form">
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="1" name="first-payment">
+                <form method="POST" action="/send-pay.php" class="pay__form">
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="1" name="firstPayment" value="2month" totalOld="99.80" totalNew="49.90">
                     <label class="pay__form-checkbox-label" for="1">
                         <div class="pay__form-checkbox-wrap">
                             <div class="pay__payment-icon-wrap">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </label>
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="2" name="first-payment" checked>
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="2" name="firstPayment" checked value="1month" totalOld="49.83" totalNew="19.93">
                     <label class="pay__form-checkbox-label" for="2">
                         <div class="pay__form-checkbox-wrap">
                             <div class="pay__payment-icon-wrap">
@@ -127,7 +127,7 @@
                             <div class="pay__payment-price-popular">MOST POPULAR - SAVE 40%</div>
                         </div>
                     </label>
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="3" name="first-payment">
+                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="3" name="firstPayment" value="oneTime" totalOld="622.00" totalNew="423.00">
                     <label class="pay__form-checkbox-label" for="3">
                         <div class="pay__form-checkbox-wrap">
                             <div class="pay__payment-icon-wrap">
@@ -174,17 +174,17 @@
                                     + Vip content
                                 </span>
                                 <span>
-                                    Discount - 68%
+                                    Discount - <span class="pay__discount-percent">68</span>%
                                 </span>
                             </div>
                             <div class="pay__payment-total-price-wrap">
-                                <span class="pay__payment-total-price-old">$622.00</span>
-                                <span class="pay__payment-total-price-new">-$423.00</span>
+                                <span class="pay__payment-total-price-old">$<span class="total-price-old">49.83</span></span>
+                                <span class="pay__payment-total-price-new">-$<span class="total-price-new">19.93</span></span>
                             </div>
                         </div>
                         <div class="pay__payment-total-wrap-bottom">
                             <span class="pay__payment-total">Total</span>
-                            <span class="pay__payment-total-price">$29.90</span>
+                            <span class="pay__payment-total-price">$<span class="total-price">29.90</span></span>
                         </div>
                     </div>
                     <button type="submit" class="pay__button"><span class="pay__button-text">PAY VIA CARD</span>
@@ -195,7 +195,43 @@
                 </form>
             </div>
         </section>
-        
+        <section class="section get-section">
+            <div class="container pay__container">
+                <h3 class="pay__payment-heading">What you get</h3>
+                <ul class="pay__get-list">
+                    <li class="pay__get-list-item">
+                        <svg class="pay__get-list-icon">
+                            <use class="pay__get-list-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                            </use>
+                        </svg>
+                        Step-by-step video tutorials</li>
+                    <li class="pay__get-list-item">
+                        <svg class="pay__get-list-icon">
+                            <use class="pay__get-list-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                            </use>
+                        </svg>
+                        Easy-to-cook delicious recipes</li>
+                    <li class="pay__get-list-item">
+                        <svg class="pay__get-list-icon">
+                            <use class="pay__get-list-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                            </use>
+                        </svg>
+                        Printable weekly shopping list with all ingredients</li>
+                    <li class="pay__get-list-item">
+                        <svg class="pay__get-list-icon">
+                            <use class="pay__get-list-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                            </use>
+                        </svg>
+                        Pre-calculated portions based on your habits and preferences</li>
+                    <li class="pay__get-list-item">
+                        <svg class="pay__get-list-icon">
+                            <use class="pay__get-list-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                            </use>
+                        </svg>
+                        Fully personalized Keto plan with 4 meals for each day</li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer class="section footer__section">
         <div class="container footer__container">

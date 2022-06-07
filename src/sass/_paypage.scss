@@ -65,6 +65,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 70px;
 }
 
 .pay__form-checkbox-label {
@@ -386,4 +387,33 @@
   right: 20px;
   fill: currentColor;
   text-align: center;
+}
+
+.pay__get-list {
+  padding: 0 30px 0 50px;
+}
+
+.pay__get-list-item {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.pay__get-list-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: -45px;
+  transform: translateY(-50%);
+}
+
+.pay__get-list-svg {
+  fill: #ef5eb9;
+}
+
+.pay__get-list-svg--male {
+  fill: #728ded;
 }

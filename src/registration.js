@@ -2,7 +2,6 @@
 import throttle from 'lodash.throttle';
 import { save, load } from './js/storage';
 
-
 const ref = {
   form: document.querySelector('.reg__form'),
   buttonWrap: document.querySelector('.reg__button-wrap'),
@@ -21,23 +20,24 @@ if (gender === null) {
   gender = 'female';
 }
 
-const typeData =  localStorage.getItem('final');
+const typeData = localStorage.getItem('final');
 
-if (typeData==='metric') {
+if (typeData === 'metric') {
   const measurements = load('measurements-metric');
   addHiddenInputs(measurements);
 }
-if (typeData==='imperic') {
+if (typeData === 'imperic') {
   const measurements = load('measurements-imperic');
   addHiddenInputs(measurements);
 }
 
-function addHiddenInputs (measurements) {
+function addHiddenInputs(measurements) {
   const keys = Object.keys(measurements);
-  const markup = keys.map(key => `<input type="hidden" name="${key}" value="${measurements[key]}"/>`).join('');
+  const markup = keys
+    .map(key => `<input type="hidden" name="${key}" value="${measurements[key]}"/>`)
+    .join('');
   ref.form.insertAdjacentHTML('afterbegin', markup);
 }
-
 
 const throttleEmail = throttle(onEmailChange, 700);
 const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -60,7 +60,7 @@ function onEmailInput() {
 
   if (email.match(patternEmail)) {
     ref.inputNotification.classList.remove('active');
-    ref.inputButtonLine.style.backgroundColor = '';
+    ref.inputBottomLine.style.backgroundColor = '';
   } else {
     ref.inputNotification.textContent = 'Please enter valid email.';
     ref.inputNotification.classList.add('active');
@@ -68,8 +68,10 @@ function onEmailInput() {
   }
   if (email == '') {
     ref.inputNotification.classList.remove('active');
-    ref.inputButtonLine.style.backgroundColor = '';
+    ref.inputBottomLine.style.backgroundColor = '';
   }
+  console.log(123);
+  localStorage.setItem('email', email);
 }
 
 function onEmailChange() {
@@ -105,5 +107,3 @@ function onCheckbox() {
   ref.regCustomCheckbox.style.borderColor = '';
   ref.regCheckboxLabelText.style.borderBottom = '';
 }
-
-
