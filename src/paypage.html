@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css">
     <title>Pay-page</title>
 </head>
 
@@ -251,8 +252,39 @@
                 </div>
             </div>
         </section>
-        <section class="section testimonials__section">
-
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <h3 class="pay__payment-heading">They did it!</h3>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide slide__item">
+                        <div class="slide__wrap">
+                            <div class="slide__result-wrap">
+                                <div class="slide__result-photo">
+                                    <img class="slide__result-img" src="./images/reviews/1.jpeg" alt="reviews1">
+                                    <div class="slide__result-desc">
+                                        Before
+                                    </div>
+                                </div>
+                                <div class="slide__result-photo slide__result-photo--second">
+                                    <img class="slide__result-img" src="./images/reviews/2.jpeg" alt="reviews2">
+                                    <div class="slide__result-desc slide__result-desc--female">
+                                        After
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide__desc-wrap">
+                                <img class="slide__desc-icon" src="./images/reviews/quote.svg" alt="icon-description">
+                                <p class="slide__desc">
+                                    I've tried so many diets and meal plans, but they were useless. This Keto meal plan is so easy to follow. So far I've been on this program for one month, and I've lost 15 pounds. I can't wait to see my progress at the end. For anyone considering to start this meal plan, it's definitely worth a go!!
+                                </p>
+                                <div class="slide__desc-author">Maria / 32</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer class="section footer__section">

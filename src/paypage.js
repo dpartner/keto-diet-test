@@ -1,3 +1,7 @@
+import Splide from '@splidejs/splide';
+
+new Splide('.splide').mount();
+
 let gender = localStorage.getItem('gender');
 if (gender === null) {
   gender = 'female';

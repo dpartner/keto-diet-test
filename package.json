@@ -26,6 +26,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.0.6",
     "basiclightbox": "^5.0.4",
     "js-circle-progress": "^0.2.3",
     "lodash.throttle": "^4.1.1",
