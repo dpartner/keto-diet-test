@@ -57,12 +57,12 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'bartforsendmail'; // Логин на почте
-    $mail->Password   = 'BartS147'; // Пароль на почте
+    $mail->Host       = 'mail.adm.tools'; // SMTP сервера вашей почты
+    $mail->Username   = 'info@zshop.biz.ua'; // Логин на почте
+    $mail->Password   = 'ZshoP147#'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('bartforsendmail@gmail.com', 'Dimas'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('info@zshop.biz.ua', 'Keto'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('bartsimpson147@gmail.com');  
