@@ -51,10 +51,10 @@ module.exports="/bg-17.afa28510.jpeg";
 module.exports="/bg-18.19f719f6.jpeg";
 },{}],"MnR1":[function(require,module,exports) {
 module.exports="/bg-19.260ebdf0.jpeg";
-},{}],"LagP":[function(require,module,exports) {
-module.exports="/bg-2.513056b5.jpeg";
 },{}],"Zf7z":[function(require,module,exports) {
 module.exports="/bg-20.46ee4188.jpeg";
+},{}],"LagP":[function(require,module,exports) {
+module.exports="/bg-2.513056b5.jpeg";
 },{}],"Yttb":[function(require,module,exports) {
 module.exports="/bg-21.ce29e347.jpeg";
 },{}],"DPfe":[function(require,module,exports) {
@@ -82,8 +82,8 @@ module.exports="/bg-8.0bf6d513.jpeg";
 },{}],"PHE4":[function(require,module,exports) {
 module.exports="/bg-9.74774687.jpeg";
 },{}],"S67B":[function(require,module,exports) {
-module.exports={"bg-1":require("./bg-1.jpeg"),"bg-10":require("./bg-10.jpeg"),"bg-11":require("./bg-11.jpeg"),"bg-12":require("./bg-12.jpeg"),"bg-13":require("./bg-13.jpeg"),"bg-14":require("./bg-14.jpeg"),"bg-15":require("./bg-15.jpeg"),"bg-16":require("./bg-16.jpeg"),"bg-17":require("./bg-17.jpeg"),"bg-18":require("./bg-18.jpeg"),"bg-19":require("./bg-19.jpeg"),"bg-2":require("./bg-2.jpeg"),"bg-20":require("./bg-20.jpeg"),"bg-21":require("./bg-21.jpeg"),"bg-22":require("./bg-22.jpeg"),"bg-23":require("./bg-23.jpeg"),"bg-24":require("./bg-24.jpeg"),"bg-25":require("./bg-25.jpeg"),"bg-26":require("./bg-26.jpeg"),"bg-3":require("./bg-3.jpeg"),"bg-4":require("./bg-4.jpeg"),"bg-5":require("./bg-5.jpeg"),"bg-6":require("./bg-6.jpeg"),"bg-7":require("./bg-7.jpeg"),"bg-8":require("./bg-8.jpeg"),"bg-9":require("./bg-9.jpeg")};
-},{"./bg-1.jpeg":"EJ9j","./bg-10.jpeg":"VW0r","./bg-11.jpeg":"lXsp","./bg-12.jpeg":"m4MI","./bg-13.jpeg":"ITWR","./bg-14.jpeg":"Rkyx","./bg-15.jpeg":"zwIs","./bg-16.jpeg":"XSl3","./bg-17.jpeg":"Nlig","./bg-18.jpeg":"Zjxv","./bg-19.jpeg":"MnR1","./bg-2.jpeg":"LagP","./bg-20.jpeg":"Zf7z","./bg-21.jpeg":"Yttb","./bg-22.jpeg":"DPfe","./bg-23.jpeg":"VOwp","./bg-24.jpeg":"OlPL","./bg-25.jpeg":"IGAf","./bg-26.jpeg":"U35R","./bg-3.jpeg":"AWuY","./bg-4.jpeg":"nMNg","./bg-5.jpeg":"f3HK","./bg-6.jpeg":"vgb8","./bg-7.jpeg":"M5eQ","./bg-8.jpeg":"jVLH","./bg-9.jpeg":"PHE4"}],"xscj":[function(require,module,exports) {
+module.exports={"bg-1":require("./bg-1.jpeg"),"bg-10":require("./bg-10.jpeg"),"bg-11":require("./bg-11.jpeg"),"bg-12":require("./bg-12.jpeg"),"bg-13":require("./bg-13.jpeg"),"bg-14":require("./bg-14.jpeg"),"bg-15":require("./bg-15.jpeg"),"bg-16":require("./bg-16.jpeg"),"bg-17":require("./bg-17.jpeg"),"bg-18":require("./bg-18.jpeg"),"bg-19":require("./bg-19.jpeg"),"bg-20":require("./bg-20.jpeg"),"bg-2":require("./bg-2.jpeg"),"bg-21":require("./bg-21.jpeg"),"bg-22":require("./bg-22.jpeg"),"bg-23":require("./bg-23.jpeg"),"bg-24":require("./bg-24.jpeg"),"bg-25":require("./bg-25.jpeg"),"bg-26":require("./bg-26.jpeg"),"bg-3":require("./bg-3.jpeg"),"bg-4":require("./bg-4.jpeg"),"bg-5":require("./bg-5.jpeg"),"bg-6":require("./bg-6.jpeg"),"bg-7":require("./bg-7.jpeg"),"bg-8":require("./bg-8.jpeg"),"bg-9":require("./bg-9.jpeg")};
+},{"./bg-1.jpeg":"EJ9j","./bg-10.jpeg":"VW0r","./bg-11.jpeg":"lXsp","./bg-12.jpeg":"m4MI","./bg-13.jpeg":"ITWR","./bg-14.jpeg":"Rkyx","./bg-15.jpeg":"zwIs","./bg-16.jpeg":"XSl3","./bg-17.jpeg":"Nlig","./bg-18.jpeg":"Zjxv","./bg-19.jpeg":"MnR1","./bg-20.jpeg":"Zf7z","./bg-2.jpeg":"LagP","./bg-21.jpeg":"Yttb","./bg-22.jpeg":"DPfe","./bg-23.jpeg":"VOwp","./bg-24.jpeg":"OlPL","./bg-25.jpeg":"IGAf","./bg-26.jpeg":"U35R","./bg-3.jpeg":"AWuY","./bg-4.jpeg":"nMNg","./bg-5.jpeg":"f3HK","./bg-6.jpeg":"vgb8","./bg-7.jpeg":"M5eQ","./bg-8.jpeg":"jVLH","./bg-9.jpeg":"PHE4"}],"xscj":[function(require,module,exports) {
 module.exports="/calories.4e221656.svg";
 },{}],"HCnt":[function(require,module,exports) {
 module.exports="/card-appetite.e3f44e09.svg";
