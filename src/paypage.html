@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./sass/main.scss" />
-    <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <!-- <link rel="stylesheet" href="../node_modules/@splidejs/splide/dist/css/splide.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/css/splide.min.css">
     <title>Pay-page</title>
 </head>
 
@@ -49,124 +50,126 @@
             <div class="container pay__container">
                 <h3 class="pay__payment-heading">Your Plan</h3>
                 <form method="POST" action="/send-pay.php" class="pay__form">
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="1" name="firstPayment" value="2month" totalOld="99.80" totalNew="49.90">
-                    <label class="pay__form-checkbox-label" for="1">
-                        <div class="pay__form-checkbox-wrap">
-                            <div class="pay__payment-icon-wrap">
-                                <div class="pay__payment-checked-icons">
-                                    <svg class="pay__payment-icon">
-                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
-                                        </use>
-                                    </svg>
-                                    <svg class="pay__payment-icon">
-                                        <use
-                                        class="pay__choice-svg"
-                                        href="./images/symbol-defs.svg#icon-close-chk"
-                                        >
-                                        </use>
-                                    </svg>
+                    <div class="pay__form-label-wrap">
+                        <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="1" name="firstPayment" value="2month" totalOld="99.80" totalNew="49.90">
+                        <label class="pay__form-checkbox-label" for="1">
+                            <div class="pay__form-checkbox-wrap">
+                                <div class="pay__payment-icon-wrap">
+                                    <div class="pay__payment-checked-icons">
+                                        <svg class="pay__payment-icon">
+                                            <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                            </use>
+                                        </svg>
+                                        <svg class="pay__payment-icon">
+                                            <use
+                                            class="pay__choice-svg"
+                                            href="./images/symbol-defs.svg#icon-close-chk"
+                                            >
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="pay__payment-price-title-wrap">
+                                    <span class="pay__payment-price-title">
+                                        2 month(s) <br> Keto diet
+                                    </span>
+                                    <span class="pay__payment-price-subtitle">
+                                        Billed every 2 months
+                                    </span>
+                                </div>
+                                <div class="pay__payment-price-wrap">
+                                    <span class="pay__payment-price-old">
+                                        $1.60
+                                    </span>
+                                    <span class="pay__payment-price-new">
+                                        $0.80
+                                    </span>
+                                    <span class="pay__payment-price-period">
+                                        per day
+                                    </span>
                                 </div>
                             </div>
-                            <div class="pay__payment-price-title-wrap">
-                                <span class="pay__payment-price-title">
-                                    2 month(s) <br> Keto diet
-                                </span>
-                                <span class="pay__payment-price-subtitle">
-                                    Billed every 2 months
-                                </span>
+                        </label>
+                        <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="2" name="firstPayment" checked value="1month" totalOld="49.83" totalNew="19.93">
+                        <label class="pay__form-checkbox-label" for="2">
+                            <div class="pay__form-checkbox-wrap">
+                                <div class="pay__payment-icon-wrap">
+                                    <div class="pay__payment-checked-icons">
+                                        <svg class="pay__payment-icon">
+                                            <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                            </use>
+                                        </svg>
+                                        <svg class="pay__payment-icon">
+                                            <use
+                                            class="pay__choice-svg"
+                                            href="./images/symbol-defs.svg#icon-close-chk"
+                                            >
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="pay__payment-price-title-wrap">
+                                    <span class="pay__payment-price-title">
+                                        1 month(s) <br> Keto diet
+                                    </span>
+                                    <span class="pay__payment-price-subtitle">
+                                        Billed every 1 month
+                                    </span>
+                                </div>
+                                <div class="pay__payment-price-wrap">
+                                    <span class="pay__payment-price-old">
+                                        $1.60
+                                    </span>
+                                    <span class="pay__payment-price-new">
+                                        $1.00
+                                    </span>
+                                    <span class="pay__payment-price-period">
+                                        per day
+                                    </span>
+                                </div>
+                                <div class="pay__payment-price-popular">MOST POPULAR - SAVE 40%</div>
                             </div>
-                            <div class="pay__payment-price-wrap">
-                                <span class="pay__payment-price-old">
-                                    $1.60
-                                </span>
-                                <span class="pay__payment-price-new">
-                                    $0.80
-                                </span>
-                                <span class="pay__payment-price-period">
-                                    per day
-                                </span>
-                            </div>
-                        </div>
-                    </label>
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="2" name="firstPayment" checked value="1month" totalOld="49.83" totalNew="19.93">
-                    <label class="pay__form-checkbox-label" for="2">
-                        <div class="pay__form-checkbox-wrap">
-                            <div class="pay__payment-icon-wrap">
-                                <div class="pay__payment-checked-icons">
-                                    <svg class="pay__payment-icon">
-                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
-                                        </use>
-                                    </svg>
-                                    <svg class="pay__payment-icon">
-                                        <use
-                                        class="pay__choice-svg"
-                                        href="./images/symbol-defs.svg#icon-close-chk"
-                                        >
-                                        </use>
-                                    </svg>
+                        </label>
+                        <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="3" name="firstPayment" value="oneTime" totalOld="622.00" totalNew="423.00">
+                        <label class="pay__form-checkbox-label" for="3">
+                            <div class="pay__form-checkbox-wrap">
+                                <div class="pay__payment-icon-wrap">
+                                    <div class="pay__payment-checked-icons">
+                                        <svg class="pay__payment-icon">
+                                            <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
+                                            </use>
+                                        </svg>
+                                        <svg class="pay__payment-icon">
+                                            <use
+                                            class="pay__choice-svg"
+                                            href="./images/symbol-defs.svg#icon-close-chk"
+                                            >
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="pay__payment-price-title-wrap">
+                                    <span class="pay__payment-price-title">
+                                        Lifetime access <br> Keto diet
+                                    </span>
+                                    <span class="pay__payment-price-subtitle">
+                                        One time payment
+                                    </span>
+                                </div>
+                                <div class="pay__payment-price-wrap">
+                                    <span class="pay__payment-price-old">
+                                        $622.00
+                                    </span>
+                                    <span class="pay__payment-price-new">
+                                        $199.00
+                                    </span>
+                                    <span class="pay__payment-price-period">
+                                        price today
+                                    </span>
                                 </div>
                             </div>
-                            <div class="pay__payment-price-title-wrap">
-                                <span class="pay__payment-price-title">
-                                    1 month(s) <br> Keto diet
-                                </span>
-                                <span class="pay__payment-price-subtitle">
-                                    Billed every 1 month
-                                </span>
-                            </div>
-                            <div class="pay__payment-price-wrap">
-                                <span class="pay__payment-price-old">
-                                    $1.60
-                                </span>
-                                <span class="pay__payment-price-new">
-                                    $1.00
-                                </span>
-                                <span class="pay__payment-price-period">
-                                    per day
-                                </span>
-                            </div>
-                            <div class="pay__payment-price-popular">MOST POPULAR - SAVE 40%</div>
+                        </label>
                         </div>
-                    </label>
-                    <input class="pay__payment-hidden-checkbox visually-hidden" type="radio" id="3" name="firstPayment" value="oneTime" totalOld="622.00" totalNew="423.00">
-                    <label class="pay__form-checkbox-label" for="3">
-                        <div class="pay__form-checkbox-wrap">
-                            <div class="pay__payment-icon-wrap">
-                                <div class="pay__payment-checked-icons">
-                                    <svg class="pay__payment-icon">
-                                        <use class="pay__choice-svg" href="./images/symbol-defs.svg#icon-check-chk">
-                                        </use>
-                                    </svg>
-                                    <svg class="pay__payment-icon">
-                                        <use
-                                        class="pay__choice-svg"
-                                        href="./images/symbol-defs.svg#icon-close-chk"
-                                        >
-                                        </use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="pay__payment-price-title-wrap">
-                                <span class="pay__payment-price-title">
-                                    Lifetime access <br> Keto diet
-                                </span>
-                                <span class="pay__payment-price-subtitle">
-                                    One time payment
-                                </span>
-                            </div>
-                            <div class="pay__payment-price-wrap">
-                                <span class="pay__payment-price-old">
-                                    $622.00
-                                </span>
-                                <span class="pay__payment-price-new">
-                                    $199.00
-                                </span>
-                                <span class="pay__payment-price-period">
-                                    price today
-                                </span>
-                            </div>
-                        </div>
-                    </label>
                     <div class="pay__payment-total-wrap">
                         <div class="pay__payment-total-wrap-top">
                             <div class="pay__payment-total-discount-wrap">
@@ -197,7 +200,7 @@
             </div>
         </section>
         <section class="section get-section">
-            <div class="container pay__container">
+            <div class="container pay__container pay__container--get">
                 <h3 class="pay__payment-heading">What you get</h3>
                 <ul class="pay__get-list">
                     <li class="pay__get-list-item">
@@ -240,7 +243,7 @@
                     <img class="recipe__mobile" src="./images/mobile.png" alt="mobile">
                     <div class="recipe__mobile-content-wrap">
                         <div class="recipe__mobile-status-bar">
-                            <p class="recipe__mobile-conten-time">15:49</p>
+                            <p class="recipe__mobile-content-time">15:49</p>
                             <div class="recipe__mobile-conten-status-wrap">
                                 <img src="./images/signal-icon-black.png" alt="Signal Icon" class="recipe__mobile-conten-status-icon">
                                 <img src="./images/wifi-icon-black.png" alt="Wifi Icon" class="recipe__mobile-conten-status-icon">
@@ -250,9 +253,15 @@
                         <img class="recipe__mobile-content" src="./images/mobile-content.png" alt="content">
                     </div>
                 </div>
+                <div class="recipe__wrap-desktop">
+                    <img class="recipe__desktop" src="./images/desktop.png" alt="desktop">
+                    <div class="recipe__desktop-content-wrap">
+                        <img class="recipe__desktop-content" src="./images/desktop-content.png" alt="content">
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="splide" aria-label="Splide Basic HTML Example">
+        <section class="splide section" role="group" aria-label="Splide Basic HTML Example">
             <h3 class="pay__payment-heading">They did it!</h3>
             <div class="splide__track">
                 <ul class="splide__list">
@@ -281,8 +290,106 @@
                             </div>
                         </div>
                     </li>
-                    <li class="splide__slide">Slide 02</li>
-                    <li class="splide__slide">Slide 03</li>
+                    <li class="splide__slide slide__item">
+                        <div class="slide__wrap">
+                            <div class="slide__result-wrap">
+                                <div class="slide__result-photo">
+                                    <img class="slide__result-img" src="./images/reviews/3.jpeg" alt="reviews3">
+                                    <div class="slide__result-desc">
+                                        Before
+                                    </div>
+                                </div>
+                                <div class="slide__result-photo slide__result-photo--second">
+                                    <img class="slide__result-img" src="./images/reviews/4.jpeg" alt="reviews4">
+                                    <div class="slide__result-desc slide__result-desc--female">
+                                        After
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide__desc-wrap">
+                                <img class="slide__desc-icon" src="./images/reviews/quote.svg" alt="icon-description">
+                                <p class="slide__desc">    
+                                    I have tried many different weight loss programs or ideas, but this one really helped me. It took me 3 weeks before I saw results but I'm so happy that I didn't give up. Happy happy!
+                                </p>
+                                <div class="slide__desc-author">Emily / 32</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide slide__item">
+                        <div class="slide__wrap">
+                            <div class="slide__result-wrap">
+                                <div class="slide__result-photo">
+                                    <img class="slide__result-img" src="./images/reviews/5.jpeg" alt="reviews5">
+                                    <div class="slide__result-desc">
+                                        Before
+                                    </div>
+                                </div>
+                                <div class="slide__result-photo slide__result-photo--second">
+                                    <img class="slide__result-img" src="./images/reviews/6.jpeg" alt="reviews6">
+                                    <div class="slide__result-desc slide__result-desc--female">
+                                        After
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide__desc-wrap">
+                                <img class="slide__desc-icon" src="./images/reviews/quote.svg" alt="icon-description">
+                                <p class="slide__desc">
+                                    I found this to be a surprisingly effective and simple way to maintain a healthy lifestyle. I came across this Keto meal plan and I decided to give it a try. Now I’m in the 8th week, and I will definitely continue following it as it makes me feel better.
+                                </p>
+                                <div class="slide__desc-author">Sitharay / 34</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide slide__item">
+                        <div class="slide__wrap">
+                            <div class="slide__result-wrap">
+                                <div class="slide__result-photo">
+                                    <img class="slide__result-img" src="./images/reviews/7.jpeg" alt="reviews7">
+                                    <div class="slide__result-desc">
+                                        Before
+                                    </div>
+                                </div>
+                                <div class="slide__result-photo slide__result-photo--second">
+                                    <img class="slide__result-img" src="./images/reviews/8.jpeg" alt="reviews8">
+                                    <div class="slide__result-desc slide__result-desc--female">
+                                        After
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide__desc-wrap">
+                                <img class="slide__desc-icon" src="./images/reviews/quote.svg" alt="icon-description">
+                                <p class="slide__desc">
+                                    The superb and fantastic meal plan at such a reasonable price! Honestly, I can not complain at all. Highly recommend it to anyone who is looking to gain muscles!
+                                </p>
+                                <div class="slide__desc-author">Hayden / 30</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide slide__item">
+                        <div class="slide__wrap">
+                            <div class="slide__result-wrap">
+                                <div class="slide__result-photo">
+                                    <img class="slide__result-img" src="./images/reviews/9.jpeg" alt="reviews9">
+                                    <div class="slide__result-desc">
+                                        Before
+                                    </div>
+                                </div>
+                                <div class="slide__result-photo slide__result-photo--second">
+                                    <img class="slide__result-img" src="./images/reviews/10.jpeg" alt="reviews10">
+                                    <div class="slide__result-desc slide__result-desc--female">
+                                        After
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide__desc-wrap">
+                                <img class="slide__desc-icon" src="./images/reviews/quote.svg" alt="icon-description">
+                                <p class="slide__desc">
+                                    The fastest, easiest and delicious way to drop kilos. I got this as my motivation to start being more active and eating healthy. And it’s totally working for me. Woohoo! I would recommend this Meal Plan for anyone wanting to lose weight fast.
+                                </p>
+                                <div class="slide__desc-author">Cristina / 28</div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -313,7 +420,20 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.js"></script>
     <script src="./paypage.js"></script>
+    <script>
+        new Splide('.splide', {
+            perPage: 3,
+            breakpoints: {
+                    1024: {
+                        perPage: 2,
+                    },
+                    768: {
+                        perPage: 1,
+                    },
+            }
+        }).mount();
+    </script>
 </body>
-
 </html>
