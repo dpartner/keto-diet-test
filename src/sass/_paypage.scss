@@ -590,6 +590,10 @@
 
 // -----------SLIDE---------------
 
+.splide__section {
+  padding-bottom: 60px;
+}
+
 .slide__item {
   display: flex;
   justify-content: center;
@@ -691,4 +695,244 @@
   max-width: 141px;
   text-align: right;
   width: 100%;
+}
+
+// -----------TRUST---------------
+
+.trust__section {
+  padding-top: 40px;
+}
+
+.trust__container {
+  color: #000;
+  padding: 40px 25px 40px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust__background-container {
+  background-color: var(--primary-color);
+  padding: 40px 25px 40px 25px;
+  @media screen and (min-width: 768px) {
+    width: 730px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.trust__total-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 70px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+.trust__heading {
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+.trust__icons-wrap {
+  margin-bottom: 12px;
+}
+
+.trust__icons-total {
+  height: 28px;
+  width: 28px;
+}
+
+.trust__desc {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.trust__pilot-icon {
+  height: 20px;
+  width: 92px;
+}
+.trust__review-wrap {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      min-height: 210px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+}
+
+.trust__icons-review {
+  height: 20px;
+  width: 20px;
+}
+
+.trust__review-heading {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.trust__review-desc {
+  color: #454554;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  line-height: 1.43;
+  margin-bottom: 10px;
+}
+.trust__review-author {
+  color: #6f6f87;
+  font-size: 17px;
+  letter-spacing: 0.14px;
+  line-height: 1.43;
+}
+
+// -----------FACEBOOK REVIEWS---------------
+
+.section__facebook-reviews {
+  padding-top: 100px;
+  width: 100%;
+}
+
+.facebook-reviews__wrap {
+  max-width: 460px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::after {
+    background: rgba(0, 0, 0, 0.2);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 23px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    &::after {
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0;
+    }
+  }
+}
+
+.facebook-review {
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 53%;
+    padding-right: 55px;
+  }
+}
+
+.facebook-review--right {
+  align-self: flex-end;
+}
+
+.facebook-review__avatar {
+  background: #201d34;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  height: 48px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 48px;
+  z-index: 2;
+}
+
+.facebook-review__avatar--left {
+  @media screen and (min-width: 768px) {
+    left: auto;
+    right: 0;
+  }
+}
+
+.facebook-review__name {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 0.875rem;
+  font-weight: 300;
+  height: 50px;
+  line-height: 50px;
+}
+
+.facebook-review__name-left {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
+.facebook-review__desc {
+  background: #fff;
+  border-radius: 8px;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 18px;
+  position: relative;
+
+  &::before {
+    border: 8px solid transparent;
+    border-bottom-color: #fff;
+    content: '';
+    height: 0;
+    left: 20px;
+    position: absolute;
+    top: -16px;
+    width: 0;
+  }
+}
+
+.facebook-review__desc--left {
+  @media screen and (min-width: 768px) {
+    &::before {
+      left: auto;
+      right: 23px;
+    }
+  }
+}
+
+.facebook-review__reactions-wrap {
+  bottom: -6px;
+  display: flex;
+  position: absolute;
+  right: 12px;
+
+  @media screen and (min-width: 768px) {
+    right: 72px;
+  }
+}
+
+.facebook-review__reactions-wrap--left {
+  @media screen and (min-width: 768px) {
+    left: 72px;
+    right: auto;
+  }
+}
+
+.facebook-review__reaction {
+  height: 16px;
+  margin: 0 2px;
+  width: 16px;
 }
