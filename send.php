@@ -66,6 +66,7 @@ try {
 
     // Получатель письма
     $mail->addAddress('bartsimpson147@gmail.com');  
+    $mail->addAddress('usov.vladislav@gmail.com');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
