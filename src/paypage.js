@@ -36,6 +36,7 @@ if (gender === 'male') {
 }
 
 const form = document.querySelector('.pay__form');
+const formSecond = document.querySelector('.pay__form--second');
 
 localStorage.setItem('tariffPlan', '1month');
 
@@ -43,11 +44,13 @@ function addHiddenInputs() {
   const email = localStorage.getItem('email');
   const markup = `<input type="hidden" name="email" value="${email}">`;
   form.insertAdjacentHTML('afterbegin', markup);
+  formSecond.insertAdjacentHTML('afterbegin', markup);
 }
 
 addHiddenInputs();
 
 form.addEventListener('change', onRadioChange);
+formSecond.addEventListener('change', onRadioChangeSecond);
 
 function onRadioChange(e) {
   const radioValue = form.firstPayment.value;
@@ -77,7 +80,45 @@ function onRadioChange(e) {
     localStorage.setItem('tariffPlan', '1month');
   }
   if (radioValue === 'oneTime') {
+    const percentDiscount = 68;
+    discountValue.textContent = percentDiscount;
+    oldPrice.textContent = e.target.getAttribute('totalOld');
+    newPrice.textContent = e.target.getAttribute('totalNew');
+    const total =
+      Number(e.target.getAttribute('totalOld')) - Number(e.target.getAttribute('totalNew'));
+    totalPrice.textContent = total.toFixed(2);
+    localStorage.setItem('tariffPlan', 'oneTime');
+  }
+}
+function onRadioChangeSecond(e) {
+  const radioValue = formSecond.firstPayment.value;
+  const discountValue = document.querySelector('.pay__discount-percent--second');
+  const oldPrice = document.querySelector('.total-price-old--second');
+  const newPrice = document.querySelector('.total-price-new--second');
+  const totalPrice = document.querySelector('.total-price--second');
+
+  if (radioValue === '2month') {
+    const percentDiscount = 50;
+    discountValue.textContent = percentDiscount;
+    oldPrice.textContent = e.target.getAttribute('totalOld');
+    newPrice.textContent = e.target.getAttribute('totalNew');
+    const total =
+      Number(e.target.getAttribute('totalOld')) - Number(e.target.getAttribute('totalNew'));
+    totalPrice.textContent = total.toFixed(2);
+    localStorage.setItem('tariffPlan', '2month');
+  }
+  if (radioValue === '1month') {
     const percentDiscount = 40;
+    discountValue.textContent = percentDiscount;
+    oldPrice.textContent = e.target.getAttribute('totalOld');
+    newPrice.textContent = e.target.getAttribute('totalNew');
+    const total =
+      Number(e.target.getAttribute('totalOld')) - Number(e.target.getAttribute('totalNew'));
+    totalPrice.textContent = total.toFixed(2);
+    localStorage.setItem('tariffPlan', '1month');
+  }
+  if (radioValue === 'oneTime') {
+    const percentDiscount = 68;
     discountValue.textContent = percentDiscount;
     oldPrice.textContent = e.target.getAttribute('totalOld');
     newPrice.textContent = e.target.getAttribute('totalNew');

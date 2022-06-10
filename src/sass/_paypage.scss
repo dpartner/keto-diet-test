@@ -799,6 +799,7 @@
 
 .section__facebook-reviews {
   padding-top: 100px;
+  padding-bottom: 50px;
   width: 100%;
 }
 
@@ -935,4 +936,99 @@
   height: 16px;
   margin: 0 2px;
   width: 16px;
+}
+
+// -----------DEVELOPERS---------------
+
+.developers__section {
+  padding-bottom: 200px;
+}
+
+.developers__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.developers__checkmark {
+  height: 84px;
+  width: 84px;
+  margin-bottom: 20px;
+}
+.developers__heading {
+  font-size: 34px;
+  margin-bottom: 80px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.developers__experts-list-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.developers__expert {
+  align-items: center;
+  background-color: #151226;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 700;
+  height: 198px;
+  justify-content: center;
+  padding: 67px 40px 30px;
+  position: relative;
+  text-align: center;
+  width: 345px;
+
+  &:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.developers__expert-avatar {
+  border-radius: 50%;
+  height: 92px;
+  overflow: hidden;
+  position: absolute;
+  top: -45px;
+  width: 92px;
+  z-index: 20;
+  margin-bottom: 20px;
+}
+
+.developers__expert-avatar-img {
+  height: auto;
+  width: 100%;
+}
+.developers__expert-name {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.developers__expert-name-desc {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 14px;
+  font-weight: 300;
+}
+.developers__expert-desc {
 }
