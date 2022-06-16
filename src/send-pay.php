@@ -34,13 +34,21 @@ try {
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
+    // // Настройки вашей почты
+    // $mail->Host       = 'mail.adm.tools'; // SMTP сервера вашей почты
+    // $mail->Username   = 'info@zshop.biz.ua'; // Логин на почте
+    // $mail->Password   = 'ZshoP147#'; // Пароль на почте
+    // $mail->SMTPSecure = 'ssl';
+    // $mail->Port       = 465;
+    // $mail->setFrom('info@zshop.biz.ua', 'Keto'); // Адрес самой почты и имя отправителя
+
     // Настройки вашей почты
-    $mail->Host       = 'mail.adm.tools'; // SMTP сервера вашей почты
-    $mail->Username   = 'info@zshop.biz.ua'; // Логин на почте
-    $mail->Password   = 'ZshoP147#'; // Пароль на почте
+    $mail->Host       = 'premium244.web-hosting.com'; // SMTP сервера вашей почты
+    $mail->Username   = 'info@healthyketo.diet'; // Логин на почте
+    $mail->Password   = '@n{@xK@tJ;2p'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('info@zshop.biz.ua', 'Keto'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('info@healthyketo.diet', 'Keto'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('bartsimpson147@gmail.com');
