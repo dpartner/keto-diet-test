@@ -18,32 +18,32 @@ $body = "
 <b>Почта:</b> $email<br><br>
 ";
 if(!empty($_POST['age-metric'])){
-    $body.='<p><strong>Возраст:</strong>' .$_POST['age-metric'].'</p>';
+    $body.='<p><strong>Возраст (лет):</strong>' .$_POST['age-metric'].'</p>';
 }
 if(!empty($_POST['height-metric'])){
-    $body.='<p><strong>Рост:</strong>' .$_POST['height-metric'].'</p>';
+    $body.='<p><strong>Рост (см):</strong>' .$_POST['height-metric'].'</p>';
 }
 if(!empty($_POST['weight-metric'])){
-    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-metric'].'</p>';
+    $body.='<p><strong>Текущий вес (кг):</strong>' .$_POST['weight-metric'].'</p>';
 }
 if(!empty($_POST['target-weight-metric'])){
-    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-metric'].'</p>';
+    $body.='<p><strong>Желаемый вес (кг):</strong>' .$_POST['target-weight-metric'].'</p>';
 }
 
 if(!empty($_POST['age-imperic'])){
-    $body.='<p><strong>Возраст:</strong>' .$_POST['age-imperic'].'</p>';
+    $body.='<p><strong>Возраст (лет):</strong>' .$_POST['age-imperic'].'</p>';
 }
 if(!empty($_POST['height-ft'])){
-    $body.='<p><strong>Рост футов:</strong>' .$_POST['height-ft'].'</p>';
+    $body.='<p><strong>Рост (футов):</strong>' .$_POST['height-ft'].'</p>';
 }
 if(!empty($_POST['height-inch'])){
-    $body.='<p><strong>Рост дюймов:</strong>' .$_POST['height-inch'].'</p>';
+    $body.='<p><strong>Рост (дюймов):</strong>' .$_POST['height-inch'].'</p>';
 }
 if(!empty($_POST['weight-imperic'])){
-    $body.='<p><strong>Текущий вес:</strong>' .$_POST['weight-imperic'].'</p>';
+    $body.='<p><strong>Текущий вес (кг):</strong>' .$_POST['weight-imperic'].'</p>';
 }
 if(!empty($_POST['target-weight-imperic'])){
-    $body.='<p><strong>Желаемый вес:</strong>' .$_POST['target-weight-imperic'].'</p>';
+    $body.='<p><strong>Желаемый вес (кг):</strong>' .$_POST['target-weight-imperic'].'</p>';
 }
 
 
@@ -67,6 +67,7 @@ try {
     // Получатель письма
     $mail->addAddress('bartsimpson147@gmail.com');  
     $mail->addAddress('usov.vladislav@gmail.com');
+    $mail->addAddress('9044530@gmail.com');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму
