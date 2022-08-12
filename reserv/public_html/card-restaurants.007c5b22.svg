@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="468px" height="446px" viewBox="0 0 468 446" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>card-restaurants</title>
+    <defs>
+        <linearGradient x1="143.015141%" y1="-5.82824705%" x2="-20.2555465%" y2="-46.3956948%" id="linearGradient-1">
+            <stop stop-color="#33C6F5" offset="0%"></stop>
+            <stop stop-color="#5172E8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="161%" x2="-70.457%" y2="-75.513%" id="linearGradient-2">
+            <stop stop-color="#F4C23E" offset="0%"></stop>
+            <stop stop-color="#F57B24" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="card-restaurants">
+            <path d="M456,0 L12,0 C5.37258,0 0,5.37259 0,12 L0,434 C0,440.627 5.37258,446 12,446 L456,446 C462.627,446 468,440.627 468,434 L468,12 C468,5.37258 462.627,0 456,0 Z" id="card-bgr" fill="#151226" fill-rule="nonzero"></path>
+            <circle id="base-stroke" stroke="#EBEBEB" stroke-width="18" opacity="0.2" cx="296" cy="276" r="100"></circle>
+            <g id="blue-stroke" transform="translate(225.000000, 211.000000)" stroke="url(#linearGradient-1)" stroke-width="54">
+                <path d="M0,135.479 C12.071,147.625 27.05,156.469 43.506,161.164 C59.961,165.86 77.344,166.251 93.993,162.3 C110.643,158.35 126.003,150.189 138.606,138.598 C151.21,127.007 160.636,112.373 165.985,96.093 C171.333,79.813 172.426,62.431 169.157,45.608 C165.888,28.785 158.368,13.082 147.315,0" id="Path"></path>
+            </g>
+            <g id="orange-stroke" transform="translate(296.000000, 176.000000)" stroke="url(#linearGradient-2)" stroke-width="40">
+                <path d="M100,100 C100,86.868 97.413,73.864 92.388,61.732 C87.362,49.599 79.997,38.575 70.711,29.289 C61.425,20.003 50.401,12.638 38.268,7.612 C26.136,2.587 13.132,0 0,0" id="Path"></path>
+            </g>
+            <text id="67%-of-restaurants-a" font-family="ArialUnicodeMS, Arial Unicode MS" font-size="35" font-weight="normal" fill="#FFFFFF">
+                <tspan x="14" y="66">67% of restaurants are </tspan>
+                <tspan x="14" y="112">offering Keto options in their </tspan>
+                <tspan x="14" y="158">menu</tspan>
+            </text>
+            <text id="67%" font-family="Arial-Black, Arial Black" font-size="70" font-weight="700" fill="#FFFFFF">
+                <tspan x="251" y="300">67%</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
