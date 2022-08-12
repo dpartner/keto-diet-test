@@ -66,16 +66,16 @@ try {
     
     // Настройки вашей почты
     $mail->Host       = 'premium244.web-hosting.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'info@healthyketo.diet'; // Логин на почте
+    $mail->Username   = 'info@ketodietplan.one'; // Логин на почте
     $mail->Password   = '@n{@xK@tJ;2p'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('info@healthyketo.diet', 'Keto'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('info@ketodietplan.one', 'Keto'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('bartsimpson147@gmail.com');  
     $mail->addAddress('usov.vladislav@gmail.com');
     $mail->addAddress('9044530@gmail.com');
+	$mail->addAddress('kochetkovvowa@gmail.com');
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
     // Прикрипление файлов к письму

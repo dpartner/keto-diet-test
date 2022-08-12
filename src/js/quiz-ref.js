@@ -6,7 +6,7 @@ export const ref = {
   answerListItem: document.querySelector('.quiz-list__item'),
   question: document.querySelector('.hero__heading'),
   heading: document.querySelector('.hero__heading-wrap'),
-  headerLogo: document.querySelector('.heading__logo-svg'),
+  headerLogo: document.querySelector('.heading__logo'),
   cardWrap: document.querySelector('.card-wrap'),
   containerHero: document.querySelector('.hero__container'),
   backgroundMask: document.querySelector('.hero__mask-svg'),

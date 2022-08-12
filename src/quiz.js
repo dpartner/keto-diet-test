@@ -27,8 +27,9 @@ import {
 } from './js/add-markup-choice-line';
 import { onHelp } from './js/add-markup-help';
 
-import backgroundsLinks from './images/quiz-bg/*.jpeg';
+import backgroundsLinks from './new_images/quiz_bg/*.png';
 import svg from './images/*.svg';
+import headerIcons from './new_images/*.png';
 import { ref } from './js/quiz-ref';
 
 let pageDone = Number(localStorage.getItem('page'));
@@ -76,7 +77,7 @@ function renderMarkup({ newPage, oldPage }) {
 function renderContentMarkup(newPage) {
   if (pages[newPage - 1].type === 'quiz') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, svg);
+    addHeaderIcon(pages, newPage, headerIcons);
     addQuestion(pages, newPage);
     addAnswersMarkup({ pages, newPage, svg, gender });
   }
