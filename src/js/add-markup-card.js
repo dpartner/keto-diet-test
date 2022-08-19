@@ -3,13 +3,13 @@ import { ref } from './quiz-ref';
 function createCardMarkup({ pages, currentPage, links }) {
   const desc = pages[currentPage - 1].p;
   const backgroundName = pages[currentPage - 1].background;
-  const svgLink = links[backgroundName];
+  const card = links[backgroundName];
 
   return `<p class="card-wrap__desc">${desc}</p>
-              <img class="card-wrap__img" src="${svgLink}" alt="" />`;
+              <img class="card-wrap__img" src="${card}" alt="" />`;
 }
 
-const addCardMarkup = ({ pages, newPage: currentPage, svg: links, gender }) => {
+const addCardMarkup = ({ pages, newPage: currentPage, cards: links, gender }) => {
   const markup = createCardMarkup({ pages, currentPage, links });
   ref.heading.style.display = 'none';
   ref.answerList.style.display = 'none';

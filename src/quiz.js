@@ -30,6 +30,8 @@ import { onHelp } from './js/add-markup-help';
 import backgroundsLinks from './new_images/quiz_bg/*.png';
 import svg from './images/*.svg';
 import headerIcons from './new_images/*.png';
+import cards from './new_images/cards/*.png';
+import choiceIcons from './new_images/choice_icon/*.png';
 import { ref } from './js/quiz-ref';
 
 let pageDone = Number(localStorage.getItem('page'));
@@ -82,18 +84,18 @@ function renderContentMarkup(newPage) {
     addAnswersMarkup({ pages, newPage, svg, gender });
   }
   if (pages[newPage - 1].type === 'card') {
-    addCardMarkup({ pages, newPage, svg, gender });
+    addCardMarkup({ pages, newPage, cards, gender });
   }
   if (pages[newPage - 1].type === 'choice') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, svg);
+    addHeaderIcon(pages, newPage, headerIcons);
     addQuestion(pages, newPage);
-    addChoiceMarkup({ pages, newPage, svg, gender });
+    addChoiceMarkup({ pages, newPage, choiceIcons, gender });
     checkboxDisableSendButton();
   }
   if (pages[newPage - 1].type === 'choice-line') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, svg);
+    addHeaderIcon(pages, newPage, headerIcons);
     addQuestion(pages, newPage);
     addChoiceMarkupLine({ pages, newPage, svg, gender });
     checkboxDisableSendButtonLine();

@@ -54,11 +54,11 @@ const addBackground = (objects, currentPage, links) => {
 };
 
 const addHeaderIcon = (arrObj, currentPage, links) => {
-  // const iconId = arrObj[currentPage - 1].icon;
-  console.log(currentPage);
+  const iconId = arrObj[currentPage - 1].icon;
+  console.log(iconId);
   console.log(links);
-  console.log(links[`header_icon_${currentPage}`]);
-  const iconLink = links[`header_icon_${currentPage}`];
+  // const iconLink = links[`header_icon_${currentPage}`];
+  const iconLink = links[iconId];
   // const svgLink = links['symbol-defs'];
 
   // ref.headerLogo.setAttribute('href', `${svgLink}#${iconId}`);

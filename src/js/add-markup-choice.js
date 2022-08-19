@@ -1,12 +1,13 @@
 import { ref } from './quiz-ref';
 import { save, load } from './storage';
 
-function createChoiceMarkup({ pages, currentPage, svg }) {
+function createChoiceMarkup({ pages, currentPage, choiceIcons }) {
   const arrValues = pages[currentPage - 1].answers.map(answer => answer.value);
   const arrSvg = pages[currentPage - 1].answers.map(answer => answer.svg);
   const arrType = pages[currentPage - 1].answers.map(answer => answer.type);
   const name = pages[currentPage - 1].answers[0].name;
-  const svgLink = svg['symbol-defs'];
+  console.log(choiceIcons);
+  // const svgLink = svg['symbol-defs'];
   return arrValues
     .map((value, index) => {
       return `<div class="quiz__choice-form-element">
@@ -19,9 +20,7 @@ function createChoiceMarkup({ pages, currentPage, svg }) {
       data-type="${arrType[index]}"
     />
     <label class="quiz__choice-label" for="${value}">
-      <svg class="quiz__choice-icon">
-        <use class="quiz__choice-svg" href="${svgLink}#${arrSvg[index]}"></use>
-      </svg>
+      <img class="quiz__choice-icon" src="${choiceIcons[arrSvg[index]]}" alt="" />
       <span class="quiz__choice-desc">${value}</span>
       <div class="quiz__choice-plus-wrap plus-wrap">
         <div class="plus-wrap__symbols-wrap">
@@ -35,7 +34,7 @@ function createChoiceMarkup({ pages, currentPage, svg }) {
     .join('');
 }
 
-const addChoiceMarkup = ({ pages, newPage: currentPage, svg, gender }) => {
+const addChoiceMarkup = ({ pages, newPage: currentPage, choiceIcons, gender }) => {
   ref.heading.style.display = '';
   ref.choiceForm.style.display = '';
   ref.cardWrap.style.display = 'none';
@@ -51,7 +50,7 @@ const addChoiceMarkup = ({ pages, newPage: currentPage, svg, gender }) => {
     ? ref.choiceFormDesc.classList.add('quiz__choice-form-desc--male')
     : ref.choiceFormDesc.classList.add('quiz__choice-form-desc--female');
   ref.choiceFormDesc.textContent = `${pages[currentPage - 1].p}`;
-  const choiceMarkup = createChoiceMarkup({ pages, currentPage, svg });
+  const choiceMarkup = createChoiceMarkup({ pages, currentPage, choiceIcons });
   ref.choiceFormWrap.innerHTML = '';
   ref.choiceFormWrap.insertAdjacentHTML('beforeend', choiceMarkup);
 };
@@ -110,3 +109,9 @@ const checkboxDisableSendButton = () => {
 };
 
 export { addChoiceMarkup, sendFormToStorage, actionFormCheckbox, checkboxDisableSendButton };
+
+{
+  /* <svg class="quiz__choice-icon">
+  <use class="quiz__choice-svg" href="${svgLink}#${arrSvg[index]}"></use>
+</svg>; */
+}
