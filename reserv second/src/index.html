@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <title>Keto diet</title>
+  </head>
+  <body>
+    <header class="header section">
+      <div class="header__container container">
+        <a class="logo-link logo-link--header" href="./index.html">
+          <!-- <svg class="logo">
+            <use class="header__logo-svg" href="./images/symbol-defs.svg#icon-keto-icon"></use>
+          </svg> -->
+          <img class="logo" src="./new_images/avokado.png" alt="logo" />
+        </a>
+        <div class="header__burger-wrapper">
+          <button class="header__button">
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__burger-menu active">
+            <a href="./index.html" class="burger-menu__link">Home</a>
+            <a href="../src/conditions.html" class="burger-menu__link">General Conditions</a>
+            <a href="../src/cookie.html" class="burger-menu__link">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section select-gender__section">
+        <div class="container">
+          <h1 class="select-gender__heading">Get your personalized meal plan right now!</h1>
+          <p class="select-gender__desc">
+            Get instant access to healthy keto meal plans, affordable and easy recipes, weight loss
+            advices from medical expert, and more!
+            <br />We’ll do all the planning while you focus on cooking, eating, and enjoying healthy
+            food.
+          </p>
+          <h2 class="select-gender__list-title">Follow the steps below to get started:</h2>
+          <ol class="select-gender__list" id="gender__box">
+            <li class="select-gender__list-item">Select your gender</li>
+            <li class="select-gender__list-item">Describe your lifestyle</li>
+            <li class="select-gender__list-item">Select food of your liking</li>
+            <li class="select-gender__list-item">Share your preferences</li>
+            <li class="select-gender__list-item">Enter your measurements</li>
+            <li class="select-gender__list-item">Get your personalized plan</li>
+          </ol>
+          <div class="select-gender__box">
+            <a href="./quiz.html" class="select-gender__wrap select-gender__wrap--female">
+              <div class="select-gender__button-background">
+                <div
+                  class="select-gender__button-background-first-circle select-gender__button-background-first-circle--female"
+                ></div>
+                <div
+                  class="select-gender__button-background-second-circle select-gender__button-background-second-circle--female"
+                ></div>
+              </div>
+              <div class="select-gender__button-content select-gender__button-content--female">
+                <!-- <svg class="select-gender__button-content-icon">
+                  <use href="./images/symbol-defs.svg#icon-gender-women"></use>
+                </svg> -->
+                <img
+                  class="select-gender__button-content-icon"
+                  src="./new_images/home_female.png"
+                  alt="female"
+                />
+                <!-- <p class="select-gender__button-content-desc">Female</p> -->
+              </div>
+            </a>
+            <p class="select-gender__button-content-desc">or</p>
+            <a href="./quiz.html" class="select-gender__wrap select-gender__wrap--male">
+              <div class="select-gender__button-background">
+                <div
+                  class="select-gender__button-background-first-circle select-gender__button-background-first-circle--male"
+                ></div>
+                <div
+                  class="select-gender__button-background-second-circle select-gender__button-background-second-circle--male"
+                ></div>
+              </div>
+              <div class="select-gender__button-content select-gender__button-content--male">
+                <!-- <svg class="select-gender__button-content-icon" width="77" height="95">
+                  <use href="./images/symbol-defs.svg#icon-gender-man"></use>
+                </svg> -->
+                <img
+                  class="select-gender__button-content-icon"
+                  src="./new_images/home_male.png"
+                  alt="female"
+                />
+                <!-- <p class="select-gender__button-content-desc">Male</p> -->
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section motivation__section">
+        <div class="container motivation__container">
+          <h2 class="motivation__heading">What will you get:</h2>
+          <ul class="motivation__list">
+            <li class="motivation__list-item">
+              <img src="./new_images/guide.png" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">Weekly shopping list</h3>
+              <p class="motivation__list-item-desc">
+                Along with your meal plan, we’ll provide convenient shopping lists for you every
+                week.
+              </p>
+            </li>
+            <li class="motivation__list-item">
+              <img src="./new_images/quick.png" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">Easy-to-follow personalized meal plan</h3>
+              <p class="motivation__list-item-desc">
+                Reach your goals with a meal plan that fits your needs and wishes.
+              </p>
+            </li>
+            <li class="motivation__list-item">
+              <img src="./new_images/rule.png" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">Enjoy delicious meals</h3>
+              <p class="motivation__list-item-desc">
+                Try out all of the delicious meals provided for you with high-quality diy videos for
+                each recipe.
+              </p>
+            </li>
+            <!-- <li class="motivation__list-item">
+              <img src="./images/fast.svg" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">Quick Meal Preparation</h3>
+              <p class="motivation__list-item-desc">
+                Fun and easy-to-follow Keto recipes with clear nutritional info that transform
+                cooking from just a chore into a craved moment of peace. No special kitchen
+                equipment needed to become a Keto chef.
+              </p>
+            </li>
+            <li class="motivation__list-item">
+              <img src="./images/subscribe.svg" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">One Subscription To Rule Them All</h3>
+              <p class="motivation__list-item-desc">
+                Receive fresh recipes each month right to your favorite device while enjoying
+                sustainable weight loss and adjust your plan based on your progress (just reach out
+                to our support). Stay in the know with the last Keto trends with our VIP posting.
+              </p>
+            </li> -->
+            <li class="motivation__list-item">
+              <img src="./new_images/profile.png" width="50" height="50" />
+              <h3 class="motivation__list-item-heading">Personalized solution for great results</h3>
+              <p class="motivation__list-item-desc">
+                Your personal medical expert and professional help.
+              </p>
+            </li>
+          </ul>
+          <div class="motivation__button-wrap">
+            <a class="motivation__button" href="#gender__box">GET STARTED</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="section footer__section">
+      <div class="container footer__container">
+        <ul class="footer__menu">
+          <!-- <li class="footer__menu-item">
+            <a class="footer__menu-link" href="./measurements.html">Blog</a>
+          </li> -->
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="../src/conditions.html">General Conditions</a>
+          </li>
+          <!-- <li class="footer__menu-item">
+            <a class="footer__menu-link" href="">Data Protection Policy</a>
+          </li> -->
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="../src/cookie.html">Cookie policy</a>
+          </li>
+          <!-- <li class="footer__menu-item"><a class="footer__menu-link" href="">Help center</a></li> -->
+        </ul>
+        <a class="logo-link logo-link--footer" href="./index.html">
+          <!-- <svg class="logo logo--footer">
+            <use class="logo-svg--footer" href="./images/symbol-defs.svg#icon-keto-icon"></use>
+          </svg> -->
+          <img class="logo logo--footer" src="./new_images/avokado3.png" alt="logo" />
+        </a>
+        <div class="footer__license-wrap">
+          <h3 class="footer__license-heading">© 2022 nutritionnow. All Rights Reserved.</h3>
+          <p class="footer__license-desc">Disclaimer: results may vary from person to person</p>
+          <!-- <button class="reset-button">Reset answers</button> -->
+        </div>
+      </div>
+    </footer>
+    <div class="cookie__wrap">
+      <span class="cookie__wrap-desc">This website is using cookies to work properly.</span>
+      <a class="cookie__button cookie__button--accept" href="#" id="accept">I agree</a>
+      <a class="cookie__button" href="#" id="reject">Don`t agree</a>
+      <a class="cookie__button" href="../src/cookie.html" id="read">Read policy</a>
+    </div>
+    <script src="./index.js"></script>
+    <!-- <script src="./js/menu.js"></script> ///////-->
+  </body>
+</html>

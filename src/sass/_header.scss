@@ -34,16 +34,16 @@
 .logo {
   color: var(--primary-color);
   width: 70px;
-  // height: 50px;
+  height: 50px;
 
   @media screen and (min-width: 440px) {
     width: 100px;
-    // height: 55px;
+    height: 55px;
   }
 
   @media screen and (min-width: 768px) {
     width: 135px;
-    // height: 60px;
+    height: 60px;
   }
 }
 

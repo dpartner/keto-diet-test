@@ -27,11 +27,8 @@ import {
 } from './js/add-markup-choice-line';
 import { onHelp } from './js/add-markup-help';
 
-import backgroundsLinks from './new_images/quiz_bg/*.png';
+import backgroundsLinks from './images/quiz-bg/*.jpeg';
 import svg from './images/*.svg';
-import headerIcons from './new_images/*.png';
-import cards from './new_images/cards/*.png';
-import choiceIcons from './new_images/choice_icon/*.png';
 import { ref } from './js/quiz-ref';
 
 let pageDone = Number(localStorage.getItem('page'));
@@ -79,23 +76,23 @@ function renderMarkup({ newPage, oldPage }) {
 function renderContentMarkup(newPage) {
   if (pages[newPage - 1].type === 'quiz') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, headerIcons);
+    addHeaderIcon(pages, newPage, svg);
     addQuestion(pages, newPage);
     addAnswersMarkup({ pages, newPage, svg, gender });
   }
   if (pages[newPage - 1].type === 'card') {
-    addCardMarkup({ pages, newPage, cards, gender });
+    addCardMarkup({ pages, newPage, svg, gender });
   }
   if (pages[newPage - 1].type === 'choice') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, headerIcons);
+    addHeaderIcon(pages, newPage, svg);
     addQuestion(pages, newPage);
-    addChoiceMarkup({ pages, newPage, choiceIcons, gender });
+    addChoiceMarkup({ pages, newPage, svg, gender });
     checkboxDisableSendButton();
   }
   if (pages[newPage - 1].type === 'choice-line') {
     addBackground(pages, newPage, backgroundsLinks);
-    addHeaderIcon(pages, newPage, headerIcons);
+    addHeaderIcon(pages, newPage, svg);
     addQuestion(pages, newPage);
     addChoiceMarkupLine({ pages, newPage, svg, gender });
     checkboxDisableSendButtonLine();

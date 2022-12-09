@@ -7,10 +7,6 @@
   margin-bottom: 10px;
 }
 
-.select-gender__desc {
-  padding: 30px 60px;
-}
-
 .select-gender__list {
   padding: 30px 60px;
 }
@@ -212,17 +208,16 @@
 
 .select-gender__button-content-icon {
   fill: var(--primary-color);
-  width: 100%;
 
-  // @media (max-width: 439px) {
-  //   width: 45px;
-  //   height: 55px;
-  // }
+  @media (max-width: 439px) {
+    width: 45px;
+    height: 55px;
+  }
 
-  // @media screen and (min-width: 440px) {
-  //   width: 77px;
-  //   height: 95px;
-  // }
+  @media screen and (min-width: 440px) {
+    width: 77px;
+    height: 95px;
+  }
 }
 
 .select-gender__button-content-desc {

@@ -55,14 +55,9 @@ const addBackground = (objects, currentPage, links) => {
 
 const addHeaderIcon = (arrObj, currentPage, links) => {
   const iconId = arrObj[currentPage - 1].icon;
-  console.log(iconId);
-  console.log(links);
-  // const iconLink = links[`header_icon_${currentPage}`];
-  const iconLink = links[iconId];
-  // const svgLink = links['symbol-defs'];
+  const svgLink = links['symbol-defs'];
 
-  // ref.headerLogo.setAttribute('href', `${svgLink}#${iconId}`);
-  ref.headerLogo.setAttribute('src', `${iconLink}`);
+  ref.headerLogo.setAttribute('href', `${svgLink}#${iconId}`);
 };
 
 export { addAnswersMarkup, addQuestion, addHeaderIcon, addBackground, sendAnswer };
