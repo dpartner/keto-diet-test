@@ -30,260 +30,260 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{"./quiz-ref":"CXGo","./storage":"qhja"}],"u0AD":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.onHelp=void 0;const e=({pages:e,pageDone:o,event:n,gender:l,svg:s,basicLightbox:a})=>{n.preventDefault();const c=e[o-1].help,d="male"===l?"help__modal-icon-wrap--male":"help__modal-icon-wrap--female",t=s["symbol-defs"],i=a.create(`<div class="help__modal-wrap">\n        <a href="#" class="help__modal-close-wrap" data-modal="close">\n          <svg class="help__modal-close-icon" data-modal="close">\n            <use href="${t}#icon-close-modal" data-modal="close"></use>\n          </svg>\n        </a>\n        <div class="help__modal-icon-wrap ${d}">\n          <svg class="help__modal-icon">\n            <use href="${t}#icon-help-thinner"></use>\n          </svg>\n        </div>\n        <div class="help__modal-desc">\n          ${c}\n        </div>\n      </div>`,{onShow:e=>{window.addEventListener("keydown",p),document.querySelector("body").addEventListener("click",r)},onClose:e=>{window.removeEventListener("keydown",p),document.querySelector("body").removeEventListener("click",r)}});function r(e){"close"===e.target.dataset.modal&&i.close()}function p(e){"Escape"===e.code&&i.close()}i.show()};function o(){}exports.onHelp=e;
 },{}],"UvYZ":[function(require,module,exports) {
-module.exports="/bg-1.20382222.png";
+module.exports="/keto-diet-test/bg-1.20382222.png";
 },{}],"orBr":[function(require,module,exports) {
-module.exports="/bg-10.e2df7b16.png";
+module.exports="/keto-diet-test/bg-10.e2df7b16.png";
 },{}],"q5jB":[function(require,module,exports) {
-module.exports="/bg-11.0752e8a8.png";
+module.exports="/keto-diet-test/bg-11.0752e8a8.png";
 },{}],"F2T2":[function(require,module,exports) {
-module.exports="/bg-12.0806c058.png";
+module.exports="/keto-diet-test/bg-12.0806c058.png";
 },{}],"PZLZ":[function(require,module,exports) {
-module.exports="/bg-13.7a3a49d5.png";
+module.exports="/keto-diet-test/bg-13.7a3a49d5.png";
 },{}],"YK3t":[function(require,module,exports) {
-module.exports="/bg-14.db11a6b5.png";
+module.exports="/keto-diet-test/bg-14.db11a6b5.png";
 },{}],"psTg":[function(require,module,exports) {
-module.exports="/bg-15.d9e6547c.png";
+module.exports="/keto-diet-test/bg-15.d9e6547c.png";
 },{}],"Bj6t":[function(require,module,exports) {
-module.exports="/bg-16.ef14c913.png";
+module.exports="/keto-diet-test/bg-16.ef14c913.png";
 },{}],"yBlg":[function(require,module,exports) {
-module.exports="/bg-17.ea21200f.png";
+module.exports="/keto-diet-test/bg-17.ea21200f.png";
 },{}],"UzwX":[function(require,module,exports) {
-module.exports="/bg-18.0a382a91.png";
+module.exports="/keto-diet-test/bg-18.0a382a91.png";
 },{}],"p6DO":[function(require,module,exports) {
-module.exports="/bg-19.59737678.png";
+module.exports="/keto-diet-test/bg-19.59737678.png";
 },{}],"R7Lv":[function(require,module,exports) {
-module.exports="/bg-2.f28d4c32.png";
+module.exports="/keto-diet-test/bg-2.f28d4c32.png";
 },{}],"Uz46":[function(require,module,exports) {
-module.exports="/bg-20.6f5b0f22.png";
+module.exports="/keto-diet-test/bg-20.6f5b0f22.png";
 },{}],"qROm":[function(require,module,exports) {
-module.exports="/bg-21.568547a0.png";
+module.exports="/keto-diet-test/bg-21.568547a0.png";
 },{}],"Rayd":[function(require,module,exports) {
-module.exports="/bg-22.0fbc58f4.png";
+module.exports="/keto-diet-test/bg-22.0fbc58f4.png";
 },{}],"cBCL":[function(require,module,exports) {
-module.exports="/bg-23.4eee9121.png";
+module.exports="/keto-diet-test/bg-23.4eee9121.png";
 },{}],"ALlV":[function(require,module,exports) {
-module.exports="/bg-24.4b80333a.png";
+module.exports="/keto-diet-test/bg-24.4b80333a.png";
 },{}],"WLdw":[function(require,module,exports) {
-module.exports="/bg-25.0bef4c0e.png";
+module.exports="/keto-diet-test/bg-25.0bef4c0e.png";
 },{}],"HeYH":[function(require,module,exports) {
-module.exports="/bg-3.51e2de5b.png";
+module.exports="/keto-diet-test/bg-3.51e2de5b.png";
 },{}],"oJI0":[function(require,module,exports) {
-module.exports="/bg-4.1f05520d.png";
+module.exports="/keto-diet-test/bg-4.1f05520d.png";
 },{}],"me3l":[function(require,module,exports) {
-module.exports="/bg-5.6e9216e8.png";
+module.exports="/keto-diet-test/bg-5.6e9216e8.png";
 },{}],"ctfU":[function(require,module,exports) {
-module.exports="/bg-6.05243272.png";
+module.exports="/keto-diet-test/bg-6.05243272.png";
 },{}],"dzh8":[function(require,module,exports) {
-module.exports="/bg-7.c80f3ae5.png";
+module.exports="/keto-diet-test/bg-7.c80f3ae5.png";
 },{}],"Yk6T":[function(require,module,exports) {
-module.exports="/bg-8.27ee4da0.png";
+module.exports="/keto-diet-test/bg-8.27ee4da0.png";
 },{}],"ZxSH":[function(require,module,exports) {
-module.exports="/bg-9.99f93020.png";
+module.exports="/keto-diet-test/bg-9.99f93020.png";
 },{}],"bjQh":[function(require,module,exports) {
 module.exports={"bg-1":require("./bg-1.png"),"bg-10":require("./bg-10.png"),"bg-11":require("./bg-11.png"),"bg-12":require("./bg-12.png"),"bg-13":require("./bg-13.png"),"bg-14":require("./bg-14.png"),"bg-15":require("./bg-15.png"),"bg-16":require("./bg-16.png"),"bg-17":require("./bg-17.png"),"bg-18":require("./bg-18.png"),"bg-19":require("./bg-19.png"),"bg-2":require("./bg-2.png"),"bg-20":require("./bg-20.png"),"bg-21":require("./bg-21.png"),"bg-22":require("./bg-22.png"),"bg-23":require("./bg-23.png"),"bg-24":require("./bg-24.png"),"bg-25":require("./bg-25.png"),"bg-3":require("./bg-3.png"),"bg-4":require("./bg-4.png"),"bg-5":require("./bg-5.png"),"bg-6":require("./bg-6.png"),"bg-7":require("./bg-7.png"),"bg-8":require("./bg-8.png"),"bg-9":require("./bg-9.png")};
 },{"./bg-1.png":"UvYZ","./bg-10.png":"orBr","./bg-11.png":"q5jB","./bg-12.png":"F2T2","./bg-13.png":"PZLZ","./bg-14.png":"YK3t","./bg-15.png":"psTg","./bg-16.png":"Bj6t","./bg-17.png":"yBlg","./bg-18.png":"UzwX","./bg-19.png":"p6DO","./bg-2.png":"R7Lv","./bg-20.png":"Uz46","./bg-21.png":"qROm","./bg-22.png":"Rayd","./bg-23.png":"cBCL","./bg-24.png":"ALlV","./bg-25.png":"WLdw","./bg-3.png":"HeYH","./bg-4.png":"oJI0","./bg-5.png":"me3l","./bg-6.png":"ctfU","./bg-7.png":"dzh8","./bg-8.png":"Yk6T","./bg-9.png":"ZxSH"}],"xscj":[function(require,module,exports) {
-module.exports="/calories.4e221656.svg";
+module.exports="/keto-diet-test/calories.4e221656.svg";
 },{}],"HCnt":[function(require,module,exports) {
-module.exports="/card-appetite.e3f44e09.svg";
+module.exports="/keto-diet-test/card-appetite.e3f44e09.svg";
 },{}],"VRzF":[function(require,module,exports) {
-module.exports="/card-blood-sugar.0ce57ee1.svg";
+module.exports="/keto-diet-test/card-blood-sugar.0ce57ee1.svg";
 },{}],"NQhD":[function(require,module,exports) {
-module.exports="/card-junk-food.b16370f9.svg";
+module.exports="/keto-diet-test/card-junk-food.b16370f9.svg";
 },{}],"G3pO":[function(require,module,exports) {
-module.exports="/card-restaurants.007c5b22.svg";
+module.exports="/keto-diet-test/card-restaurants.007c5b22.svg";
 },{}],"GkWv":[function(require,module,exports) {
-module.exports="/card-target-weight.3fa19c16.svg";
+module.exports="/keto-diet-test/card-target-weight.3fa19c16.svg";
 },{}],"VYWQ":[function(require,module,exports) {
-module.exports="/card-water.7389aece.svg";
+module.exports="/keto-diet-test/card-water.7389aece.svg";
 },{}],"IGAJ":[function(require,module,exports) {
-module.exports="/card-your-way.272b7e26.svg";
+module.exports="/keto-diet-test/card-your-way.272b7e26.svg";
 },{}],"qRRe":[function(require,module,exports) {
-module.exports="/dev.1ff0f9bc.svg";
+module.exports="/keto-diet-test/dev.1ff0f9bc.svg";
 },{}],"Cpbe":[function(require,module,exports) {
-module.exports="/fast.13b1ae89.svg";
+module.exports="/keto-diet-test/fast.13b1ae89.svg";
 },{}],"p7Pd":[function(require,module,exports) {
-module.exports="/final-weight-card.be112b6d.svg";
+module.exports="/keto-diet-test/final-weight-card.be112b6d.svg";
 },{}],"UmfP":[function(require,module,exports) {
-module.exports="/free-profile.d9c1dbbc.svg";
+module.exports="/keto-diet-test/free-profile.d9c1dbbc.svg";
 },{}],"NzAr":[function(require,module,exports) {
-module.exports="/gender-man.1aaaedd4.svg";
+module.exports="/keto-diet-test/gender-man.1aaaedd4.svg";
 },{}],"ydcr":[function(require,module,exports) {
-module.exports="/gender-women.78c560e1.svg";
+module.exports="/keto-diet-test/gender-women.78c560e1.svg";
 },{}],"pEjg":[function(require,module,exports) {
-module.exports="/gid.18d71647.svg";
+module.exports="/keto-diet-test/gid.18d71647.svg";
 },{}],"HZji":[function(require,module,exports) {
-module.exports="/head-mask.93add8fd.svg";
+module.exports="/keto-diet-test/head-mask.93add8fd.svg";
 },{}],"ajjJ":[function(require,module,exports) {
-module.exports="/icon-physical-activity.2159a4df.svg";
+module.exports="/keto-diet-test/icon-physical-activity.2159a4df.svg";
 },{}],"xF82":[function(require,module,exports) {
-module.exports="/keto-icon.0d88012b.svg";
+module.exports="/keto-diet-test/keto-icon.0d88012b.svg";
 },{}],"rFnr":[function(require,module,exports) {
-module.exports="/list.f645be28.svg";
+module.exports="/keto-diet-test/list.f645be28.svg";
 },{}],"okQu":[function(require,module,exports) {
-module.exports="/progress-percentage-bg.f5898a9b.svg";
+module.exports="/keto-diet-test/progress-percentage-bg.f5898a9b.svg";
 },{}],"ftzE":[function(require,module,exports) {
-module.exports="/promises.9aae2532.svg";
+module.exports="/keto-diet-test/promises.9aae2532.svg";
 },{}],"yKQK":[function(require,module,exports) {
-module.exports="/subscribe.219aee54.svg";
+module.exports="/keto-diet-test/subscribe.219aee54.svg";
 },{}],"bKpA":[function(require,module,exports) {
-module.exports="/symbol-defs.c14f698e.svg";
+module.exports="/keto-diet-test/symbol-defs.c14f698e.svg";
 },{}],"uUbn":[function(require,module,exports) {
 module.exports={calories:require("./calories.svg"),"card-appetite":require("./card-appetite.svg"),"card-blood-sugar":require("./card-blood-sugar.svg"),"card-junk-food":require("./card-junk-food.svg"),"card-restaurants":require("./card-restaurants.svg"),"card-target-weight":require("./card-target-weight.svg"),"card-water":require("./card-water.svg"),"card-your-way":require("./card-your-way.svg"),dev:require("./dev.svg"),fast:require("./fast.svg"),"final-weight-card":require("./final-weight-card.svg"),"free-profile":require("./free-profile.svg"),"gender-man":require("./gender-man.svg"),"gender-women":require("./gender-women.svg"),gid:require("./gid.svg"),"head-mask":require("./head-mask.svg"),"icon-physical-activity":require("./icon-physical-activity.svg"),"keto-icon":require("./keto-icon.svg"),list:require("./list.svg"),"progress-percentage-bg":require("./progress-percentage-bg.svg"),promises:require("./promises.svg"),subscribe:require("./subscribe.svg"),"symbol-defs":require("./symbol-defs.svg")};
 },{"./calories.svg":"xscj","./card-appetite.svg":"HCnt","./card-blood-sugar.svg":"VRzF","./card-junk-food.svg":"NQhD","./card-restaurants.svg":"G3pO","./card-target-weight.svg":"GkWv","./card-water.svg":"VYWQ","./card-your-way.svg":"IGAJ","./dev.svg":"qRRe","./fast.svg":"Cpbe","./final-weight-card.svg":"p7Pd","./free-profile.svg":"UmfP","./gender-man.svg":"NzAr","./gender-women.svg":"ydcr","./gid.svg":"pEjg","./head-mask.svg":"HZji","./icon-physical-activity.svg":"ajjJ","./keto-icon.svg":"xF82","./list.svg":"rFnr","./progress-percentage-bg.svg":"okQu","./promises.svg":"ftzE","./subscribe.svg":"yKQK","./symbol-defs.svg":"bKpA"}],"S4Jc":[function(require,module,exports) {
-module.exports="/age.634f845d.png";
+module.exports="/keto-diet-test/age.634f845d.png";
 },{}],"hwmo":[function(require,module,exports) {
-module.exports="/avatar-1.564db04f.png";
+module.exports="/keto-diet-test/avatar-1.564db04f.png";
 },{}],"W3Ar":[function(require,module,exports) {
-module.exports="/avatar-2.76cd5e1c.png";
+module.exports="/keto-diet-test/avatar-2.76cd5e1c.png";
 },{}],"lM9C":[function(require,module,exports) {
-module.exports="/avatar-3.ac2ed7fb.png";
-},{}],"ZJPV":[function(require,module,exports) {
-module.exports="/avatar-4.7f2fe981.png";
+module.exports="/keto-diet-test/avatar-3.ac2ed7fb.png";
 },{}],"pLTC":[function(require,module,exports) {
-module.exports="/avokado.5cf28922.png";
+module.exports="/keto-diet-test/avokado.5cf28922.png";
+},{}],"ZJPV":[function(require,module,exports) {
+module.exports="/keto-diet-test/avatar-4.7f2fe981.png";
 },{}],"v1Cx":[function(require,module,exports) {
-module.exports="/avokado3.00ebe933.png";
+module.exports="/keto-diet-test/avokado3.00ebe933.png";
 },{}],"tnhf":[function(require,module,exports) {
-module.exports="/avokado_paralax.c9c891e9.png";
+module.exports="/keto-diet-test/avokado_paralax.c9c891e9.png";
 },{}],"oVhe":[function(require,module,exports) {
-module.exports="/citrus.8744a513.png";
+module.exports="/keto-diet-test/citrus.8744a513.png";
 },{}],"Y4TL":[function(require,module,exports) {
-module.exports="/guide.edff3e13.png";
+module.exports="/keto-diet-test/guide.edff3e13.png";
 },{}],"KiwN":[function(require,module,exports) {
-module.exports="/header_icon_1.f282ee6b.png";
+module.exports="/keto-diet-test/header_icon_1.f282ee6b.png";
 },{}],"KGd1":[function(require,module,exports) {
-module.exports="/header_icon_10.65cb9cc6.png";
+module.exports="/keto-diet-test/header_icon_10.65cb9cc6.png";
 },{}],"sFeQ":[function(require,module,exports) {
-module.exports="/header_icon_11.d9f7ef4e.png";
+module.exports="/keto-diet-test/header_icon_11.d9f7ef4e.png";
 },{}],"JtMK":[function(require,module,exports) {
-module.exports="/header_icon_12.2827d14c.png";
+module.exports="/keto-diet-test/header_icon_12.2827d14c.png";
 },{}],"rXgu":[function(require,module,exports) {
-module.exports="/header_icon_13.9db28de0.png";
+module.exports="/keto-diet-test/header_icon_13.9db28de0.png";
 },{}],"zPZa":[function(require,module,exports) {
-module.exports="/header_icon_14.5f3f0fc5.png";
+module.exports="/keto-diet-test/header_icon_14.5f3f0fc5.png";
 },{}],"i0ad":[function(require,module,exports) {
-module.exports="/header_icon_15.f6abacef.png";
+module.exports="/keto-diet-test/header_icon_15.f6abacef.png";
 },{}],"hNu4":[function(require,module,exports) {
-module.exports="/header_icon_16.6510e433.png";
+module.exports="/keto-diet-test/header_icon_16.6510e433.png";
 },{}],"hPLO":[function(require,module,exports) {
-module.exports="/header_icon_17.98c4f794.png";
+module.exports="/keto-diet-test/header_icon_17.98c4f794.png";
 },{}],"BjLl":[function(require,module,exports) {
-module.exports="/header_icon_18.9a0853b5.png";
+module.exports="/keto-diet-test/header_icon_18.9a0853b5.png";
 },{}],"Evxp":[function(require,module,exports) {
-module.exports="/header_icon_19.8bcb3e8d.png";
+module.exports="/keto-diet-test/header_icon_19.8bcb3e8d.png";
 },{}],"qGBv":[function(require,module,exports) {
-module.exports="/header_icon_2.cee8a300.png";
+module.exports="/keto-diet-test/header_icon_2.cee8a300.png";
 },{}],"Rnca":[function(require,module,exports) {
-module.exports="/header_icon_20.6dfdefa6.png";
+module.exports="/keto-diet-test/header_icon_20.6dfdefa6.png";
 },{}],"Mxr5":[function(require,module,exports) {
-module.exports="/header_icon_21.6f4d47b4.png";
+module.exports="/keto-diet-test/header_icon_21.6f4d47b4.png";
 },{}],"Am9g":[function(require,module,exports) {
-module.exports="/header_icon_22.a9e35901.png";
+module.exports="/keto-diet-test/header_icon_22.a9e35901.png";
 },{}],"hMRW":[function(require,module,exports) {
-module.exports="/header_icon_23.3554e762.png";
+module.exports="/keto-diet-test/header_icon_23.3554e762.png";
 },{}],"xJl6":[function(require,module,exports) {
-module.exports="/header_icon_24.43586e29.png";
+module.exports="/keto-diet-test/header_icon_24.43586e29.png";
 },{}],"tKqC":[function(require,module,exports) {
-module.exports="/header_icon_25.86c1605a.png";
+module.exports="/keto-diet-test/header_icon_25.86c1605a.png";
 },{}],"VGgC":[function(require,module,exports) {
-module.exports="/header_icon_3.47262811.png";
+module.exports="/keto-diet-test/header_icon_3.47262811.png";
 },{}],"nKSH":[function(require,module,exports) {
-module.exports="/header_icon_4.e00bd83d.png";
+module.exports="/keto-diet-test/header_icon_4.e00bd83d.png";
 },{}],"eVdc":[function(require,module,exports) {
-module.exports="/header_icon_5.c2d0ef5b.png";
+module.exports="/keto-diet-test/header_icon_5.c2d0ef5b.png";
 },{}],"y1fx":[function(require,module,exports) {
-module.exports="/header_icon_6.0340e0bd.png";
+module.exports="/keto-diet-test/header_icon_6.0340e0bd.png";
 },{}],"XaHc":[function(require,module,exports) {
-module.exports="/header_icon_7.e429f34a.png";
+module.exports="/keto-diet-test/header_icon_7.e429f34a.png";
 },{}],"a1oJ":[function(require,module,exports) {
-module.exports="/header_icon_8.879bee35.png";
+module.exports="/keto-diet-test/header_icon_8.879bee35.png";
 },{}],"ds1n":[function(require,module,exports) {
-module.exports="/header_icon_9.461f1494.png";
+module.exports="/keto-diet-test/header_icon_9.461f1494.png";
 },{}],"N2fG":[function(require,module,exports) {
-module.exports="/height.477264b1.png";
+module.exports="/keto-diet-test/height.477264b1.png";
 },{}],"NhDC":[function(require,module,exports) {
-module.exports="/home_female.ae2363ee.png";
+module.exports="/keto-diet-test/home_female.ae2363ee.png";
 },{}],"fIku":[function(require,module,exports) {
-module.exports="/home_male.ef0283f3.png";
+module.exports="/keto-diet-test/home_male.ef0283f3.png";
 },{}],"wwBI":[function(require,module,exports) {
-module.exports="/phone.80b15ce0.png";
+module.exports="/keto-diet-test/phone.80b15ce0.png";
 },{}],"Mb26":[function(require,module,exports) {
-module.exports="/physical_icon.f282ee6b.png";
+module.exports="/keto-diet-test/physical_icon.f282ee6b.png";
 },{}],"aWrH":[function(require,module,exports) {
-module.exports="/profile.834c24cb.png";
+module.exports="/keto-diet-test/profile.834c24cb.png";
 },{}],"YjNP":[function(require,module,exports) {
-module.exports="/quick.d5dc6947.png";
+module.exports="/keto-diet-test/quick.d5dc6947.png";
 },{}],"CiP4":[function(require,module,exports) {
-module.exports="/rule.969ab124.png";
+module.exports="/keto-diet-test/rule.969ab124.png";
 },{}],"QEVR":[function(require,module,exports) {
-module.exports="/salad.3abfdf13.png";
+module.exports="/keto-diet-test/salad.3abfdf13.png";
 },{}],"kyOw":[function(require,module,exports) {
-module.exports="/target.e9540e9f.png";
+module.exports="/keto-diet-test/target.e9540e9f.png";
 },{}],"Rsgt":[function(require,module,exports) {
-module.exports="/weight.e20060f1.png";
+module.exports="/keto-diet-test/weight.e20060f1.png";
 },{}],"cLbR":[function(require,module,exports) {
-module.exports={age:require("./age.png"),"avatar-1":require("./avatar-1.png"),"avatar-2":require("./avatar-2.png"),"avatar-3":require("./avatar-3.png"),"avatar-4":require("./avatar-4.png"),avokado:require("./avokado.png"),avokado3:require("./avokado3.png"),avokado_paralax:require("./avokado_paralax.png"),citrus:require("./citrus.png"),guide:require("./guide.png"),header_icon_1:require("./header_icon_1.png"),header_icon_10:require("./header_icon_10.png"),header_icon_11:require("./header_icon_11.png"),header_icon_12:require("./header_icon_12.png"),header_icon_13:require("./header_icon_13.png"),header_icon_14:require("./header_icon_14.png"),header_icon_15:require("./header_icon_15.png"),header_icon_16:require("./header_icon_16.png"),header_icon_17:require("./header_icon_17.png"),header_icon_18:require("./header_icon_18.png"),header_icon_19:require("./header_icon_19.png"),header_icon_2:require("./header_icon_2.png"),header_icon_20:require("./header_icon_20.png"),header_icon_21:require("./header_icon_21.png"),header_icon_22:require("./header_icon_22.png"),header_icon_23:require("./header_icon_23.png"),header_icon_24:require("./header_icon_24.png"),header_icon_25:require("./header_icon_25.png"),header_icon_3:require("./header_icon_3.png"),header_icon_4:require("./header_icon_4.png"),header_icon_5:require("./header_icon_5.png"),header_icon_6:require("./header_icon_6.png"),header_icon_7:require("./header_icon_7.png"),header_icon_8:require("./header_icon_8.png"),header_icon_9:require("./header_icon_9.png"),height:require("./height.png"),home_female:require("./home_female.png"),home_male:require("./home_male.png"),phone:require("./phone.png"),physical_icon:require("./physical_icon.png"),profile:require("./profile.png"),quick:require("./quick.png"),rule:require("./rule.png"),salad:require("./salad.png"),target:require("./target.png"),weight:require("./weight.png")};
-},{"./age.png":"S4Jc","./avatar-1.png":"hwmo","./avatar-2.png":"W3Ar","./avatar-3.png":"lM9C","./avatar-4.png":"ZJPV","./avokado.png":"pLTC","./avokado3.png":"v1Cx","./avokado_paralax.png":"tnhf","./citrus.png":"oVhe","./guide.png":"Y4TL","./header_icon_1.png":"KiwN","./header_icon_10.png":"KGd1","./header_icon_11.png":"sFeQ","./header_icon_12.png":"JtMK","./header_icon_13.png":"rXgu","./header_icon_14.png":"zPZa","./header_icon_15.png":"i0ad","./header_icon_16.png":"hNu4","./header_icon_17.png":"hPLO","./header_icon_18.png":"BjLl","./header_icon_19.png":"Evxp","./header_icon_2.png":"qGBv","./header_icon_20.png":"Rnca","./header_icon_21.png":"Mxr5","./header_icon_22.png":"Am9g","./header_icon_23.png":"hMRW","./header_icon_24.png":"xJl6","./header_icon_25.png":"tKqC","./header_icon_3.png":"VGgC","./header_icon_4.png":"nKSH","./header_icon_5.png":"eVdc","./header_icon_6.png":"y1fx","./header_icon_7.png":"XaHc","./header_icon_8.png":"a1oJ","./header_icon_9.png":"ds1n","./height.png":"N2fG","./home_female.png":"NhDC","./home_male.png":"fIku","./phone.png":"wwBI","./physical_icon.png":"Mb26","./profile.png":"aWrH","./quick.png":"YjNP","./rule.png":"CiP4","./salad.png":"QEVR","./target.png":"kyOw","./weight.png":"Rsgt"}],"wtTi":[function(require,module,exports) {
-module.exports="/card-appetite.761cb91b.png";
+module.exports={age:require("./age.png"),"avatar-1":require("./avatar-1.png"),"avatar-2":require("./avatar-2.png"),"avatar-3":require("./avatar-3.png"),avokado:require("./avokado.png"),"avatar-4":require("./avatar-4.png"),avokado3:require("./avokado3.png"),avokado_paralax:require("./avokado_paralax.png"),citrus:require("./citrus.png"),guide:require("./guide.png"),header_icon_1:require("./header_icon_1.png"),header_icon_10:require("./header_icon_10.png"),header_icon_11:require("./header_icon_11.png"),header_icon_12:require("./header_icon_12.png"),header_icon_13:require("./header_icon_13.png"),header_icon_14:require("./header_icon_14.png"),header_icon_15:require("./header_icon_15.png"),header_icon_16:require("./header_icon_16.png"),header_icon_17:require("./header_icon_17.png"),header_icon_18:require("./header_icon_18.png"),header_icon_19:require("./header_icon_19.png"),header_icon_2:require("./header_icon_2.png"),header_icon_20:require("./header_icon_20.png"),header_icon_21:require("./header_icon_21.png"),header_icon_22:require("./header_icon_22.png"),header_icon_23:require("./header_icon_23.png"),header_icon_24:require("./header_icon_24.png"),header_icon_25:require("./header_icon_25.png"),header_icon_3:require("./header_icon_3.png"),header_icon_4:require("./header_icon_4.png"),header_icon_5:require("./header_icon_5.png"),header_icon_6:require("./header_icon_6.png"),header_icon_7:require("./header_icon_7.png"),header_icon_8:require("./header_icon_8.png"),header_icon_9:require("./header_icon_9.png"),height:require("./height.png"),home_female:require("./home_female.png"),home_male:require("./home_male.png"),phone:require("./phone.png"),physical_icon:require("./physical_icon.png"),profile:require("./profile.png"),quick:require("./quick.png"),rule:require("./rule.png"),salad:require("./salad.png"),target:require("./target.png"),weight:require("./weight.png")};
+},{"./age.png":"S4Jc","./avatar-1.png":"hwmo","./avatar-2.png":"W3Ar","./avatar-3.png":"lM9C","./avokado.png":"pLTC","./avatar-4.png":"ZJPV","./avokado3.png":"v1Cx","./avokado_paralax.png":"tnhf","./citrus.png":"oVhe","./guide.png":"Y4TL","./header_icon_1.png":"KiwN","./header_icon_10.png":"KGd1","./header_icon_11.png":"sFeQ","./header_icon_12.png":"JtMK","./header_icon_13.png":"rXgu","./header_icon_14.png":"zPZa","./header_icon_15.png":"i0ad","./header_icon_16.png":"hNu4","./header_icon_17.png":"hPLO","./header_icon_18.png":"BjLl","./header_icon_19.png":"Evxp","./header_icon_2.png":"qGBv","./header_icon_20.png":"Rnca","./header_icon_21.png":"Mxr5","./header_icon_22.png":"Am9g","./header_icon_23.png":"hMRW","./header_icon_24.png":"xJl6","./header_icon_25.png":"tKqC","./header_icon_3.png":"VGgC","./header_icon_4.png":"nKSH","./header_icon_5.png":"eVdc","./header_icon_6.png":"y1fx","./header_icon_7.png":"XaHc","./header_icon_8.png":"a1oJ","./header_icon_9.png":"ds1n","./height.png":"N2fG","./home_female.png":"NhDC","./home_male.png":"fIku","./phone.png":"wwBI","./physical_icon.png":"Mb26","./profile.png":"aWrH","./quick.png":"YjNP","./rule.png":"CiP4","./salad.png":"QEVR","./target.png":"kyOw","./weight.png":"Rsgt"}],"wtTi":[function(require,module,exports) {
+module.exports="/keto-diet-test/card-appetite.761cb91b.png";
 },{}],"aTFH":[function(require,module,exports) {
-module.exports="/card-blood-sugar.c0c9e430.png";
+module.exports="/keto-diet-test/card-blood-sugar.c0c9e430.png";
 },{}],"ZrMH":[function(require,module,exports) {
-module.exports="/card-junk-food.a5168cfa.png";
+module.exports="/keto-diet-test/card-junk-food.a5168cfa.png";
 },{}],"bjPS":[function(require,module,exports) {
-module.exports="/card-restaurants.7102caa9.png";
+module.exports="/keto-diet-test/card-restaurants.7102caa9.png";
 },{}],"GXTM":[function(require,module,exports) {
-module.exports="/card-target-weight.f2b6bc48.png";
+module.exports="/keto-diet-test/card-target-weight.f2b6bc48.png";
 },{}],"OT5n":[function(require,module,exports) {
-module.exports="/card-water.f8406c7d.png";
+module.exports="/keto-diet-test/card-water.f8406c7d.png";
 },{}],"Xrvr":[function(require,module,exports) {
-module.exports="/card-your-way.7033822a.png";
+module.exports="/keto-diet-test/card-your-way.7033822a.png";
 },{}],"nRPu":[function(require,module,exports) {
 module.exports={"card-appetite":require("./card-appetite.png"),"card-blood-sugar":require("./card-blood-sugar.png"),"card-junk-food":require("./card-junk-food.png"),"card-restaurants":require("./card-restaurants.png"),"card-target-weight":require("./card-target-weight.png"),"card-water":require("./card-water.png"),"card-your-way":require("./card-your-way.png")};
 },{"./card-appetite.png":"wtTi","./card-blood-sugar.png":"aTFH","./card-junk-food.png":"ZrMH","./card-restaurants.png":"bjPS","./card-target-weight.png":"GXTM","./card-water.png":"OT5n","./card-your-way.png":"Xrvr"}],"LeWn":[function(require,module,exports) {
-module.exports="/icon-aspargus.29c45b67.png";
+module.exports="/keto-diet-test/icon-aspargus.29c45b67.png";
 },{}],"aagM":[function(require,module,exports) {
-module.exports="/icon-avocado.dc0ce43a.png";
+module.exports="/keto-diet-test/icon-avocado.dc0ce43a.png";
 },{}],"KNfK":[function(require,module,exports) {
-module.exports="/icon-bacon.ea92cdd1.png";
+module.exports="/keto-diet-test/icon-bacon.ea92cdd1.png";
 },{}],"gj9u":[function(require,module,exports) {
-module.exports="/icon-beef.69f6d559.png";
+module.exports="/keto-diet-test/icon-beef.69f6d559.png";
 },{}],"BbwT":[function(require,module,exports) {
-module.exports="/icon-broccoli.25e0c729.png";
+module.exports="/keto-diet-test/icon-broccoli.25e0c729.png";
 },{}],"W1yP":[function(require,module,exports) {
-module.exports="/icon-butter.7be9571b.png";
+module.exports="/keto-diet-test/icon-butter.7be9571b.png";
 },{}],"qlVj":[function(require,module,exports) {
-module.exports="/icon-cauliflower.ae8cca64.png";
+module.exports="/keto-diet-test/icon-cauliflower.ae8cca64.png";
 },{}],"lWSd":[function(require,module,exports) {
-module.exports="/icon-cheese.0ab54aee.png";
+module.exports="/keto-diet-test/icon-cheese.0ab54aee.png";
 },{}],"g5YT":[function(require,module,exports) {
-module.exports="/icon-chicken.c906542b.png";
+module.exports="/keto-diet-test/icon-chicken.c906542b.png";
 },{}],"bhT1":[function(require,module,exports) {
-module.exports="/icon-coconut.05a60a5d.png";
+module.exports="/keto-diet-test/icon-coconut.05a60a5d.png";
 },{}],"BRkO":[function(require,module,exports) {
-module.exports="/icon-cod.4276c871.png";
+module.exports="/keto-diet-test/icon-cod.4276c871.png";
 },{}],"crFT":[function(require,module,exports) {
-module.exports="/icon-cottagecheese.0fbb267b.png";
+module.exports="/keto-diet-test/icon-cottagecheese.0fbb267b.png";
 },{}],"rAjw":[function(require,module,exports) {
-module.exports="/icon-eggs.262ff12d.png";
+module.exports="/keto-diet-test/icon-eggs.262ff12d.png";
 },{}],"LRbU":[function(require,module,exports) {
-module.exports="/icon-mushrooms.4435072d.png";
+module.exports="/keto-diet-test/icon-mushrooms.4435072d.png";
 },{}],"Vmlu":[function(require,module,exports) {
-module.exports="/icon-no-meat.f71f91fe.png";
+module.exports="/keto-diet-test/icon-no-meat.f71f91fe.png";
 },{}],"JA00":[function(require,module,exports) {
-module.exports="/icon-nuts.a0faceaa.png";
+module.exports="/keto-diet-test/icon-nuts.a0faceaa.png";
 },{}],"BAsk":[function(require,module,exports) {
-module.exports="/icon-pork.046b541a.png";
+module.exports="/keto-diet-test/icon-pork.046b541a.png";
 },{}],"Ffxs":[function(require,module,exports) {
-module.exports="/icon-salmon.9126ff08.png";
+module.exports="/keto-diet-test/icon-salmon.9126ff08.png";
 },{}],"q84r":[function(require,module,exports) {
-module.exports="/icon-tofu.e1e12f5d.png";
+module.exports="/keto-diet-test/icon-tofu.e1e12f5d.png";
 },{}],"fEC4":[function(require,module,exports) {
-module.exports="/icon-tuna.51ed785e.png";
+module.exports="/keto-diet-test/icon-tuna.51ed785e.png";
 },{}],"Yvbw":[function(require,module,exports) {
-module.exports="/icon-zucchini.8c1cc3f5.png";
+module.exports="/keto-diet-test/icon-zucchini.8c1cc3f5.png";
 },{}],"qYUy":[function(require,module,exports) {
 module.exports={"icon-aspargus":require("./icon-aspargus.png"),"icon-avocado":require("./icon-avocado.png"),"icon-bacon":require("./icon-bacon.png"),"icon-beef":require("./icon-beef.png"),"icon-broccoli":require("./icon-broccoli.png"),"icon-butter":require("./icon-butter.png"),"icon-cauliflower":require("./icon-cauliflower.png"),"icon-cheese":require("./icon-cheese.png"),"icon-chicken":require("./icon-chicken.png"),"icon-coconut":require("./icon-coconut.png"),"icon-cod":require("./icon-cod.png"),"icon-cottagecheese":require("./icon-cottagecheese.png"),"icon-eggs":require("./icon-eggs.png"),"icon-mushrooms":require("./icon-mushrooms.png"),"icon-no-meat":require("./icon-no-meat.png"),"icon-nuts":require("./icon-nuts.png"),"icon-pork":require("./icon-pork.png"),"icon-salmon":require("./icon-salmon.png"),"icon-tofu":require("./icon-tofu.png"),"icon-tuna":require("./icon-tuna.png"),"icon-zucchini":require("./icon-zucchini.png")};
 },{"./icon-aspargus.png":"LeWn","./icon-avocado.png":"aagM","./icon-bacon.png":"KNfK","./icon-beef.png":"gj9u","./icon-broccoli.png":"BbwT","./icon-butter.png":"W1yP","./icon-cauliflower.png":"qlVj","./icon-cheese.png":"lWSd","./icon-chicken.png":"g5YT","./icon-coconut.png":"bhT1","./icon-cod.png":"BRkO","./icon-cottagecheese.png":"crFT","./icon-eggs.png":"rAjw","./icon-mushrooms.png":"LRbU","./icon-no-meat.png":"Vmlu","./icon-nuts.png":"JA00","./icon-pork.png":"BAsk","./icon-salmon.png":"Ffxs","./icon-tofu.png":"q84r","./icon-tuna.png":"fEC4","./icon-zucchini.png":"Yvbw"}],"rAAd":[function(require,module,exports) {
 "use strict";var e=k(require("lodash.throttle")),r=w(require("basiclightbox")),n=k(require("./js/progress-percent")),a=require("./js/progress-dot"),t=require("./js/progress-line"),o=require("./js/pages"),s=require("./js/add-markup-answers"),d=require("./js/add-markup-progress"),i=require("./js/add-markup-card"),u=require("./js/add-markup-choice"),g=require("./js/add-markup-choice-line"),c=require("./js/add-markup-help"),p=k(require("./new_images/quiz_bg/*.png")),l=k(require("./images/*.svg")),f=k(require("./new_images/*.png")),m=k(require("./new_images/cards/*.png")),b=k(require("./new_images/choice_icon/*.png")),h=require("./js/quiz-ref");function v(){if("function"!=typeof WeakMap)return null;var e=new WeakMap;return v=function(){return e},e}function w(e){if(e&&e.__esModule)return e;if(null===e||"object"!=typeof e&&"function"!=typeof e)return{default:e};var r=v();if(r&&r.has(e))return r.get(e);var n={},a=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var t in e)if(Object.prototype.hasOwnProperty.call(e,t)){var o=a?Object.getOwnPropertyDescriptor(e,t):null;o&&(o.get||o.set)?Object.defineProperty(n,t,o):n[t]=e[t]}return n.default=e,r&&r.set(e,n),n}function k(e){return e&&e.__esModule?e:{default:e}}let D=Number(localStorage.getItem("page"));0===D&&(D=1);let P=localStorage.getItem("gender");null===P&&(P="female");const q=o.pages.length;N(D),(0,d.addProgressDotMarkup)(o.pages,D);const L=(0,e.default)(j,700);function j(){if(h.ref.progressStart.getBoundingClientRect().top<=document.documentElement.clientHeight)return(0,n.default)(D,q),(0,a.onDoneDot)(D),(0,t.onDoneLine)(D,q),window.removeEventListener("scroll",L)}function y({newPage:e,oldPage:r}){localStorage.setItem("page",`${e}`),D=localStorage.getItem("page"),(0,d.addProgressDotMarkup)(o.pages,e),(0,a.removeDoneDot)(),(0,t.clearDoneLine)(),N(e),(0,a.removeOldActiveDot)(r),j(),window.addEventListener("scroll",L)}function N(e){"quiz"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,f.default),(0,s.addQuestion)(o.pages,e),(0,s.addAnswersMarkup)({pages:o.pages,newPage:e,svg:l.default,gender:P})),"card"===o.pages[e-1].type&&(0,i.addCardMarkup)({pages:o.pages,newPage:e,cards:m.default,gender:P}),"choice"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,f.default),(0,s.addQuestion)(o.pages,e),(0,u.addChoiceMarkup)({pages:o.pages,newPage:e,choiceIcons:b.default,gender:P}),(0,u.checkboxDisableSendButton)()),"choice-line"===o.pages[e-1].type&&((0,s.addBackground)(o.pages,e,p.default),(0,s.addHeaderIcon)(o.pages,e,f.default),(0,s.addQuestion)(o.pages,e),(0,g.addChoiceMarkupLine)({pages:o.pages,newPage:e,svg:l.default,gender:P}),(0,g.checkboxDisableSendButtonLine)()),"measurements"===o.pages[e-1].type&&(window.location="./measurements.html")}function E(){const e=Number(D);y({newPage:Number(D)+1,oldPage:e})}function S(e){e.preventDefault();const r=Number(D),n=Number(D)+1;(0,s.sendAnswer)({e:e,pages:o.pages,oldPage:r}),y({newPage:n,oldPage:r})}function B(e){if(1===Number(D))return;e.preventDefault();const r=Number(D);y({newPage:Number(D)-1,oldPage:r})}function M(e){e.preventDefault(),(0,u.sendFormToStorage)({e:e,pages:o.pages,pageDone:D});const r=Number(D);y({newPage:Number(D)+1,oldPage:r})}function _(e){(0,u.actionFormCheckbox)({e:e,pages:o.pages,pageDone:D}),(0,u.checkboxDisableSendButton)()}function x(e){e.preventDefault(),(0,g.sendFormToStorageLine)({e:e,pages:o.pages,pageDone:D});const r=Number(D);y({newPage:Number(D)+1,oldPage:r})}function O(e){(0,g.actionFormCheckboxLine)({e:e,pages:o.pages,pageDone:D}),(0,g.checkboxDisableSendButtonLine)()}function F(e){e.preventDefault(),(0,c.onHelp)({pages:o.pages,pageDone:D,event:e,gender:P,svg:l.default,basicLightbox:r})}window.addEventListener("scroll",L),h.ref.answerList.addEventListener("click",S),h.ref.backButton.addEventListener("click",B),h.ref.cardNextButton.addEventListener("click",E),h.ref.choiceForm.addEventListener("submit",M),h.ref.choiceForm.addEventListener("change",_),h.ref.choiceFormLine.addEventListener("submit",x),h.ref.choiceFormLine.addEventListener("change",O),document.querySelector("#helpButton").addEventListener("click",F);
 },{"lodash.throttle":"FNyO","basiclightbox":"BNjD","./js/progress-percent":"xtzB","./js/progress-dot":"tuDp","./js/progress-line":"wFNr","./js/pages":"KUk1","./js/add-markup-answers":"a6HF","./js/add-markup-progress":"v3Z2","./js/add-markup-card":"Z2Gu","./js/add-markup-choice":"rDXu","./js/add-markup-choice-line":"HkkF","./js/add-markup-help":"u0AD","./new_images/quiz_bg/*.png":"bjQh","./images/*.svg":"uUbn","./new_images/*.png":"cLbR","./new_images/cards/*.png":"nRPu","./new_images/choice_icon/*.png":"qYUy","./js/quiz-ref":"CXGo"}]},{},["rAAd"], null)
-//# sourceMappingURL=/quiz.js.map
+//# sourceMappingURL=/keto-diet-test/quiz.7e1fc279.js.map
