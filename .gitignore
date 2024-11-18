@@ -107,3 +107,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+send.php
+send-pay.php
